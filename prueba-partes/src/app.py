@@ -1,1 +1,0 @@
-print('parte 2')
