@@ -1,0 +1,23 @@
+{
+  "rclone_exe": "C:\\rclone\\rclone-v1.74.3-windows-amd64\\rclone.exe",
+  "base_dir": "C:\\monitoreo-sharepoint\\backups",
+  "log_dir": "logs",
+  "sites": [
+    {
+      "name": "CALIDAD",
+      "remote": "share_calidad:"
+    },
+    {
+      "name": "COMPRAS",
+      "remote": "COMPRAS:"
+    },
+    {
+      "name": "CONTABILIDAD",
+      "remote": "share_contabilidad:"
+    },
+    {
+      "name": "GESTION HUMANA",
+      "remote": "sharepoint:"
+    }
+  ]
+}

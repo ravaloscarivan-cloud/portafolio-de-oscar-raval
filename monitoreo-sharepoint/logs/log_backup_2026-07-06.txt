@@ -1,0 +1,40 @@
+{
+    "fecha": "2026-07-06",
+    "estado_global": "FINALIZADO",
+    "inicio_global": "2026-07-06 17:55:57",
+    "sitios": [
+        {
+            "nombre": "CALIDAD",
+            "remote": "share_calidad:",
+            "estado": "OK",
+            "inicio": "2026-07-06 17:55:57",
+            "fin": "2026-07-06 17:56:17",
+            "duracion": "19 seg"
+        },
+        {
+            "nombre": "COMPRAS",
+            "remote": "COMPRAS:",
+            "estado": "OK",
+            "inicio": "2026-07-06 17:56:17",
+            "fin": "2026-07-06 17:56:35",
+            "duracion": "17 seg"
+        },
+        {
+            "nombre": "CONTABILIDAD",
+            "remote": "share_contabilidad:",
+            "estado": "OK",
+            "inicio": "2026-07-06 17:56:35",
+            "fin": "2026-07-06 17:57:09",
+            "duracion": "33 seg"
+        },
+        {
+            "nombre": "GESTION HUMANA",
+            "remote": "sharepoint:",
+            "estado": "OK",
+            "inicio": "2026-07-06 17:57:09",
+            "fin": "2026-07-06 17:57:30",
+            "duracion": "20 seg"
+        }
+    ],
+    "fin_global": "2026-07-06 17:57:30"
+}
