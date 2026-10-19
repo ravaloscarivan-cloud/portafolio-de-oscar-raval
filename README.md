@@ -1,2 +1,5 @@
-# portafolio-de-oscar-raval
-Proyectos de Oscar Iván Raval publicados desde su portafolio. Cada carpeta es un proyecto.
+# Portafolio de Oscar Raval
+
+Proyectos publicados desde [mi portafolio](https://portafolio-oscarivan.vercel.app/proyectos). Cada carpeta es un proyecto.
+
+- [prueba-automatica](./prueba-automatica)
