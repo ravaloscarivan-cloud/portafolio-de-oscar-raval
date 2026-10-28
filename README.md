@@ -2,6 +2,7 @@
 
 Proyectos publicados desde [mi portafolio](https://portafolio-oscarivan.vercel.app/proyectos). Cada carpeta es un proyecto.
 
+- [backup-share-point](./backup-share-point)
 - [evaluaciones-psicometricas](./evaluaciones-psicometricas)
 - [img-proye](./img-proye)
 - [importador-dsers](./importador-dsers)

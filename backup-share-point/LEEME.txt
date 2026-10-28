@@ -1,0 +1,58 @@
+BACKUP SHAREPOINT (rclone) - APLICACION EN SEGUNDO PLANO
+==========================================================
+
+QUE HACE
+- Al abrir BackupSharePoint.exe NO descarga nada en ese momento.
+  Se queda en los iconos ocultos de la barra de tareas (flecha verde)
+  y ejecuta el backup TODOS LOS DIAS A LAS 03:00.
+- Sitios: CALIDAD, COMPRAS, CONTABILIDAD, GESTION HUMANA, ALMACEN,
+  SISTEMAS y FACTURACION.
+- Copia cada sitio en la misma estructura de siempre:
+      C:\BACKUPS\rclone\sharepoint\<SITIO>\<AAAA-MM-DD>
+- Se conservan 2 semanas de descargas: la semana actual y la anterior.
+  Los LUNES, si todas las copias salieron bien, borra la semana mas vieja.
+  Ejemplo: el lunes de la 3ra semana se borra la 1ra semana y la 2da
+  queda completa (lunes a domingo). Si hubo errores, NO borra nada.
+  Se puede cambiar con SEMANAS_CONSERVAR en config.ini.
+- Logs en los mismos archivos:
+      C:\BACKUPS\rclone\logs\backup.log
+      C:\BACKUPS\rclone\logs\errores.log
+- Si el servidor estaba suspendido a las 03:00, el backup corre al despertar.
+- Mientras copia, impide que el servidor entre en suspension.
+- Se registra solo para iniciar con Windows al iniciar sesion.
+
+INSTALACION EN EL SERVIDOR
+1. Descomprima esta carpeta en una ruta fija, por ejemplo:
+       C:\BACKUPS\rclone\app\
+   (si la mueve despues, vuelva a abrir el .exe desde la nueva ruta).
+2. Inicie sesion con el MISMO usuario de Windows con el que configuro
+   rclone (la configuracion de rclone es por usuario).
+3. Doble clic en BackupSharePoint.exe. Aparece un aviso y el icono
+   queda en los iconos ocultos (flecha ^ junto al reloj).
+
+MENU (clic derecho sobre el icono)
+- Estado / Proxima ejecucion / Ultimo backup
+- Ejecutar backup ahora (opcional, pide confirmacion)
+- Cancelar backup en curso
+- Abrir log / Abrir log de errores / Abrir carpeta de backups
+- Abrir configuracion (config.ini)
+- Iniciar con Windows (marcado = arranca solo al iniciar sesion)
+- Salir (pide confirmacion; si sale, NO habra backups)
+
+Color del icono: verde = en espera / ultimo OK,
+                 naranja = copiando,
+                 rojo = el ultimo backup tuvo errores.
+
+CONFIGURACION (config.ini, junto al .exe)
+- Rutas de rclone, carpeta de backups, logs, hora (HORA = 03:00),
+  semanas a conservar (SEMANAS_CONSERVAR = 2)
+  y la lista de sitios. Para agregar un sitio nuevo basta con una linea
+  NOMBRE = remoto:   en [SITIOS]. Tras cambiarlo: Salir y volver a abrir.
+
+MUY IMPORTANTE PARA QUE NO FALLE
+- La sesion del usuario debe quedar INICIADA. En escritorio remoto,
+  cierre la ventana de RDP (desconectar), NO use "Cerrar sesion".
+- Si el servidor se reinicia, la app arranca sola cuando se inicie
+  sesion con ese usuario (para que sea sin intervencion, configure el
+  inicio de sesion automatico, por ejemplo con Autologon de Sysinternals).
+- Si el antivirus bloquea el .exe, agreguelo como excepcion.
