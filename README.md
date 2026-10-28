@@ -6,4 +6,5 @@ Proyectos publicados desde [mi portafolio](https://portafolio-oscarivan.vercel.a
 - [importador-dsers](./importador-dsers)
 - [monitor-huellero](./monitor-huellero)
 - [monitoreo-sharepoint](./monitoreo-sharepoint)
+- [sanithelp-capacitaciones](./sanithelp-capacitaciones)
 - [shopify-app-template---react-router](./shopify-app-template---react-router)

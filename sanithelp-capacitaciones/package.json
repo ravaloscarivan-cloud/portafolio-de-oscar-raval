@@ -1,0 +1,26 @@
+{
+  "name": "capacitaciones-sanithelp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Aplicativo de capacitaciones y asistencia con firma - SanitHelp",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix client",
+    "dev": "concurrently -n api,web -c blue,cyan \"node --watch --env-file-if-exists=.env.local dev-server.js\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "vigilar": "node --env-file-if-exists=.env.local scripts/vigilar-capacitaciones.js",
+    "publicar": "node --env-file-if-exists=.env.local scripts/vigilar-capacitaciones.js --una-vez",
+    "validar": "node scripts/validar-capacitaciones.js",
+    "fotos": "node --env-file-if-exists=.env.local scripts/fotos.js"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "express": "^4.21.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

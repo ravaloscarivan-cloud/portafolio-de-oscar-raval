@@ -1,0 +1,261 @@
+// Evaluaciones de las capacitaciones agregadas automáticamente desde CAPACITACIONES/.
+// Mismo formato que evaluaciones.js: { "<id>": { pre: [5 preguntas], post: [5 preguntas] } }, "correcta" = índice.
+
+export const evaluacionesImportadas = {
+  "planeacion-sg-sst": {
+    "pre": [
+      { "pregunta": "¿Cuál es el punto de partida de la planeación del SG-SST?", "opciones": ["Comprar elementos de protección", "El diagnóstico inicial", "La auditoría externa", "El cierre de hallazgos"], "correcta": 1 },
+      { "pregunta": "¿Cómo deben ser los objetivos del SG-SST?", "opciones": ["Claros, medibles y coherentes con la política de SST", "Generales para que se cumplan siempre", "Iguales a los de cualquier otra empresa", "Definidos solo por el área financiera"], "correcta": 0 },
+      { "pregunta": "¿Qué hace el plan de trabajo anual?", "opciones": ["Reemplaza la política de SST", "Registra solo los accidentes del año", "Convierte los objetivos en actividades, responsables, fechas, recursos, indicadores y evidencias", "Elimina la necesidad de hacer seguimiento"], "correcta": 2 },
+      { "pregunta": "¿Qué ciclo describe la mejora continua del SG-SST?", "opciones": ["Revisar, archivar, olvidar, repetir", "Comprar, instalar, usar, desechar", "Informar, sancionar, corregir, cerrar", "Planear, hacer, verificar y actuar"], "correcta": 3 },
+      { "pregunta": "¿Para qué sirven los indicadores y las evidencias?", "opciones": ["Para medir avance, cumplimiento y eficacia", "Para decorar los informes", "Para reemplazar las capacitaciones", "Solo para cumplir con la ARL"], "correcta": 0 }
+    ],
+    "post": [
+      { "pregunta": "¿Qué elemento de la estructura del SG-SST permite priorizar riesgos y establecer controles?", "opciones": ["Los indicadores", "La identificación de peligros", "El presupuesto", "La revisión por la dirección"], "correcta": 1 },
+      { "pregunta": "¿Qué definen los roles y responsabilidades?", "opciones": ["El horario de almuerzo", "Los proveedores autorizados", "El valor de las sanciones", "Quién lidera, ejecuta, participa y hace seguimiento"], "correcta": 3 },
+      { "pregunta": "En el ciclo PHVA, ¿qué se hace en la etapa ACTUAR?", "opciones": ["Cerrar hallazgos, corregir desviaciones y actualizar la planeación", "Realizar el diagnóstico inicial", "Ejecutar las capacitaciones", "Solo revisar indicadores"], "correcta": 0 },
+      { "pregunta": "Según la capacitación, la planeación debe permitir verificar qué se hará, quién, cuándo, con qué recursos y…", "opciones": ["cuánto se sancionará", "quién lo aprobó primero", "cómo se medirá", "dónde se archivará"], "correcta": 2 },
+      { "pregunta": "¿Cuál es el compromiso de cada participante con el SG-SST?", "opciones": ["Esperar a que el responsable de SST haga todo", "Mantener actualizado el plan anual, cumplir las actividades asignadas y aportar evidencias", "Ejecutar actividades solo cuando haya auditoría", "Modificar los objetivos sin informar"], "correcta": 1 }
+    ]
+  },
+  "teoria-fuego-extintores": {
+    "pre": [
+      { "pregunta": "¿Cuáles son los cuatro elementos del tetraedro del fuego?", "opciones": ["Agua, aire, tierra y calor", "Calor, combustible, oxígeno y reacción en cadena", "Humo, llama, ceniza y calor", "Combustible, electricidad, viento y presión"], "correcta": 1 },
+      { "pregunta": "¿A qué clase de fuego corresponden el papel, la madera, la tela y los plásticos?", "opciones": ["Clase A", "Clase B", "Clase C", "Clase K"], "correcta": 0 },
+      { "pregunta": "¿Cuándo se debe intentar apagar un fuego con un extintor?", "opciones": ["Siempre, sin importar su tamaño", "Solo cuando ya llegaron los bomberos", "Cuando hay humo denso, para ganar tiempo", "Solo si es pequeño e incipiente y existe una salida segura"], "correcta": 3 },
+      { "pregunta": "En la técnica P.A.S.S., ¿hacia dónde se dirige la boquilla?", "opciones": ["A la parte más alta de las llamas", "Al humo", "A la base del fuego", "Al techo, para enfriar el ambiente"], "correcta": 2 },
+      { "pregunta": "¿Qué debe hacer si el fuego crece o bloquea la salida?", "opciones": ["Suspender el intento, evacuar y seguir el plan de emergencias", "Buscar un segundo extintor y seguir intentando", "Encerrarse en una oficina", "Abrir las ventanas para que salga el humo"], "correcta": 0 }
+    ],
+    "post": [
+      { "pregunta": "¿Qué ocurre si se elimina o controla uno de los elementos del tetraedro del fuego?", "opciones": ["El fuego se propaga más rápido", "No pasa nada mientras haya calor", "Se puede detener la combustión", "Aumenta la reacción en cadena"], "correcta": 2 },
+      { "pregunta": "Un incendio en un equipo eléctrico energizado es un fuego de clase…", "opciones": ["A", "D", "K", "C"], "correcta": 3 },
+      { "pregunta": "¿Qué significa la primera P de la técnica P.A.S.S.?", "opciones": ["Retirar el pasador o seguro", "Presionar la manija", "Pedir ayuda a los bomberos", "Pasar el extintor a otra persona"], "correcta": 0 },
+      { "pregunta": "¿Cuál de estos puntos se verifica al revisar un extintor?", "opciones": ["Que esté guardado bajo llave en una bodega", "Que el pasador y el sello estén intactos", "Que tenga el manómetro desconectado", "Que esté cubierto para que no se ensucie"], "correcta": 1 },
+      { "pregunta": "¿Cómo debe retirarse de un fuego que no logra controlar?", "opciones": ["Corriendo de espaldas al fuego", "Esperando a que el extintor se descargue por completo", "Sin dar nunca la espalda al fuego y dirigiéndose al punto de encuentro", "Volviendo por sus objetos personales"], "correcta": 2 }
+    ]
+  },
+  "liderazgo-sst": {
+    "pre": [
+      { "pregunta": "¿Cuál es el objetivo de la capacitación de liderazgo en SST?", "opciones": ["Definir quién sanciona a los trabajadores", "Fortalecer conductas de liderazgo que promuevan el autocuidado, el reporte y la participación en el SG-SST", "Reemplazar al responsable del SG-SST", "Aumentar la cantidad de órdenes que da el jefe"], "correcta": 1 },
+      { "pregunta": "¿Dónde se demuestra el liderazgo preventivo?", "opciones": ["Solo en las reuniones con la gerencia", "En los informes anuales", "En las decisiones y conductas cotidianas", "Únicamente durante las auditorías"], "correcta": 2 },
+      { "pregunta": "Según la capacitación, ¿qué necesita un buen líder en SST?", "opciones": ["Orientar, escuchar y generar confianza para prevenir", "Mandar y sancionar con firmeza", "Evitar hablar de los riesgos para no alarmar", "Delegar todo en el área de SST"], "correcta": 0 },
+      { "pregunta": "¿Cuál es la primera de las cinco acciones del liderazgo aplicado al día a día?", "opciones": ["Actuar", "Seguir", "Comunicar", "Observar"], "correcta": 3 },
+      { "pregunta": "¿Qué significa «hacer seguimiento»?", "opciones": ["Archivar los reportes recibidos", "Verificar que los compromisos y las acciones de mejora se cumplan y sean efectivos", "Vigilar a los compañeros para sancionarlos", "Repetir la misma capacitación cada semana"], "correcta": 1 }
+    ],
+    "post": [
+      { "pregunta": "Un colaborador reporta un cable deteriorado en un área de paso. ¿Qué debe hacer un líder?", "opciones": ["Decirle que no es tan grave y seguir trabajando", "Esperar a que alguien se tropiece para reportarlo", "Escuchar, señalizar o controlar el riesgo, reportar al responsable y verificar que la corrección se cierre", "Retirar el cable sin avisar a nadie"], "correcta": 2 },
+      { "pregunta": "¿Cómo se deben recibir los reportes del equipo?", "opciones": ["Sin minimizarlos ni descalificarlos", "Con desconfianza, para evitar falsas alarmas", "Solo si vienen por escrito y firmados", "Dejándolos para el final de la semana"], "correcta": 0 },
+      { "pregunta": "¿Qué significa «actuar a tiempo» en SST?", "opciones": ["Terminar las tareas antes del horario", "Acostumbrarse a los riesgos conocidos", "Esperar la próxima inspección programada", "No normalizar riesgos: informar y activar el procedimiento ante una situación peligrosa"], "correcta": 3 },
+      { "pregunta": "¿Cuál es la fórmula del liderazgo en SST presentada en la capacitación?", "opciones": ["Autoridad + control + sanción", "Ejemplo + comunicación + participación + acción", "Normas + multas + reportes", "Experiencia + jerarquía + disciplina"], "correcta": 1 },
+      { "pregunta": "¿Cuál de estas acciones hace parte del compromiso de un líder o colaborador?", "opciones": ["Reconocer las buenas prácticas del equipo", "Ocultar los incidentes para no afectar los indicadores", "Comunicar los riesgos solo a los jefes", "Usar los elementos de protección solo cuando hay visita"], "correcta": 0 }
+    ]
+  },
+  "brigada-salud": {
+    "pre": [
+      { "pregunta": "¿Cuál es la función principal de la brigada de salud?", "opciones": ["Reemplazar la atención médica profesional", "Apoyar la respuesta inicial y facilitar la atención oportuna", "Diagnosticar enfermedades de los colaboradores", "Formular medicamentos en caso de dolor"], "correcta": 1 },
+      { "pregunta": "¿Cuál es el primer paso de la secuencia básica de actuación?", "opciones": ["Apoyar", "Entregar", "Alertar", "Proteger"], "correcta": 3 },
+      { "pregunta": "¿Qué hace el brigadista antes de intervenir?", "opciones": ["Verifica que el entorno sea seguro y usa las medidas de bioseguridad disponibles", "Mueve de inmediato a la persona a otro lugar", "Espera a que la persona se recupere sola", "Toma fotos del evento para el informe"], "correcta": 0 },
+      { "pregunta": "¿Qué medidas puede brindar un brigadista en el paso «Apoyar»?", "opciones": ["Cualquier procedimiento que haya visto hacer", "Las que le indique un compañero sin entrenamiento", "Únicamente aquellas para las que está capacitado y cuenta con elementos adecuados", "Solo la administración de medicamentos"], "correcta": 2 },
+      { "pregunta": "¿Qué incluye la función «Prevenir» de la brigada?", "opciones": ["Sancionar a quien no se cuide", "Realizar exámenes médicos de ingreso", "Atender solo emergencias graves", "Promover el autocuidado e identificar situaciones que pueden afectar la salud"], "correcta": 3 }
+    ],
+    "post": [
+      { "pregunta": "En el paso «Valorar», ¿qué debe hacer el brigadista?", "opciones": ["Emitir un diagnóstico de la persona afectada", "Observar el estado general y reconocer signos de alarma sin realizar diagnósticos", "Suministrar un analgésico", "Retirarse del lugar"], "correcta": 1 },
+      { "pregunta": "¿Cuál de estas acciones se debe evitar durante la respuesta inicial?", "opciones": ["Activar la ruta interna de atención", "Conservar la calma", "Automedicar a la persona afectada", "Registrar lo sucedido"], "correcta": 2 },
+      { "pregunta": "¿Qué se hace en el paso «Alertar»?", "opciones": ["Informar y activar la ruta interna o el Sistema de Emergencias Médicas según la situación", "Avisar solo al final de la jornada", "Esperar a ver si la situación empeora", "Publicar lo ocurrido en los grupos de chat"], "correcta": 0 },
+      { "pregunta": "¿Cuál de estas es una buena práctica de la brigada de salud?", "opciones": ["Guardar los elementos de la brigada en casa", "Evitar los simulacros para no interrumpir el trabajo", "Atender sin protección para ganar tiempo", "Participar en capacitaciones y simulacros"], "correcta": 3 },
+      { "pregunta": "¿Qué debe hacer el brigadista cuando una situación supera su capacidad de respuesta?", "opciones": ["Intentar resolverla por su cuenta", "Activar la ruta de atención y solicitar apoyo especializado", "Mover a la persona a un lugar más cómodo", "Esperar a que termine el turno"], "correcta": 1 }
+    ]
+  },
+  "exposicion-riesgo-biologico": {
+    "pre": [
+      { "pregunta": "¿Qué es el riesgo biológico?", "opciones": ["La posibilidad de sufrir una caída en el trabajo", "La posibilidad de exposición a microorganismos o material biológico capaz de causar daño a la salud", "El riesgo de contacto con energía eléctrica", "El desgaste por posturas prolongadas"], "correcta": 1 },
+      { "pregunta": "¿Cuál de estas es una forma de exposición a agentes biológicos?", "opciones": ["El ruido de los equipos", "La iluminación deficiente", "Punciones o cortes con agujas o bisturís contaminados", "El trabajo frente al computador"], "correcta": 2 },
+      { "pregunta": "¿Qué se debe hacer con una aguja usada?", "opciones": ["Desecharla de inmediato en el recipiente rígido, sin reencapucharla", "Reencapucharla antes de desecharla", "Dejarla sobre la bandeja para desecharla después", "Echarla en la bolsa de residuos ordinarios"], "correcta": 0 },
+      { "pregunta": "¿Cuándo se debe realizar la higiene de manos en relación con los guantes?", "opciones": ["Nunca, porque los guantes la reemplazan", "Solo al final de la jornada", "Solo antes de ponerse los guantes", "Siempre después de retirar los guantes"], "correcta": 3 },
+      { "pregunta": "¿Qué es lo primero que se debe hacer ante una exposición ocupacional?", "opciones": ["Terminar la tarea y luego revisar", "Detener la actividad y lavar la zona expuesta", "Esperar a ver si aparecen síntomas", "Comentarlo con un compañero al día siguiente"], "correcta": 1 }
+    ],
+    "post": [
+      { "pregunta": "¿De qué depende el nivel de riesgo biológico?", "opciones": ["Del agente, la vía de exposición, la actividad realizada y las medidas de control", "Solo del número de pacientes atendidos", "Únicamente de la antigüedad del trabajador", "Del horario de la jornada"], "correcta": 0 },
+      { "pregunta": "Si hubo una salpicadura en ojos, nariz o boca, ¿qué se debe hacer?", "opciones": ["Frotar la zona con un paño seco", "Aplicar alcohol directamente", "Enjuagar con abundante agua", "No hacer nada si no hay dolor"], "correcta": 2 },
+      { "pregunta": "¿Cómo se elige el elemento de protección personal (EPP)?", "opciones": ["Siempre el mismo para todas las tareas", "Según la tarea y la exposición esperada", "Según la preferencia personal", "Solo cuando lo pide el paciente"], "correcta": 1 },
+      { "pregunta": "¿Qué indica el principio clave de la bioseguridad?", "opciones": ["Las exposiciones pequeñas no necesitan reporte", "La bioseguridad solo aplica en procedimientos quirúrgicos", "Los guantes reemplazan cualquier otra medida", "No asumir que una exposición «es pequeña»: toda situación se maneja con las precauciones definidas"], "correcta": 3 },
+      { "pregunta": "Después de reportar una exposición, ¿qué sigue?", "opciones": ["Volver al trabajo sin más trámite", "Esperar a la próxima capacitación", "Acudir a valoración médica lo antes posible y cumplir el seguimiento indicado", "Automedicarse para prevenir infecciones"], "correcta": 2 }
+    ]
+  },
+  "reporte-accidentes-trabajo": {
+    "pre": [
+      { "pregunta": "¿Cuándo comienza el reporte de un accidente de trabajo?", "opciones": ["Al final de la jornada laboral", "Desde el momento en que ocurre el evento", "Cuando la lesión empeora", "Una semana después del evento"], "correcta": 1 },
+      { "pregunta": "¿Qué es un incidente de trabajo?", "opciones": ["Un evento que siempre produce invalidez", "Una enfermedad de origen común", "Un suceso relacionado con el trabajo en el que pudo ocurrir una lesión o daño, aunque no se materializó", "Una falta disciplinaria del trabajador"], "correcta": 2 },
+      { "pregunta": "¿Cuál es el primer paso de la ruta básica de reporte?", "opciones": ["Atender: brindar primeros auxilios o activar la atención médica", "Investigar las causas", "Buscar al responsable del accidente", "Esperar a que llegue la ARL"], "correcta": 0 },
+      { "pregunta": "¿Qué se debe hacer ante una lesión aparentemente leve?", "opciones": ["No informarla para no generar trámites", "Informarla solo si el compañero lo pide", "Esperar a ver si empeora", "Informarla por la ruta interna para que SST determine el trámite"], "correcta": 3 },
+      { "pregunta": "¿Cuál es el propósito de reportar un accidente?", "opciones": ["Señalar al culpable", "Proteger a las personas y aprender del evento", "Sancionar al área donde ocurrió", "Cumplir un requisito sin consecuencias"], "correcta": 1 }
+    ],
+    "post": [
+      { "pregunta": "¿A quién debe notificar de inmediato el trabajador un accidente?", "opciones": ["A un familiar", "Solo a sus compañeros de turno", "Al jefe, supervisor o responsable de SST", "A nadie, si puede seguir trabajando"], "correcta": 2 },
+      { "pregunta": "Según la Resolución 156 de 2005, ¿en qué plazo el empleador diligencia el informe de accidente?", "opciones": ["Dentro de los dos (2) días hábiles siguientes a la ocurrencia", "Dentro del mes siguiente", "Solo cuando el trabajador lo solicita", "Al cierre del año"], "correcta": 0 },
+      { "pregunta": "¿Ante qué entidades la empresa diligencia el reporte del accidente?", "opciones": ["Ante la alcaldía y la policía", "Ante la ARL y la EPS", "Solo ante el área de talento humano", "Ante el proveedor de EPP"], "correcta": 1 },
+      { "pregunta": "¿Cuál de estas es una buena práctica al reportar un accidente?", "opciones": ["Incluir suposiciones sobre quién tuvo la culpa", "Omitir los testigos para agilizar el trámite", "Limpiar el área antes de registrar las condiciones", "Describir los hechos y la secuencia real del evento"], "correcta": 3 },
+      { "pregunta": "¿Qué información clave debe incluir el reporte?", "opciones": ["Qué ocurrió, cuándo, dónde, actividad realizada, lesión observada, testigos y atención inicial", "Solo el nombre del trabajador", "Únicamente la opinión del jefe inmediato", "El costo estimado del accidente"], "correcta": 0 }
+    ]
+  },
+  "protocolo-bioseguridad": {
+    "pre": [
+      { "pregunta": "¿Cuál es el objetivo del protocolo de bioseguridad?", "opciones": ["Aplicar las precauciones estándar solo con pacientes diagnosticados", "Aplicar las precauciones estándar de forma consistente en toda actividad asistencial", "Reemplazar la higiene de manos por el uso de guantes", "Aplicar medidas únicamente durante las auditorías"], "correcta": 1 },
+      { "pregunta": "Además de los momentos indicados, ¿cuándo debe realizarse siempre la higiene de manos?", "opciones": ["Solo al iniciar la jornada", "Únicamente antes de almorzar", "Después de retirar los guantes", "Solo si los guantes se rompen"], "correcta": 2 },
+      { "pregunta": "¿Qué se debe hacer con una aguja usada?", "opciones": ["Reencapucharla para evitar pinchazos", "Doblarla antes de desecharla", "Dejarla en la bandeja y desecharla al final del turno", "Desecharla de inmediato en un contenedor resistente a punciones"], "correcta": 3 },
+      { "pregunta": "¿Con qué criterio se selecciona el EPP?", "opciones": ["Según la actividad y la exposición esperada", "Según la preferencia personal", "Siempre el mismo para toda tarea", "Solo cuando el paciente lo solicita"], "correcta": 0 },
+      { "pregunta": "¿Qué es lo primero que se debe hacer ante una exposición a material biológico?", "opciones": ["Terminar el procedimiento y luego revisar", "Esperar a ver si aparecen síntomas", "Suspender la actividad y lavar o irrigar la zona expuesta", "Informarlo al final de la semana"], "correcta": 2 }
+    ],
+    "post": [
+      { "pregunta": "¿Con quiénes se aplican las precauciones estándar?", "opciones": ["Solo con pacientes de urgencias", "Con todos los pacientes y en todos los entornos de atención", "Solo con pacientes con infección confirmada", "Únicamente en procedimientos quirúrgicos"], "correcta": 1 },
+      { "pregunta": "¿Qué incluye la higiene respiratoria?", "opciones": ["Cubrir boca y nariz al toser o estornudar y aplicar control de fuente cuando corresponda", "Usar siempre doble guante", "Ventilar el área solo al final del día", "Evitar el lavado de manos después de toser"], "correcta": 0 },
+      { "pregunta": "¿Qué se debe hacer ANTES de la atención?", "opciones": ["Retirar el EPP", "Procesar equipos y superficies", "Desechar los residuos", "Evaluar el riesgo, preparar insumos y verificar el EPP requerido"], "correcta": 3 },
+      { "pregunta": "Ante un derrame, ¿qué indica el protocolo?", "opciones": ["Secarlo rápidamente con papel y seguir trabajando", "Aislar el área y aplicar el procedimiento institucional de limpieza y desinfección", "Esperar a que se seque solo", "Cubrirlo con una sábana hasta el día siguiente"], "correcta": 1 },
+      { "pregunta": "Después de reportar una exposición, ¿cuál es el siguiente paso?", "opciones": ["Volver a la actividad sin más trámite", "Automedicarse", "Acudir a valoración médica o de urgencias lo antes posible", "Esperar a que el jefe decida si fue grave"], "correcta": 2 }
+    ]
+  },
+  "conformacion-brigadistas": {
+    "pre": [
+      { "pregunta": "¿A qué debe responder la conformación de la brigada?", "opciones": ["A la antigüedad de los trabajadores", "A las amenazas, el nivel de riesgo, los turnos y los recursos disponibles", "Solo al número de empleados de la oficina principal", "A la preferencia del jefe de cada área"], "correcta": 1 },
+      { "pregunta": "¿Qué actitud se espera de una persona que quiere ser brigadista?", "opciones": ["Compromiso, actitud de servicio, responsabilidad y voluntad para entrenar", "Disponibilidad solo cuando haya una emergencia real", "Experiencia previa como bombero profesional", "Interés únicamente en recibir la dotación"], "correcta": 0 },
+      { "pregunta": "¿Cuál es el primer paso del proceso básico de conformación?", "opciones": ["Entregar la dotación", "Realizar el simulacro", "Analizar amenazas, vulnerabilidad, áreas, turnos y recursos", "Firmar el compromiso del brigadista"], "correcta": 2 },
+      { "pregunta": "¿Cuál de estos es un rol frecuente de respuesta de la brigada?", "opciones": ["Auditoría contable", "Mantenimiento de software", "Atención de quejas de usuarios", "Control inicial de incendios"], "correcta": 3 },
+      { "pregunta": "¿Qué significa que la brigada tenga cobertura?", "opciones": ["Que todos los brigadistas trabajen en la misma área", "Que haya brigadistas presentes en las áreas y turnos relevantes", "Que la brigada tenga un seguro especial", "Que solo exista brigada en el turno de la mañana"], "correcta": 1 }
+    ],
+    "post": [
+      { "pregunta": "Según la capacitación, ¿basta con nombrar brigadistas?", "opciones": ["Sí, el nombramiento es suficiente", "Sí, si se publica el listado en cartelera", "No: la brigada debe estar conformada, capacitada, entrenada y dotada", "No, porque la brigada la conforma solo la ARL"], "correcta": 2 },
+      { "pregunta": "¿Qué se hace en el paso «Dotar y probar»?", "opciones": ["Entregar los elementos requeridos y verificar la respuesta con ejercicios y simulacros", "Convocar a los trabajadores disponibles", "Revisar las amenazas del plan de emergencias", "Retirar a los brigadistas sin experiencia"], "correcta": 0 },
+      { "pregunta": "¿Cuándo se debe actualizar el listado de la brigada?", "opciones": ["Solo una vez cada cinco años", "Nunca, una vez conformada no cambia", "Únicamente después de una emergencia real", "Cuando haya cambios de personal o de turnos"], "correcta": 3 },
+      { "pregunta": "¿Qué debe conocer un brigadista sobre su lugar de trabajo?", "opciones": ["Solo la ubicación de la cafetería", "Rutas de evacuación, puntos de encuentro, equipos de emergencia y mecanismos de comunicación", "Los horarios de todos los proveedores", "Únicamente el número de su jefe inmediato"], "correcta": 1 },
+      { "pregunta": "¿Qué beneficio principal tiene una brigada preparada?", "opciones": ["Reduce la improvisación durante las emergencias", "Elimina la necesidad del plan de emergencias", "Reemplaza a los servicios de emergencia externos", "Evita tener que hacer simulacros"], "correcta": 0 }
+    ]
+  },
+  "atencion-pacientes": {
+    "pre": [
+      { "pregunta": "¿Cuáles son las cuatro claves de la atención a pacientes?", "opciones": ["Rapidez, volumen, costo y horario", "Respeto, comunicación, seguridad y confidencialidad", "Diagnóstico, tratamiento, facturación y alta", "Puntualidad, uniforme, orden y silencio"], "correcta": 1 },
+      { "pregunta": "¿Qué conducta hace parte del trato digno?", "opciones": ["Interrumpir al paciente para ahorrar tiempo", "Decidir por el paciente sin consultarle", "Saludar, identificarse y escuchar sin interrumpir", "Comentar sus creencias con otros pacientes"], "correcta": 2 },
+      { "pregunta": "¿Qué busca la seguridad del paciente?", "opciones": ["Reducir riesgos durante la atención y establecer barreras que prevengan eventos adversos", "Disminuir el número de pacientes atendidos", "Evitar que el paciente haga preguntas", "Reemplazar la historia clínica"], "correcta": 0 },
+      { "pregunta": "¿Cuándo se debe confirmar la identidad del paciente?", "opciones": ["Solo cuando el paciente ingresa por primera vez", "Únicamente si el paciente lo solicita", "Al final de la jornada", "Antes de procedimientos, entrega de información o medicamentos"], "correcta": 3 },
+      { "pregunta": "¿Qué combina una atención de calidad?", "opciones": ["Rapidez con el menor contacto posible", "Competencia técnica con respeto, escucha y comunicación", "Lenguaje técnico con explicaciones breves", "Equipos modernos sin necesidad de comunicación"], "correcta": 1 }
+    ],
+    "post": [
+      { "pregunta": "¿Qué hacer ante una duda durante la atención?", "opciones": ["Continuar y revisar después", "Preguntar al paciente qué prefiere y seguir", "Detener, verificar y escalar", "Ignorarla si el procedimiento es rutinario"], "correcta": 2 },
+      { "pregunta": "¿Qué implica una comunicación clara con el paciente?", "opciones": ["Usar términos técnicos para dar precisión", "Explicar con lenguaje sencillo y verificar que comprendió", "Entregar la información solo por escrito", "Hablar únicamente con el acompañante"], "correcta": 1 },
+      { "pregunta": "¿Qué se revisa en el paso «Verificar»?", "opciones": ["La orden, el procedimiento, las alergias, las restricciones y las condiciones relevantes", "Solo el nombre del médico tratante", "El estado del pago del servicio", "Únicamente la hora de la cita"], "correcta": 0 },
+      { "pregunta": "¿Qué significa atención humanizada?", "opciones": ["Atender según el orden de llegada sin excepciones", "Centrarse solo en el diagnóstico", "Limitar el tiempo de escucha", "Reconocer a la persona, no solo el diagnóstico, con empatía y cuidado de su intimidad"], "correcta": 3 },
+      { "pregunta": "¿Para qué se reportan los incidentes, eventos adversos o riesgos detectados?", "opciones": ["Para sancionar al paciente", "Para activar acciones de mejora", "Para cerrar el caso sin seguimiento", "Para evitar comunicar al equipo"], "correcta": 1 }
+    ]
+  },
+  "capacitacion-brigadistas": {
+    "pre": [
+      { "pregunta": "¿Qué debe hacer un brigadista antes de intervenir en una emergencia?", "opciones": ["Intervenir de inmediato sin importar el riesgo", "Proteger su propia seguridad", "Esperar a que termine la emergencia", "Buscar a su jefe para pedir permiso por escrito"], "correcta": 1 },
+      { "pregunta": "¿Cuál es el primer paso de la secuencia básica de actuación?", "opciones": ["Coordinar", "Actuar", "Alertar", "Proteger"], "correcta": 3 },
+      { "pregunta": "¿Qué actividad corresponde al brigadista en la etapa de prevención y preparación?", "opciones": ["Reconocer rutas, salidas, equipos y puntos de encuentro", "Guiar la evacuación durante el evento", "Verificar personas y novedades después del evento", "Entregar información al apoyo externo"], "correcta": 0 },
+      { "pregunta": "¿Cómo debe guiarse la evacuación?", "opciones": ["Corriendo para salir lo más rápido posible", "Gritando para que todos se enteren", "Sin correr ni generar pánico", "Dejando que cada persona elija su ruta"], "correcta": 2 },
+      { "pregunta": "¿Cuál es la prioridad ante una emergencia según la regla clave?", "opciones": ["Proteger los equipos y documentos", "La vida y la coordinación segura", "Terminar las tareas pendientes", "Controlar el evento sin ayuda"], "correcta": 1 }
+    ],
+    "post": [
+      { "pregunta": "¿Qué información se debe comunicar al dar la alerta?", "opciones": ["Solo el nombre de quien reporta", "La hora y el clima", "Qué sucede, dónde ocurre y qué apoyo se requiere", "El número de personas en la sede"], "correcta": 2 },
+      { "pregunta": "¿Hasta dónde debe apoyar un brigadista durante la emergencia?", "opciones": ["Solo dentro de su nivel de formación", "Hasta donde le alcancen las fuerzas", "En cualquier tarea que se presente", "Únicamente si lo autoriza un paciente"], "correcta": 0 },
+      { "pregunta": "¿Cuál es el orden correcto del ciclo de mejora de la brigada?", "opciones": ["Practicar, mejorar, capacitar y evaluar", "Evaluar, capacitar, mejorar y practicar", "Mejorar, evaluar, practicar y capacitar", "Capacitar, practicar, evaluar y mejorar"], "correcta": 3 },
+      { "pregunta": "¿Qué hace el brigadista después del evento?", "opciones": ["Se retira sin informar novedades", "Verifica personas y novedades y apoya el reporte", "Archiva el plan de emergencias", "Espera al próximo simulacro sin participar en la evaluación"], "correcta": 1 },
+      { "pregunta": "¿Qué se evalúa en un simulacro según el ciclo de mejora?", "opciones": ["La ropa de los participantes", "La cantidad de documentos firmados", "Tiempos, fallas y coordinación", "El número de extintores comprados"], "correcta": 2 }
+    ]
+  },
+  "codigo-etica": {
+    "pre": [
+      { "pregunta": "¿Cuáles son los cinco principios del Código de Ética?", "opciones": ["Rapidez, obediencia, silencio, puntualidad y productividad", "Integridad, respeto, confidencialidad, responsabilidad y transparencia", "Lealtad, discreción, eficiencia, orden y disciplina", "Calidad, costo, oportunidad, cobertura y volumen"], "correcta": 1 },
+      { "pregunta": "¿Qué significa actuar con integridad?", "opciones": ["Actuar con honestidad y coherencia, incluso cuando nadie está observando", "Cumplir solo las tareas que supervisa el jefe", "Ocultar los errores para no afectar la imagen del área", "Hacer lo que la mayoría del equipo hace"], "correcta": 0 },
+      { "pregunta": "¿Qué es un conflicto de interés?", "opciones": ["Una discusión entre compañeros de trabajo", "Un desacuerdo con un paciente por la atención", "Una situación personal o comercial que puede afectar la objetividad de una decisión", "Una diferencia de opinión sobre un procedimiento"], "correcta": 2 },
+      { "pregunta": "¿Cómo se debe compartir la información de los pacientes?", "opciones": ["Por el chat personal, si es urgente", "Con cualquier compañero que pregunte", "Con familiares que llamen por teléfono", "Solo por canales autorizados y con quien la necesita para su función"], "correcta": 3 },
+      { "pregunta": "¿Qué recomienda el código ante la duda sobre si una conducta es ética?", "opciones": ["Actuar rápido y revisar después", "Consultar antes de actuar", "Decidir según la costumbre del área", "No hacer nada y esperar"], "correcta": 1 }
+    ],
+    "post": [
+      { "pregunta": "Rotuló una muestra con los datos de otro paciente y ya fue enviada. ¿Qué debe hacer?", "opciones": ["Esperar a ver si alguien lo nota", "Corregir el rótulo en el registro sin avisar", "Reportarlo de inmediato al jefe o responsable para corregirlo", "Tomar una nueva muestra sin informar"], "correcta": 2 },
+      { "pregunta": "¿Cómo se debe actuar ante un conflicto de interés?", "opciones": ["Informarlo oportunamente y abstenerse de participar en la decisión", "Mantenerlo en reserva para no generar sospechas", "Decidir rápido antes de que alguien lo note", "Pedir a un compañero que firme la decisión"], "correcta": 0 },
+      { "pregunta": "¿Cuál de estas preguntas hace parte del test para decidir correctamente?", "opciones": ["¿Me conviene personalmente?", "¿Alguien se va a enterar?", "¿Lo hace todo el mundo?", "¿Podría explicar esta decisión con transparencia?"], "correcta": 3 },
+      { "pregunta": "¿Cómo deben comunicarse las conductas contrarias a los principios éticos?", "opciones": ["Comentándolas en los grupos de chat del área", "De buena fe y por los canales definidos", "De forma anónima en redes sociales", "Solo si afectan directamente a quien reporta"], "correcta": 1 },
+      { "pregunta": "¿Cuál es una forma correcta de proteger la confidencialidad en la IPS?", "opciones": ["Comentar los casos solo en la sala de espera", "Compartir la contraseña con compañeros de confianza", "Bloquear la pantalla del computador al alejarse", "Enviar resultados por chat personal para ahorrar tiempo"], "correcta": 2 }
+    ]
+  },
+  "higiene-postural": {
+    "pre": [
+      { "pregunta": "¿Qué es la higiene postural?", "opciones": ["Mantener limpio el puesto de trabajo", "Adoptar posiciones y movimientos adecuados en las actividades diarias", "Hacer ejercicio intenso una vez por semana", "Usar ropa cómoda durante la jornada"], "correcta": 1 },
+      { "pregunta": "¿Dónde debe ubicarse la pantalla del computador?", "opciones": ["A un lado del escritorio para dejar espacio libre", "Por debajo del nivel del escritorio", "Frente a usted, aproximadamente a la altura de los ojos", "Lo más lejos posible, al fondo del escritorio"], "correcta": 2 },
+      { "pregunta": "Al levantar un objeto del piso, ¿qué se debe hacer?", "opciones": ["Flexionar rodillas y caderas y mantener la espalda en posición neutral", "Doblar la espalda con las piernas rectas", "Levantarlo rápido para terminar pronto", "Sostenerlo con los brazos extendidos, lejos del cuerpo"], "correcta": 0 },
+      { "pregunta": "¿Cuál es la recomendación sobre la postura sentada durante la jornada?", "opciones": ["Mantener una única postura perfecta todo el día", "Cruzar las piernas para mayor comodidad", "Sentarse en el borde de la silla", "Ajustar el puesto y cambiar de posición con frecuencia"], "correcta": 3 },
+      { "pregunta": "¿Cuál de estas tareas de una IPS implica riesgo postural?", "opciones": ["Ninguna, porque es trabajo de oficina", "Solo las del almacén", "Registrar historias clínicas, tomar muestras y mover cajas o canecas", "Solo las que se hacen de noche"], "correcta": 2 }
+    ],
+    "post": [
+      { "pregunta": "Para cambiar de dirección mientras carga un objeto, usted debe:", "opciones": ["Girar la cintura manteniendo los pies fijos", "Mover los pies y no retorcer la cintura", "Inclinar el tronco hacia adelante", "Soltar la carga y recogerla de nuevo"], "correcta": 1 },
+      { "pregunta": "¿Qué hacer si una carga pesa demasiado?", "opciones": ["Levantarla de un solo tirón", "Arrastrarla con la espalda doblada", "Esperar a que otra persona la mueva sin avisar", "Pedir ayuda o usar una ayuda mecánica como un carro"], "correcta": 3 },
+      { "pregunta": "¿Cómo deben quedar el teclado y el mouse?", "opciones": ["Cerca del cuerpo, con las muñecas rectas", "Al fondo del escritorio, con los brazos estirados", "Por encima del nivel de los hombros", "En distintas alturas para variar"], "correcta": 0 },
+      { "pregunta": "Al tomar una muestra debe inclinarse mucho porque la silla del paciente está baja. ¿Qué es lo correcto?", "opciones": ["Continuar así porque el procedimiento es corto", "Pedir al paciente que se ponga de pie", "Ajustar la altura de la silla o camilla y acercarse al paciente", "Tomar la muestra estirando los brazos desde lejos"], "correcta": 2 },
+      { "pregunta": "Siente un dolor fuerte en la espalda al levantar una caneca en el trabajo. ¿Qué debe hacer?", "opciones": ["Seguir trabajando y tomar un analgésico", "Esperar a ver si pasa en unas semanas", "Contárselo solo a un compañero", "Suspender la tarea, informar al jefe y al responsable del SG-SST y buscar valoración médica"], "correcta": 3 }
+    ]
+  },
+  "lavado-manos": {
+    "pre": [
+      { "pregunta": "¿Cuántos momentos para la higiene de manos propone la OMS?", "opciones": ["3", "5", "7", "10"], "correcta": 1 },
+      { "pregunta": "¿Cuándo se debe preferir el lavado con agua y jabón en lugar de la preparación alcohólica?", "opciones": ["Cuando las manos están visiblemente sucias o contaminadas", "Siempre antes de tocar a un paciente", "Solo al terminar la jornada", "Nunca, el gel siempre es mejor"], "correcta": 0 },
+      { "pregunta": "¿El uso de guantes reemplaza la higiene de manos?", "opciones": ["Sí, si los guantes son estériles", "Sí, si se cambian cada hora", "Solo en la toma de muestras", "No, la higiene de manos se realiza en los momentos indicados aunque se usen guantes"], "correcta": 3 },
+      { "pregunta": "¿Cuánto debe durar la fricción con preparación alcohólica?", "opciones": ["5 a 10 segundos", "Más de 2 minutos", "20 a 30 segundos", "Lo que tarde en aplicarse el producto"], "correcta": 2 },
+      { "pregunta": "¿Cuál de estas zonas suele olvidarse durante la higiene de manos?", "opciones": ["Las puntas de los dedos y las uñas", "La parte central de la palma", "El antebrazo hasta el codo", "Ninguna, siempre se frota todo"], "correcta": 0 }
+    ],
+    "post": [
+      { "pregunta": "Acomodó la camilla del consultorio pero no tocó al paciente. ¿Debe higienizar sus manos?", "opciones": ["No, porque no tocó al paciente", "Sí, tocar el entorno del paciente es el momento 5", "Solo si la camilla se ve sucia", "Solo si va a usar guantes"], "correcta": 1 },
+      { "pregunta": "¿Cuánto debe durar el lavado de manos con agua y jabón?", "opciones": ["10 segundos", "20 segundos", "5 minutos", "40 a 60 segundos"], "correcta": 3 },
+      { "pregunta": "Antes de ponerse los guantes después de la higiene de manos, ¿qué debe verificar?", "opciones": ["Que las manos estén todavía húmedas para que deslicen", "Que el gel no se haya secado", "Que las manos estén completamente secas", "Nada, puede ponérselos de inmediato"], "correcta": 2 },
+      { "pregunta": "Después de higienizarse para canalizar una vena, contesta su celular. ¿Qué debe hacer?", "opciones": ["Repetir la higiene de manos antes del procedimiento", "Continuar, porque ya se había higienizado", "Ponerse guantes sin higienizarse de nuevo", "Limpiar solo la punta de los dedos con algodón"], "correcta": 0 },
+      { "pregunta": "¿Cuál es la forma correcta de terminar la fricción con preparación alcohólica?", "opciones": ["Secar las manos con una toalla de papel", "Enjuagar con agua", "Sacudir las manos para que se evapore", "Seguir frotando hasta que las manos estén completamente secas"], "correcta": 3 }
+    ]
+  },
+  "reglamento-interno": {
+    "pre": [
+      { "pregunta": "¿Qué es el Reglamento Interno de Trabajo?", "opciones": ["Un manual técnico de los equipos de la IPS", "El conjunto de normas que define las condiciones que deben observar el empleador y los trabajadores durante la prestación del servicio", "Un documento opcional que solo aplica al personal administrativo", "La lista de precios de los servicios de la IPS"], "correcta": 1 },
+      { "pregunta": "¿Qué relación tiene el Reglamento Interno con la ley laboral?", "opciones": ["La reemplaza dentro de la empresa", "Puede desmejorar los derechos mínimos si el trabajador lo firma", "Debe ser compatible con las normas laborales vigentes y no las reemplaza", "No tiene ninguna relación con la ley"], "correcta": 2 },
+      { "pregunta": "¿Cuáles son los cuatro compromisos del colaborador frente al Reglamento?", "opciones": ["Conocer, cumplir, comunicar y participar", "Leer, firmar, archivar y olvidar", "Vigilar, sancionar, denunciar y despedir", "Aprender, enseñar, evaluar y auditar"], "correcta": 0 },
+      { "pregunta": "¿Cuántos días hábiles de vacaciones remuneradas corresponden por cada año de servicio según el Código Sustantivo del Trabajo?", "opciones": ["5 días hábiles", "10 días hábiles", "30 días calendario", "15 días hábiles"], "correcta": 3 },
+      { "pregunta": "¿Cuál de estos temas forma parte del Reglamento Interno?", "opciones": ["Las recetas médicas de los pacientes", "Jornada y horarios, permisos, orden y seguridad y régimen disciplinario", "Los resultados de laboratorio", "Las tarifas de los proveedores"], "correcta": 1 }
+    ],
+    "post": [
+      { "pregunta": "Un compañero le pide que marque su entrada porque llegará unos minutos tarde. ¿Qué debe hacer?", "opciones": ["Marcar por él para ayudarlo", "Marcar solo si es la primera vez", "No hacerlo: cada persona registra su propia asistencia", "Pedirle a otro compañero que lo haga"], "correcta": 2 },
+      { "pregunta": "Antes de imponer una sanción disciplinaria, ¿qué garantía debe respetarse?", "opciones": ["Escuchar al trabajador en descargos y permitirle conocer los cargos y las pruebas", "Ninguna, el jefe decide directamente", "Publicar la falta en la cartelera", "Descontar el día de salario de inmediato"], "correcta": 0 },
+      { "pregunta": "¿Cuál de estas sanciones está prohibida por la ley?", "opciones": ["Un llamado de atención escrito", "Una suspensión prevista en el Reglamento", "Una amonestación verbal", "Una medida que atente contra la dignidad del trabajador"], "correcta": 3 },
+      { "pregunta": "¿Qué ley ordenó actualizar el Reglamento Interno de Trabajo conforme a sus parámetros?", "opciones": ["Ley 100 de 1993", "Ley 2466 de 2025", "Ley 1010 de 2006", "Ley 1581 de 2012"], "correcta": 1 },
+      { "pregunta": "Amaneció enfermo y la EPS le dio incapacidad. ¿Qué es lo correcto?", "opciones": ["Avisar de inmediato al jefe y entregar la incapacidad en el plazo del Reglamento", "Esperar a regresar para contarlo", "Pedirle a un compañero que cubra el turno sin informar", "No avisar, porque la incapacidad ya lo justifica"], "correcta": 0 }
+    ]
+  },
+  "pgirasa": {
+    "pre": [
+      { "pregunta": "¿Qué es el PGIRASA?", "opciones": ["Un formato para registrar la asistencia del personal", "El plan que describe cómo la IPS maneja sus residuos desde que se generan hasta su disposición final", "Un programa exclusivo para el reciclaje de papel", "El reglamento de uso de los uniformes"], "correcta": 1 },
+      { "pregunta": "¿En qué recipiente se depositan los guantes y gasas contaminados con sangre?", "opciones": ["Caneca negra", "Caneca blanca", "Caneca verde", "Caneca roja de riesgo biológico"], "correcta": 3 },
+      { "pregunta": "¿Hasta qué nivel se debe llenar un guardián de cortopunzantes?", "opciones": ["Hasta 3/4 partes de su capacidad", "Hasta el borde", "Hasta la mitad", "Hasta que no entre más"], "correcta": 0 },
+      { "pregunta": "Según la Resolución 2184 de 2019, ¿qué color corresponde a los residuos aprovechables como papel limpio y plástico?", "opciones": ["Negro", "Rojo", "Blanco", "Verde"], "correcta": 2 },
+      { "pregunta": "¿A quién se pueden entregar los residuos peligrosos de la IPS?", "opciones": ["Al reciclador que pase por la calle", "A cualquier empresa de aseo", "Al personal de mensajería", "Solo a gestores externos autorizados por la autoridad ambiental"], "correcta": 3 }
+    ],
+    "post": [
+      { "pregunta": "¿Cuál es la primera etapa del ciclo de gestión de residuos dentro de la IPS?", "opciones": ["El almacenamiento central", "La segregación en la fuente", "La entrega al gestor externo", "La incineración"], "correcta": 1 },
+      { "pregunta": "¿Qué se debe hacer con una aguja después de usarla?", "opciones": ["Reencapucharla con cuidado antes de botarla", "Dejarla en la bandeja y desecharla al final de la jornada", "Depositarla de inmediato en el guardián, sin reencapuchar", "Botarla en la bolsa roja"], "correcta": 2 },
+      { "pregunta": "¿Qué documento entrega el gestor externo como respaldo del tratamiento de los residuos peligrosos?", "opciones": ["Un certificado final de tratamiento, junto con el manifiesto de transporte", "Una factura de compra de bolsas", "El acta de inducción del personal", "Ninguno, no es necesario"], "correcta": 0 },
+      { "pregunta": "Se rompe un tubo con sangre en la toma de muestras. ¿Qué es lo correcto?", "opciones": ["Secarlo con papel y botarlo en la caneca negra", "Esperar a que el personal de aseo lo vea", "Lavarlo con agua y enviarlo al desagüe", "Aislar el área, ponerse los EPP, usar el kit de derrames y desinfectar con hipoclorito"], "correcta": 3 },
+      { "pregunta": "¿Cuál de estas es una característica del cuarto de almacenamiento central?", "opciones": ["Acceso libre para pacientes y visitantes", "Residuos peligrosos y ordinarios mezclados para ahorrar espacio", "Pisos lavables, ventilación, señalización y acceso restringido", "Ubicado junto al área de alimentos"], "correcta": 2 }
+    ]
+  },
+  "uso-epp": {
+    "pre": [
+      { "pregunta": "¿Por qué se dice que el EPP es la última barrera de protección?", "opciones": ["Porque es el control más efectivo de todos", "Porque complementa la eliminación del peligro y los controles de ingeniería y administrativos, sin reemplazarlos", "Porque solo se usa en emergencias", "Porque lo debe comprar cada trabajador"], "correcta": 1 },
+      { "pregunta": "¿Con qué criterio se selecciona el EPP?", "opciones": ["Según el color que prefiera el trabajador", "Según lo que haya disponible en el momento", "Según el peligro, la tarea y el nivel de exposición", "Solo según el cargo de la persona"], "correcta": 2 },
+      { "pregunta": "¿Usar guantes reemplaza la higiene de manos?", "opciones": ["No: se debe hacer higiene de manos antes de ponerse y después de quitarse los guantes", "Sí, si los guantes son de nitrilo", "Sí, siempre que no estén rotos", "Solo la reemplaza en consulta externa"], "correcta": 0 },
+      { "pregunta": "¿Cuál es el último paso al retirarse el EPP?", "opciones": ["Quitarse los guantes", "Quitarse la bata", "Quitarse las gafas", "Realizar higiene de manos"], "correcta": 3 },
+      { "pregunta": "¿Cuándo se protege la cara con gafas de seguridad o careta?", "opciones": ["Solo cuando el paciente lo pide", "Cuando existe riesgo de salpicaduras o proyecciones", "Únicamente en la sala de espera", "Nunca en una IPS de consulta externa"], "correcta": 1 }
+    ],
+    "post": [
+      { "pregunta": "En la secuencia de colocación del EPP, ¿qué elemento se pone de último?", "opciones": ["La bata", "La mascarilla", "Los guantes, por encima del puño de la bata", "Las gafas"], "correcta": 2 },
+      { "pregunta": "Durante una toma de muestra se rompe el guante. ¿Qué es lo correcto?", "opciones": ["Seguir trabajando para no demorar al paciente", "Ponerse otro guante encima del roto", "Cubrir la rotura con esparadrapo", "Retirar los guantes, hacer higiene de manos, revisar si hubo contacto con sangre y ponerse guantes nuevos"], "correcta": 3 },
+      { "pregunta": "¿Dónde se desecha el EPP desechable contaminado con fluidos?", "opciones": ["En la bolsa roja de riesgo biológico", "En la caneca negra de residuos ordinarios", "En la caneca blanca de aprovechables", "En cualquier caneca disponible"], "correcta": 0 },
+      { "pregunta": "¿Cuál de estas es una responsabilidad del colaborador frente al EPP?", "opciones": ["Modificar el EPP para que sea más cómodo", "Usarlo de forma correcta y permanente, cuidarlo y reportar daños o faltantes", "Comprar su propio EPP", "Decidir si lo usa según su experiencia"], "correcta": 1 },
+      { "pregunta": "¿Cuál de estas prácticas con la mascarilla es un error?", "opciones": ["Cambiarla cuando está húmeda", "Ajustar la banda nasal al colocarla", "Retirarla por las tiras sin tocar el frente", "Bajarla al mentón mientras se habla con un paciente"], "correcta": 3 }
+    ]
+  },
+};

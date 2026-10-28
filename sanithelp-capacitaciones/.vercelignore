@@ -1,0 +1,10 @@
+node_modules
+client/node_modules
+client/dist
+.env*
+.agents
+.claude
+skills-lock.json
+server
+CAPACITACIONES
+scripts

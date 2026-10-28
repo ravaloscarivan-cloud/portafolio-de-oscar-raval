@@ -1,0 +1,9 @@
+node_modules/
+client/dist/
+client/public/capacitaciones/
+.env*
+.vercel
+
+.vercel
+.env*
+scripts/.trabajo/

@@ -1,0 +1,214 @@
+{
+  "archivos": {
+    "Capacitacion Identificacion Peligros Riesgos.pptx": {
+      "estado": "creada",
+      "id": "identificacion-peligros",
+      "manual": true,
+      "tamano": 777063
+    },
+    "Capacitacion Prevencion Investigacion Incidentes Accidentes.pptx": {
+      "estado": "creada",
+      "id": "investigacion-incidentes",
+      "manual": true,
+      "tamano": 250160
+    },
+    "Capacitacion_Vigia_SST_SanitHelp.pptx": {
+      "estado": "creada",
+      "id": "vigia-sst",
+      "manual": true,
+      "tamano": 767490
+    },
+    "Estilos de Vida Saludables.pptx": {
+      "estado": "creada",
+      "id": "estilos-vida-saludables",
+      "manual": true,
+      "tamano": 1228697
+    },
+    "Fundamentos SG SST Estandares Minimos.pptx": {
+      "estado": "creada",
+      "id": "fundamentos-sg-sst",
+      "manual": true,
+      "tamano": 169929
+    },
+    "Inspecciones Seguridad Reporte Condiciones.pptx": {
+      "estado": "creada",
+      "id": "inspecciones-seguridad",
+      "manual": true,
+      "tamano": 1345738
+    },
+    "MANEJO INTEGRADO DE PLAGAS.pptx": {
+      "estado": "creada",
+      "id": "manejo-integrado-plagas",
+      "manual": true,
+      "tamano": 15381466
+    },
+    "Plan Emergencias Simulacros.pptx": {
+      "estado": "creada",
+      "id": "plan-emergencias",
+      "manual": true,
+      "tamano": 1227007
+    },
+    "Presentación PAUEEE SANITHELP.pptx": {
+      "estado": "creada",
+      "id": "ahorro-energia",
+      "manual": true,
+      "tamano": 147169
+    },
+    "Presentación PG-AR-001 PAUEA SANITHELP.pptx": {
+      "estado": "creada",
+      "id": "ahorro-agua",
+      "manual": true,
+      "tamano": 310688
+    },
+    "Programa Huella de Carbono PG-AR-003 V1 SanitHelp.pptx": {
+      "estado": "creada",
+      "id": "huella-carbono",
+      "manual": true,
+      "tamano": 181536
+    },
+    "Riesgo Biologico Bioseguridad Residuos.pptx": {
+      "estado": "creada",
+      "id": "riesgo-biologico",
+      "manual": true,
+      "tamano": 1347887
+    },
+    "Planeacion Estructuracion SG-SST.pptx": {
+      "estado": "creada",
+      "id": "planeacion-sg-sst",
+      "titulo": "Planeación y estructuración del SG-SST",
+      "diapositivas": 10,
+      "procesado": "2026-10-27T15:37:52.599Z",
+      "tamano": 521026
+    },
+    "Teoria Del Fuego Manejo Extintores.pptx": {
+      "estado": "creada",
+      "id": "teoria-fuego-extintores",
+      "titulo": "Teoría del fuego y manejo de extintores",
+      "diapositivas": 12,
+      "procesado": "2026-10-27T15:40:07.329Z",
+      "tamano": 542706
+    },
+    "Habilidades Liderazgo SST.pptx": {
+      "estado": "creada",
+      "id": "liderazgo-sst",
+      "titulo": "Habilidades de liderazgo en SST",
+      "diapositivas": 10,
+      "procesado": "2026-10-27T15:42:26.865Z",
+      "tamano": 214218
+    },
+    "Brigada de Salud.pptx": {
+      "estado": "creada",
+      "id": "brigada-salud",
+      "titulo": "Brigada de salud",
+      "diapositivas": 8,
+      "procesado": "2026-10-27T15:46:00.718Z",
+      "tamano": 214836
+    },
+    "Capacitacion Riesgo Biologico.pptx": {
+      "estado": "creada",
+      "id": "exposicion-riesgo-biologico",
+      "titulo": "Riesgo biológico: prevención de la exposición y actuación ante accidentes",
+      "diapositivas": 9,
+      "procesado": "2026-10-27T15:47:53.425Z",
+      "tamano": 218256
+    },
+    "Reporte Accidentes Trabajo.pptx": {
+      "estado": "creada",
+      "id": "reporte-accidentes-trabajo",
+      "titulo": "Reporte de accidentes de trabajo",
+      "diapositivas": 11,
+      "procesado": "2026-10-27T15:50:01.114Z",
+      "tamano": 210838
+    },
+    "Protocolo Bioseguridad.pptx": {
+      "estado": "creada",
+      "id": "protocolo-bioseguridad",
+      "titulo": "Protocolo de bioseguridad",
+      "diapositivas": 10,
+      "procesado": "2026-10-27T15:52:49.539Z",
+      "tamano": 217953
+    },
+    "Conformacion de Brigadistas.pptx": {
+      "estado": "creada",
+      "id": "conformacion-brigadistas",
+      "titulo": "Conformación de brigadistas",
+      "diapositivas": 9,
+      "procesado": "2026-10-27T15:57:33.093Z",
+      "tamano": 215431
+    },
+    "Atencion_a_Pacientes_SanitHelp.pptx": {
+      "estado": "creada",
+      "id": "atencion-pacientes",
+      "titulo": "Atención a pacientes",
+      "diapositivas": 10,
+      "procesado": "2026-10-27T16:44:18.009Z",
+      "tamano": 513343
+    },
+    "Capacitacion de Brigadistas.pptx": {
+      "estado": "creada",
+      "id": "capacitacion-brigadistas",
+      "titulo": "Capacitación de brigadistas",
+      "diapositivas": 11,
+      "procesado": "2026-10-27T16:47:26.798Z",
+      "tamano": 511833
+    },
+    "Codigo de Etica.pptx": {
+      "estado": "creada",
+      "id": "codigo-etica",
+      "titulo": "Código de Ética",
+      "diapositivas": 14,
+      "procesado": "2026-10-27T16:52:15.232Z",
+      "tamano": 512691
+    },
+    "Higiene Postural.pptx": {
+      "estado": "creada",
+      "id": "higiene-postural",
+      "titulo": "Higiene postural",
+      "diapositivas": 15,
+      "procesado": "2026-10-27T16:56:25.169Z",
+      "tamano": 177778
+    },
+    "Lavado de Manos.pptx": {
+      "estado": "creada",
+      "id": "lavado-manos",
+      "titulo": "Lavado de manos",
+      "diapositivas": 15,
+      "procesado": "2026-10-27T16:59:13.498Z",
+      "tamano": 523704
+    },
+    "Reglamento Interno.pptx": {
+      "estado": "creada",
+      "id": "reglamento-interno",
+      "titulo": "Reglamento Interno de Trabajo",
+      "diapositivas": 15,
+      "procesado": "2026-10-27T17:03:25.545Z",
+      "tamano": 517907
+    },
+    "PGIRASA- P.pdf": {
+      "estado": "creada",
+      "id": "pgirasa",
+      "titulo": "Plan de Gestión Integral de Residuos Generados en la Atención en Salud (PGIRASA)",
+      "diapositivas": 16,
+      "procesado": "2026-10-27T18:29:38.410Z",
+      "tamano": 584702
+    },
+    "Uso de EPP.pptx": {
+      "estado": "creada",
+      "id": "uso-epp",
+      "titulo": "Uso de EPP",
+      "diapositivas": 15,
+      "tamano": 526325,
+      "procesado": "2026-10-28T13:32:09.658Z"
+    },
+    "Pausas Activas.pptx": {
+      "estado": "creada",
+      "id": "pausas-activas",
+      "titulo": "Pausas activas",
+      "diapositivas": 14,
+      "tamano": 521208,
+      "procesado": "2026-10-28T14:19:35.079Z"
+    }
+  },
+  "pendientePublicar": false,
+  "faltantes": {}
+}
