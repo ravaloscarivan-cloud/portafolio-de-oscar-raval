@@ -1,0 +1,20 @@
+{
+  "name": "postulaciones-sst-movid",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22 <25"
+  },
+  "scripts": {
+    "test": "node --test",
+    "dev": "npx vercel dev"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.3",
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "pg": "^8.23.1"
+  }
+}
