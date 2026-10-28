@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Acceso · Importador DSers</title>
+  <style>
+    :root { --bg:#0e0e0e; --card:#181818; --borde:#2c2c2c; --texto:#e4e4e4; --muted:#8c8c8c; --gris:#2a2a2a; --gris-claro:#d0d0d0; }
+    * { box-sizing:border-box; transition:none !important; animation:none !important; }
+    html, body { height:100%; }
+    body { margin:0; display:flex; flex-direction:column; font-family:Inter, system-ui, 'Segoe UI', sans-serif;
+      background:var(--bg); color:var(--texto); -webkit-font-smoothing:antialiased; }
+    svg { fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0; }
+    [hidden] { display:none !important; }
+
+    .barra-top { display:flex; align-items:center; gap:10px; padding:18px 28px; border-bottom:1px solid var(--borde); }
+    .marca { display:grid; place-items:center; width:30px; height:30px; border-radius:7px; background:var(--gris-claro); color:#111; }
+    .barra-top b { font-size:15px; letter-spacing:.2px; }
+    .barra-top span { color:var(--muted); font-size:13px; margin-left:auto; display:flex; align-items:center; gap:6px; }
+
+    .centro { flex:1; display:grid; place-items:center; padding:24px 16px; }
+    .card { width:100%; max-width:400px; background:var(--card); border:1px solid var(--borde); border-radius:14px; overflow:hidden; }
+    .card-cuerpo { padding:36px 32px 28px; }
+    .icono { display:grid; place-items:center; width:48px; height:48px; border-radius:12px; background:var(--gris); border:1px solid #3a3a3a; margin-bottom:22px; }
+    .etiqueta { font-size:12px; font-weight:600; letter-spacing:1.2px; text-transform:uppercase; color:var(--muted); margin:0 0 8px; }
+    h1 { margin:0 0 8px; font-size:24px; font-weight:700; letter-spacing:-.3px; }
+    .desc { margin:0 0 28px; color:var(--muted); font-size:14px; line-height:1.55; }
+
+    label { display:block; font-size:13px; font-weight:600; margin-bottom:10px; }
+    .digitos { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:14px; }
+    .digitos input { width:100%; height:64px; text-align:center; font:inherit; font-size:26px; font-weight:700;
+      background:#111; color:var(--texto); border:1px solid #3a3a3a; border-radius:10px; outline:none; caret-color:var(--gris-claro); }
+    .digitos input:focus { border-color:var(--gris-claro); box-shadow:0 0 0 3px rgba(208,208,208,.12); }
+    .digitos.error input { border-color:#6a6a6a; }
+
+    .estado { display:flex; align-items:center; gap:8px; min-height:20px; font-size:13px; color:var(--muted); margin-bottom:18px; }
+    .estado:empty { visibility:hidden; }
+
+    button { width:100%; display:flex; align-items:center; justify-content:center; gap:8px; height:48px;
+      border:1px solid var(--gris-claro); border-radius:10px; background:var(--gris-claro); color:#111;
+      font:inherit; font-size:15px; font-weight:700; cursor:pointer; }
+    button.sec { background:var(--gris); color:var(--texto); border-color:#3a3a3a; }
+    button:hover, button:active { filter:none; transform:none; }
+    button:disabled { opacity:.4; cursor:not-allowed; }
+    button.enlace { height:auto; width:auto; margin:14px auto 0; padding:0; background:none; border:0; color:var(--muted);
+      font-size:13px; font-weight:500; text-decoration:underline; text-underline-offset:3px; }
+
+    .campo { width:100%; height:48px; padding:0 14px; margin-bottom:16px; font:inherit; font-size:15px;
+      background:#111; color:var(--texto); border:1px solid #3a3a3a; border-radius:10px; outline:none; }
+    .campo:focus { border-color:var(--gris-claro); box-shadow:0 0 0 3px rgba(208,208,208,.12); }
+
+    .separador { display:flex; align-items:center; gap:12px; margin:20px 0; color:#5c5c5c; font-size:12px; text-transform:uppercase; letter-spacing:1px; }
+    .separador::before, .separador::after { content:''; flex:1; height:1px; background:var(--borde); }
+
+
+    .card-pie { display:flex; align-items:center; gap:10px; padding:16px 32px; background:#141414; border-top:1px solid var(--borde);
+      color:var(--muted); font-size:12.5px; line-height:1.45; }
+
+    .espera-barra { position:relative; height:4px; margin:0 0 18px; border-radius:2px; background:var(--gris); overflow:hidden; }
+    .espera-barra div { position:absolute; inset:0; width:35%; background:var(--gris-claro); border-radius:2px;
+      animation:espera 1.4s ease-in-out infinite !important; }
+    @keyframes espera { 0% { transform:translateX(-100%); } 100% { transform:translateX(290%); } }
+    @media (prefers-reduced-motion:reduce) { .espera-barra div { animation:none !important; width:100%; opacity:.4; } }
+
+    .sugerir { position:relative; }
+    .sugerir .campo { margin-bottom:6px; }
+    .sugerencias { position:absolute; z-index:5; top:52px; left:0; right:0; margin:0; padding:4px; list-style:none;
+      background:#141414; border:1px solid #3a3a3a; border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,.5); }
+    .sugerencias li { display:flex; align-items:center; gap:8px; padding:10px 12px; border-radius:7px; cursor:pointer; font-size:15px; }
+    .sugerencias li:hover, .sugerencias li.activa { background:var(--gris); }
+    .sugerencias small { margin-left:auto; color:var(--muted); font-size:12px; }
+    .ayuda.aviso { color:var(--texto); font-weight:600; }
+    .ayuda { margin:0 0 16px; color:var(--muted); font-size:12.5px; line-height:1.45; }
+
+    footer { text-align:center; padding:18px; color:#5c5c5c; font-size:12px; }
+    @media (max-width:420px) { .card-cuerpo { padding:28px 20px 22px; } .card-pie { padding:14px 20px; } .digitos input { height:56px; } }
+  </style>
+</head>
+<body>
+  <div class="barra-top">
+    <div class="marca">
+      <svg width="16" height="16" viewBox="0 0 24 24"><path d="M10 12h11"/><path d="M10 18h11"/><path d="M10 6h11"/><path d="M4 10h2"/><path d="M4 6h1v4"/><path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+    </div>
+    <b>Importador DSers</b>
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+      Área privada
+    </span>
+  </div>
+
+  <div class="centro">
+    <main class="card">
+      <!-- Vista: código -->
+      <div class="card-cuerpo" id="vistaClave">
+        <div class="icono">
+          <svg width="22" height="22" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="etiqueta" id="etiqueta">Acceso restringido</p>
+        <h1 id="titulo">Verifica tu identidad</h1>
+        <p class="desc" id="desc">Introduce el código de acceso de 4 dígitos para continuar al panel de importación.</p>
+
+        <form id="form" autocomplete="off">
+          <label for="d0">Código de acceso</label>
+          <div class="digitos" id="digitos">
+            <input id="d0" inputmode="numeric" maxlength="1" type="password" aria-label="Dígito 1">
+            <input inputmode="numeric" maxlength="1" type="password" aria-label="Dígito 2">
+            <input inputmode="numeric" maxlength="1" type="password" aria-label="Dígito 3">
+            <input inputmode="numeric" maxlength="1" type="password" aria-label="Dígito 4">
+          </div>
+          <div class="estado" id="estado" role="status"></div>
+          <button id="btn" type="submit" disabled>
+            <span id="btnTexto">Ingresar</span>
+            <svg width="17" height="17" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </form>
+
+        <div class="separador">o</div>
+        <button class="sec" id="btnInvitado" type="button">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Entrar como invitado</span>
+        </button>
+      </div>
+
+      <!-- Vista: invitado -->
+      <div class="card-cuerpo" id="vistaInvitado" hidden>
+        <div class="icono">
+          <svg width="22" height="22" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <p class="etiqueta" id="invEtiqueta">Acceso de invitado</p>
+        <h1 id="invTitulo">Entrar como invitado</h1>
+        <p class="desc">Entra con tu usuario y tu PIN. La primera vez en este dispositivo, elige un usuario nuevo y crea tu PIN: queda guardado aquí. El administrador debe darte permiso para entrar.</p>
+        <form id="formInvitado" autocomplete="off">
+          <label for="usuarioInvitado">Usuario</label>
+          <div class="sugerir">
+            <input class="campo" id="usuarioInvitado" maxlength="31" placeholder="@tu_usuario" autocapitalize="none" spellcheck="false"
+              role="combobox" aria-autocomplete="list" aria-controls="sugerencias" aria-expanded="false">
+            <ul class="sugerencias" id="sugerencias" role="listbox" hidden></ul>
+          </div>
+          <p class="ayuda" id="ayudaUsuario">Empieza por @. Letras, números, punto o guion bajo.</p>
+          <div id="bloquePin">
+            <label for="pinInvitado" id="etiquetaPin">PIN</label>
+            <input class="campo" id="pinInvitado" type="password" inputmode="numeric" maxlength="6" placeholder="4 a 6 números" autocomplete="off">
+          </div>
+          <div id="bloqueConfirmar" hidden>
+            <label for="pinConfirmar">Repite tu PIN</label>
+            <input class="campo" id="pinConfirmar" type="password" inputmode="numeric" maxlength="6" placeholder="Repite el PIN" autocomplete="off">
+          </div>
+          <div class="estado" id="estadoInvitado" role="status"></div>
+          <button id="btnEntrarInvitado" type="submit" disabled>
+            <span id="btnInvitadoTexto">Entrar</span>
+            <svg width="17" height="17" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </form>
+        <button class="enlace" id="btnVolverClave" type="button">Volver al acceso con código</button>
+      </div>
+
+      <!-- Vista: invitado esperando el permiso del admin -->
+      <div class="card-cuerpo" id="vistaEspera" hidden>
+        <div class="icono">
+          <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <p class="etiqueta">Esperando permiso</p>
+        <h1>Hola, <span id="esperaNombre"></span></h1>
+        <p class="desc">Le avisamos al administrador. En cuanto te dé permiso entrarás automáticamente; no cierres esta página.</p>
+        <div class="espera-barra"><div></div></div>
+        <div class="estado" id="estadoEspera" role="status"></div>
+        <button class="sec" id="btnCancelarEspera" type="button">Cancelar solicitud</button>
+      </div>
+
+      <div class="card-pie">
+        <svg width="16" height="16" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        <span id="pie">Por seguridad, el acceso se pide cada vez que se abre o recarga la página, y también al compartir el enlace.</span>
+      </div>
+    </main>
+  </div>
+
+  <footer>Importador DSers · Acceso protegido</footer>
+
+<script type="module">
+  const $ = (id) => document.getElementById(id);
+  const inputs = [...document.querySelectorAll('#digitos input')];
+  const ICONO_ALERTA = '<svg width="15" height="15" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>';
+  let enviando = false;
+
+  const codigo = () => inputs.map((i) => i.value).join('');
+
+  function mostrar(el, msg, alerta) {
+    el.innerHTML = msg ? (alerta ? ICONO_ALERTA : '') + `<span>${msg}</span>` : '';
+  }
+  const mostrarClave = (msg, alerta) => { mostrar($('estado'), msg, alerta); $('digitos').classList.toggle('error', !!alerta); };
+
+  async function api(ruta, cuerpo) {
+    const r = await fetch(ruta, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(cuerpo),
+      credentials: 'same-origin',
+    });
+    return { ok: r.ok, datos: await r.json().catch(() => ({})) };
+  }
+
+  // ---------- Código ----------
+  function limpiarCodigo() {
+    inputs.forEach((i) => { i.disabled = false; i.value = ''; });
+    $('btn').disabled = true;
+    inputs[0].focus();
+  }
+
+  async function enviarCodigo() {
+    if (enviando || codigo().length !== 4) return;
+    enviando = true;
+    $('btn').disabled = true;
+    inputs.forEach((i) => (i.disabled = true));
+    mostrarClave('Verificando…');
+    try {
+      const { ok, datos } = await api('/api/login', { clave: codigo() });
+      if (ok) { location.replace('/'); return; }
+      mostrarClave(datos.error || 'Código incorrecto.', true);
+    } catch {
+      mostrarClave('Sin conexión. Intenta de nuevo.', true);
+    }
+    limpiarCodigo();
+    enviando = false;
+  }
+
+  inputs.forEach((input, i) => {
+    input.addEventListener('input', () => {
+      input.value = input.value.replace(/\D/g, '').slice(-1);
+      if (input.value && i < 3) inputs[i + 1].focus();
+      $('btn').disabled = codigo().length !== 4;
+      if ($('estado').textContent) mostrarClave('');
+      if (codigo().length === 4) enviarCodigo();
+    });
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Backspace' && !input.value && i > 0) inputs[i - 1].focus();
+      if (e.key === 'ArrowLeft' && i > 0) inputs[i - 1].focus();
+      if (e.key === 'ArrowRight' && i < 3) inputs[i + 1].focus();
+    });
+    input.addEventListener('paste', (e) => {
+      e.preventDefault();
+      const txt = (e.clipboardData.getData('text') || '').replace(/\D/g, '').slice(0, 4);
+      txt.split('').forEach((c, j) => (inputs[j].value = c));
+      inputs[Math.min(txt.length, 3)].focus();
+      $('btn').disabled = codigo().length !== 4;
+      if (txt.length === 4) enviarCodigo();
+    });
+  });
+  $('form').addEventListener('submit', (e) => { e.preventDefault(); enviarCodigo(); });
+
+  // ---------- Invitado: @usuario + PIN ----------
+  // El usuario siempre empieza por @ y es por dispositivo: el que se crea aquí queda guardado y se escribe solo.
+  // - Usuario guardado en este dispositivo → su PIN.
+  // - Usuario libre → crear el PIN (y repetirlo).
+  // - Usuario que ya existe pero no es de este dispositivo → «ya existe» (con link de invitación sí puede entrar).
+  // Los usuarios que entraron desde este dispositivo se sugieren al tocar el campo.
+  const CLAVE_RECIENTES = 'prh_usuarios_recientes';
+  const PATRON_USUARIO = /^@[a-z0-9._]{2,30}$/;
+  let modoUsuario = ''; // '' (sin revisar) | 'existe' | 'nuevo' | 'tomado'
+  let revisarTimer = 0;
+  let marcada = -1;
+
+  const recientes = () => { try { return JSON.parse(localStorage.getItem(CLAVE_RECIENTES) || '[]'); } catch { return []; } };
+  function recordarUsuario(u) {
+    try { localStorage.setItem(CLAVE_RECIENTES, JSON.stringify([u, ...recientes().filter((x) => x !== u)].slice(0, 6))); } catch {}
+  }
+  const sugeridos = () => recientes().filter((u) => u.startsWith($('usuarioInvitado').value) && u !== $('usuarioInvitado').value);
+
+  function pintarSugerencias() {
+    const lista = $('usuarioInvitado').readOnly ? [] : sugeridos();
+    const ul = $('sugerencias');
+    ul.innerHTML = '';
+    marcada = -1;
+    for (const u of lista) {
+      const li = document.createElement('li');
+      li.setAttribute('role', 'option');
+      li.textContent = u;
+      li.addEventListener('pointerdown', (e) => { e.preventDefault(); elegirSugerencia(u); });
+      ul.appendChild(li);
+    }
+    ul.hidden = lista.length === 0;
+    $('usuarioInvitado').setAttribute('aria-expanded', String(!ul.hidden));
+  }
+  const cerrarSugerencias = () => { $('sugerencias').hidden = true; $('usuarioInvitado').setAttribute('aria-expanded', 'false'); };
+  function elegirSugerencia(u) {
+    $('usuarioInvitado').value = u;
+    cerrarSugerencias();
+    cambioUsuario();
+    $('pinInvitado').focus();
+  }
+
+  function ponerModo(modo) {
+    modoUsuario = modo;
+    const nuevo = modo === 'nuevo';
+    const tomado = modo === 'tomado';
+    $('bloquePin').hidden = tomado;
+    $('bloqueConfirmar').hidden = !nuevo;
+    $('etiquetaPin').textContent = nuevo ? 'Crea tu PIN (lo usarás siempre)' : modo === 'existe' ? 'Tu PIN' : 'PIN';
+    $('btnInvitadoTexto').textContent = nuevo ? 'Crear y entrar' : 'Entrar';
+    const ayuda = $('ayudaUsuario');
+    ayuda.classList.toggle('aviso', tomado);
+    ayuda.textContent = tomado ? `✗ El usuario ${$('usuarioInvitado').value} ya existe. Elige otro.`
+      : nuevo ? '✓ Usuario nuevo: crea un PIN de 4 a 6 números y no lo olvides.'
+        : modo === 'existe' ? 'Tu usuario de este dispositivo: escribe tu PIN.'
+          : 'Empieza por @. Letras, números, punto o guion bajo.';
+    if (!nuevo) $('pinConfirmar').value = '';
+    actualizarBoton();
+  }
+
+  // Siempre con @ al inicio, en minúsculas y solo caracteres válidos.
+  function limpiarUsuario() {
+    const campo = $('usuarioInvitado');
+    const limpio = '@' + campo.value.toLowerCase().replace(/[^a-z0-9._]/g, '').slice(0, 30);
+    if (campo.value !== limpio) campo.value = limpio;
+  }
+
+  function cambioUsuario() {
+    clearTimeout(revisarTimer);
+    ponerModo('');
+    const u = $('usuarioInvitado').value;
+    if (!PATRON_USUARIO.test(u)) return;
+    revisarTimer = setTimeout(async () => {
+      try {
+        const { ok, datos } = await api('/api/invitado', { accion: 'existe', usuario: u });
+        if (!ok || $('usuarioInvitado').value !== u) return;
+        const deAqui = recientes().includes(u) || $('usuarioInvitado').readOnly;
+        ponerModo(!datos.existe ? 'nuevo' : deAqui ? 'existe' : 'tomado');
+      } catch {}
+    }, 350);
+  }
+
+  const pinValido = (v) => /^\d{4,6}$/.test(v);
+  function listoInvitado() {
+    if (!pinValido($('pinInvitado').value)) return false;
+    if (modoUsuario === 'existe') return true;
+    return modoUsuario === 'nuevo' && $('pinConfirmar').value.length >= 4;
+  }
+  function actualizarBoton() { $('btnEntrarInvitado').disabled = !listoInvitado(); }
+
+  $('btnInvitado').addEventListener('click', () => {
+    $('vistaClave').hidden = true;
+    $('vistaInvitado').hidden = false;
+    // El usuario de este dispositivo ya queda escrito: solo falta el PIN.
+    const guardado = recientes()[0];
+    if (guardado && !$('usuarioInvitado').value) {
+      $('usuarioInvitado').value = guardado;
+      cambioUsuario();
+      $('pinInvitado').focus();
+    } else $('usuarioInvitado').focus();
+  });
+  $('btnVolverClave').addEventListener('click', () => {
+    $('vistaInvitado').hidden = true;
+    $('vistaClave').hidden = false;
+    inputs[0].focus();
+  });
+
+  const campoUsuario = $('usuarioInvitado');
+  campoUsuario.addEventListener('focus', () => { if (!campoUsuario.value) campoUsuario.value = '@'; pintarSugerencias(); });
+  campoUsuario.addEventListener('click', pintarSugerencias);
+  campoUsuario.addEventListener('blur', () => setTimeout(cerrarSugerencias, 120));
+  campoUsuario.addEventListener('input', () => {
+    limpiarUsuario();
+    pintarSugerencias();
+    cambioUsuario();
+    if ($('estadoInvitado').textContent) mostrar($('estadoInvitado'), '');
+  });
+  campoUsuario.addEventListener('keydown', (e) => {
+    // La @ inicial no se puede borrar.
+    const alInicio = campoUsuario.selectionStart <= 1 && campoUsuario.selectionEnd <= 1;
+    if (e.key === 'Backspace' && alInicio) e.preventDefault();
+    const items = [...$('sugerencias').children];
+    if ($('sugerencias').hidden || !items.length) return;
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      marcada = (marcada + (e.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length;
+      items.forEach((li, i) => li.classList.toggle('activa', i === marcada));
+    } else if (e.key === 'Enter' && marcada >= 0) {
+      e.preventDefault();
+      elegirSugerencia(sugeridos()[marcada]);
+    } else if (e.key === 'Escape') cerrarSugerencias();
+  });
+  for (const campo of ['pinInvitado', 'pinConfirmar']) {
+    $(campo).addEventListener('input', () => {
+      $(campo).value = $(campo).value.replace(/\D/g, '').slice(0, 6);
+      actualizarBoton();
+      if ($('estadoInvitado').textContent) mostrar($('estadoInvitado'), '');
+    });
+  }
+
+  $('formInvitado').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (enviando || !listoInvitado()) return;
+    const usuario = $('usuarioInvitado').value;
+    const crear = modoUsuario === 'nuevo';
+    if (crear && $('pinInvitado').value !== $('pinConfirmar').value) {
+      mostrar($('estadoInvitado'), 'Los PIN no coinciden.', true);
+      $('pinConfirmar').value = '';
+      $('pinConfirmar').focus();
+      actualizarBoton();
+      return;
+    }
+    enviando = true;
+    $('btnEntrarInvitado').disabled = true;
+    mostrar($('estadoInvitado'), crear ? 'Creando tu cuenta…' : 'Verificando…');
+    try {
+      const { ok, datos } = await api('/api/invitado', { usuario, pin: $('pinInvitado').value, crear, inv: invitacion });
+      if (ok && datos.ok) { recordarUsuario(usuario); mostrar($('estadoInvitado'), 'Entrando…'); location.replace('/'); return; }
+      if (ok && datos.pendiente) { recordarUsuario(usuario); esperarPermiso(datos.espera); return; }
+      if (datos.nuevo) ponerModo('nuevo');
+      if (datos.existe) ponerModo(recientes().includes(usuario) ? 'existe' : 'tomado');
+      mostrar($('estadoInvitado'), datos.error || 'No se pudo entrar.', true);
+    } catch {
+      mostrar($('estadoInvitado'), 'Sin conexión. Intenta de nuevo.', true);
+    }
+    $('pinInvitado').value = '';
+    $('pinConfirmar').value = '';
+    actualizarBoton();
+    enviando = false;
+  });
+
+  // ---------- Esperando el permiso del admin ----------
+  // Se consulta cada 2 s; al aceptar, el servidor entrega las cookies y se abre la app.
+  let espera = null;
+  let temporizadorEspera = 0;
+  function esperarPermiso(pase) {
+    espera = pase;
+    $('esperaNombre').textContent = $('usuarioInvitado').value;
+    mostrar($('estadoEspera'), '');
+    $('vistaInvitado').hidden = true;
+    $('vistaEspera').hidden = false;
+    consultarPermiso();
+  }
+  function terminarEspera(mensaje) {
+    clearTimeout(temporizadorEspera);
+    espera = null;
+    $('vistaEspera').hidden = true;
+    $('vistaInvitado').hidden = false;
+    $('pinInvitado').value = '';
+    $('pinConfirmar').value = '';
+    $('btnEntrarInvitado').disabled = true;
+    mostrar($('estadoInvitado'), mensaje, true);
+    enviando = false;
+  }
+  async function consultarPermiso() {
+    if (!espera) return;
+    try {
+      const { ok, datos } = await api('/api/invitado', { espera });
+      if (!espera) return;
+      if (ok && datos.ok) { espera = null; mostrar($('estadoEspera'), 'Permiso concedido. Entrando…'); location.replace('/'); return; }
+      if (!ok) { terminarEspera(datos.error || 'No se pudo entrar.'); return; }
+      mostrar($('estadoEspera'), '');
+    } catch {
+      mostrar($('estadoEspera'), 'Sin conexión. Reintentando…', true);
+    }
+    temporizadorEspera = setTimeout(consultarPermiso, 2000);
+  }
+  $('btnCancelarEspera').addEventListener('click', () => {
+    const pase = espera;
+    terminarEspera('Cancelaste la solicitud.');
+    if (pase) api('/api/invitado', { espera: pase, cancelar: true }).catch(() => {});
+  });
+  window.addEventListener('pagehide', () => {
+    if (espera) navigator.sendBeacon?.('/api/invitado', new Blob([JSON.stringify({ espera, cancelar: true })], { type: 'application/json' }));
+  });
+
+  // Si el admin sacó al invitado, la app lo trae aquí con el motivo.
+  const MOTIVOS = {
+    sacado: 'El administrador cerró tu sesión. Para volver, pide acceso de nuevo.',
+    bloqueado: 'El administrador bloqueó tu acceso.',
+    vencida: 'Tu sesión venció. Ingresa de nuevo.',
+    borrado: 'El administrador borró tu usuario. Puedes registrarte de nuevo con un PIN nuevo.',
+  };
+  const motivo = new URLSearchParams(location.search).get('motivo');
+  if (MOTIVOS[motivo]) {
+    history.replaceState(null, '', location.pathname);
+    $('vistaClave').hidden = true;
+    $('vistaInvitado').hidden = false;
+    mostrar($('estadoInvitado'), MOTIVOS[motivo], true);
+  }
+
+  // Link de invitación del admin (?inv=…): entra directo con su usuario y PIN, sin esperar permiso.
+  let invitacion = null;
+  const inv = new URLSearchParams(location.search).get('inv');
+  if (inv) {
+    $('vistaClave').hidden = true;
+    $('vistaInvitado').hidden = false;
+    $('invEtiqueta').textContent = 'Invitación';
+    $('invTitulo').textContent = 'Te invitaron a colaborar';
+    mostrar($('estadoInvitado'), 'Revisando la invitación…');
+    api('/api/invitado', { accion: 'invitacion', inv }).then(({ datos }) => {
+      if (datos.valida) {
+        invitacion = inv;
+        if (PATRON_USUARIO.test(datos.usuario || '')) {
+          // La invitación es para ese @usuario: queda escrito y fijo, solo falta su PIN.
+          $('usuarioInvitado').value = datos.usuario;
+          $('usuarioInvitado').readOnly = true;
+          cerrarSugerencias();
+          cambioUsuario();
+          $('invTitulo').textContent = `Hola, ${datos.usuario}`;
+          mostrar($('estadoInvitado'), 'Te invitaron a colaborar. Escribe tu PIN (si es tu primera vez, créalo).');
+          $('pinInvitado').focus();
+        } else {
+          mostrar($('estadoInvitado'), 'Entra con tu usuario y PIN (si es tu primera vez, créalo).');
+        }
+      } else {
+        $('invTitulo').textContent = 'Entrar como invitado';
+        mostrar($('estadoInvitado'), 'La invitación venció o fue anulada. Pide una nueva o solicita permiso para entrar.', true);
+      }
+    }).catch(() => mostrar($('estadoInvitado'), 'Sin conexión. Recarga la página.', true));
+  }
+
+  // Limpia una sesión anterior de versiones previas.
+  try { sessionStorage.removeItem('dsers_token'); localStorage.removeItem('dsers_rostro'); } catch {}
+  inputs[0].focus();
+</script>
+</body>
+</html>

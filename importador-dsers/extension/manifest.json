@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "DSers Importador",
+  "version": "2.2.0",
+  "description": "Importa links de AliExpress a DSers uno por uno, en una pestaña de tu Chrome, sin usar mouse ni teclado.",
+  "permissions": [
+    "tabs",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.dsers.com/*",
+    "https://*.dsers.com/*",
+    "http://localhost:3000/*",
+    "https://dsers-importador.vercel.app/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost:3000/*",
+        "https://dsers-importador.vercel.app/*"
+      ],
+      "js": [
+        "puente.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://*.dsers.com/*"
+      ],
+      "js": [
+        "dsers-login.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

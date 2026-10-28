@@ -1,0 +1,5 @@
+2026/10/05-10:54:05.075 5cc0 Creating DB C:\app_import_productos\chrome-profile\Default\Local Storage\leveldb since it was missing.
+2026/10/05-10:54:05.109 5cc0 Reusing MANIFEST C:\app_import_productos\chrome-profile\Default\Local Storage\leveldb/MANIFEST-000001
+2026/10/05-10:59:41.675 13d8 Level-0 table #5: started
+2026/10/05-10:59:41.685 13d8 Level-0 table #5: 15490 bytes OK
+2026/10/05-10:59:41.689 13d8 Delete type=0 #3

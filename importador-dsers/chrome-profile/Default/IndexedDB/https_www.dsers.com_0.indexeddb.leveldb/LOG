@@ -1,0 +1,13 @@
+2026/10/05-10:59:50.578 3480 Reusing MANIFEST C:\app_import_productos\chrome-profile\Default\IndexedDB\https_www.dsers.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/10/05-10:59:50.579 3480 Recovering log #7
+2026/10/05-10:59:50.581 3480 Reusing old log C:\app_import_productos\chrome-profile\Default\IndexedDB\https_www.dsers.com_0.indexeddb.leveldb/000007.log 
+2026/10/05-10:59:50.833 5ecc Level-0 table #11: started
+2026/10/05-10:59:50.839 5ecc Level-0 table #11: 644 bytes OK
+2026/10/05-10:59:50.843 5ecc Delete type=0 #7
+2026/10/05-10:59:50.845 624c Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at '\x00\x04\x00\x00\x05' @ 97 : 1
+2026/10/05-10:59:50.845 624c Compacting 1@0 + 1@1 files
+2026/10/05-10:59:50.849 624c Generated table #12@0: 38 keys, 1191 bytes
+2026/10/05-10:59:50.849 624c Compacted 1@0 + 1@1 files => 1191 bytes
+2026/10/05-10:59:50.851 624c compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/10/05-10:59:50.852 624c Delete type=2 #11
+2026/10/05-10:59:50.853 624c Manual compaction at level-0 from '\x00\x04\x00\x00\x05' @ 97 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)

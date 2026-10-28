@@ -1,0 +1,24 @@
+{
+  "name": "app_import_productos",
+  "version": "1.0.0",
+  "description": "Importa productos de AliExpress a DSers desde un archivo .txt",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.2.0",
+    "@vercel/functions": "^3.9.11",
+    "express": "^4.21.2",
+    "lucide-react": "^1.52.0",
+    "playwright-core": "^1.49.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.2",
+    "vite": "^8.3.2"
+  },
+  "type": "module"
+}

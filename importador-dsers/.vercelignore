@@ -1,0 +1,8 @@
+# Datos locales: nunca subir (chrome-profile guarda la sesión de Chrome).
+chrome-profile
+node_modules
+dist
+server.js
+public
+links_ejemplo.txt
+iniciar.bat

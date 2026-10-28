@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Importador DSers</title>
+  <style>
+    :root { --bg:#f0f1f5; --card:#fff; --text:#1d1d1f; --muted:#6b6b76; --accent:#f44d1f; --dark:#1d1d1f; --border:#d9dbe1; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, Segoe UI, sans-serif; background:var(--bg); color:var(--text); }
+    header { background:#fff; border-bottom:1px solid var(--border); padding:16px 32px; font-size:26px; font-weight:800; }
+    main { max-width: 900px; margin: 32px auto; padding: 0 16px; }
+    .card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:24px; margin-bottom:20px; }
+    h2 { margin:0 0 6px; font-size:20px; }
+    p.sub { margin:0 0 18px; color:var(--muted); }
+    .fila { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    input[type=file] { flex:1; min-width:220px; padding:10px; border:1px solid var(--border); border-radius:6px; background:#fafafa; }
+    button { border:0; border-radius:6px; padding:11px 20px; font-weight:700; cursor:pointer; background:var(--dark); color:#fff; }
+    button.sec { background:#fff; color:var(--dark); border:1px solid var(--border); }
+    button:disabled { opacity:.5; cursor:not-allowed; }
+    ol { margin:12px 0 0; padding-left:22px; max-height:220px; overflow:auto; word-break:break-all; font-size:14px; }
+    ol li.hecho { color:#1a8f3c; }
+    ol li.activo { color:var(--accent); font-weight:700; }
+    .barra { height:10px; background:#e6e7ec; border-radius:6px; overflow:hidden; margin:12px 0; }
+    .barra > div { height:100%; width:0; background:var(--accent); transition:width .3s; }
+    pre { background:#16161a; color:#d6f5d6; padding:14px; border-radius:8px; max-height:260px; overflow:auto; font-size:13px; white-space:pre-wrap; margin:0; }
+    .vacio { color:var(--muted); font-size:14px; margin-top:10px; }
+  </style>
+</head>
+<body>
+  <header>DSers · Importador</header>
+  <main>
+    <section class="card">
+      <h2>1. Carga tu archivo .txt</h2>
+      <p class="sub">Un link de AliExpress por línea (mínimo 2).</p>
+      <div class="fila">
+        <input type="file" id="archivo" accept=".txt,text/plain">
+        <button class="sec" id="btnAbrir">Abrir DSers / iniciar sesión</button>
+      </div>
+      <div id="listaInfo" class="vacio">Aún no has cargado ningún archivo.</div>
+      <ol id="lista"></ol>
+    </section>
+
+    <section class="card">
+      <h2>2. Importar</h2>
+      <p class="sub">Se abrirá DSers, pegará cada link, pulsará OK y esperará 5 segundos antes del siguiente.</p>
+      <button id="btnImportar" disabled>Importar a DSers</button>
+      <div class="barra"><div id="progreso"></div></div>
+      <pre id="log">Esperando...</pre>
+    </section>
+  </main>
+
+<script>
+  const $ = (id) => document.getElementById(id);
+  let links = [];
+  let timer = null;
+
+  $('archivo').addEventListener('change', async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const texto = await file.text();
+    // Acepta links separados por saltos de línea, espacios o comas
+    links = texto.split(/[\s,;]+/).map(s => s.trim()).filter(s => /^https?:\/\/\S*aliexpress\.\S+/i.test(s));
+    pintarLista(0);
+    if (links.length < 2) {
+      $('listaInfo').textContent = `Se encontraron ${links.length} link(s) de AliExpress. El archivo debe tener 2 o más.`;
+      $('btnImportar').disabled = true;
+    } else {
+      $('listaInfo').textContent = `Se encontraron ${links.length} links de AliExpress.`;
+      $('btnImportar').disabled = false;
+    }
+  });
+
+  function pintarLista(actual, corriendo) {
+    $('lista').innerHTML = links.map((l, i) => {
+      const n = i + 1;
+      const cls = n < actual || (!corriendo && actual >= n && actual > 0) ? 'hecho' : (n === actual && corriendo ? 'activo' : '');
+      return `<li class="${cls}">${l.replace(/</g,'&lt;')}</li>`;
+    }).join('');
+  }
+
+  $('btnAbrir').addEventListener('click', async () => {
+    const r = await fetch('/api/abrir-dsers', { method: 'POST' });
+    if (!r.ok) alert((await r.json()).error);
+  });
+
+  $('btnImportar').addEventListener('click', async () => {
+    $('btnImportar').disabled = true;
+    const r = await fetch('/api/importar', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ links }),
+    });
+    const data = await r.json();
+    if (!r.ok) { alert(data.error); $('btnImportar').disabled = false; return; }
+    clearInterval(timer);
+    timer = setInterval(consultarEstado, 1000);
+    consultarEstado();
+  });
+
+  async function consultarEstado() {
+    const e = await (await fetch('/api/estado')).json();
+    $('log').textContent = e.log.join('\n') || 'Iniciando...';
+    $('log').scrollTop = $('log').scrollHeight;
+    const pct = e.total ? Math.round(((e.corriendo ? e.actual - 1 : e.actual) / e.total) * 100) : 0;
+    $('progreso').style.width = pct + '%';
+    pintarLista(e.actual, e.corriendo);
+    if (!e.corriendo) { clearInterval(timer); $('btnImportar').disabled = links.length < 2; }
+  }
+</script>
+</body>
+</html>
