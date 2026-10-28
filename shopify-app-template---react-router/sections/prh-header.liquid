@@ -1,0 +1,1708 @@
+{% liquid
+
+  assign nav_links = linklists['main-menu'].links
+
+%}
+
+
+<header class="prh-header" id="prh-header">
+
+
+  <div class="prh-header__announcement"><div class="prh-container"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h11v10H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.5"/><circle cx="18" cy="18" r="1.5"/></svg>Env&iacute;os a toda Colombia</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6z"/><path d="m8 12 2.5 2.5L16 9"/></svg>Compra segura</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v11H8l-3 3z"/><path d="M8 9h8M8 12h5"/></svg>Atenci&oacute;n personalizada</span></div></div>
+
+
+  <div class="prh-header__main">
+
+    <div class="prh-container prh-header__inner">
+
+
+      <!-- LOGO PRH -->
+
+      <a
+
+        class="prh-header__logo"
+
+        href="{{ routes.root_url }}"
+
+        aria-label="{{ shop.name }}"
+
+      >
+
+        <img
+
+          src="{{ 'logo-prh.png' | asset_url }}"
+
+          class="prh-header__logo-image"
+
+          width="220"
+
+          height="70"
+
+          loading="eager"
+
+          alt="{{ shop.name }}"
+
+        >
+
+      </a>
+
+
+      <!-- NAVEGACIÓN -->
+
+      <nav class="prh-nav" aria-label="Navegaci&oacute;n principal">
+
+
+        <!-- INICIO -->
+
+        <a
+
+          href="{{ routes.root_url }}"
+
+          class="prh-nav__link {% if request.page_type == 'index' %}is-active{% endif %}"
+
+        >
+
+          <span class="prh-nav__icon">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+
+              <path d="M3 10.5 12 3l9 7.5"/>
+
+              <path d="M5.5 9.5V21h13V9.5"/>
+
+              <path d="M9.5 21v-6h5v6"/>
+
+            </svg>
+
+          </span>
+
+          <span>INICIO</span>
+
+        </a>
+
+
+        <!-- PRODUCTOS -->
+
+        <a
+
+          href="{{ routes.all_products_collection_url }}"
+
+          class="prh-nav__link {% if request.page_type == 'collection' and collection.handle == 'all' %}is-active{% endif %}"
+
+        >
+
+          <span class="prh-nav__icon">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+
+              <path d="M4 8h16"/>
+
+              <path d="M6 8l1-4h10l1 4"/>
+
+              <path d="M5 8v12h14V8"/>
+
+              <path d="M9 12h6"/>
+
+            </svg>
+
+          </span>
+
+          <span>PRODUCTOS</span>
+
+        </a>
+
+
+        <!-- CATEGORÍAS -->
+
+        <details class="prh-nav__dropdown">
+
+          <summary
+
+            class="prh-nav__link {% if request.path contains '/collections/' and collection.handle != 'all' %}is-active{% endif %}"
+
+          >
+
+            <span class="prh-nav__icon">
+
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                <rect x="4" y="4" width="6" height="6" rx="1"/>
+
+                <rect x="14" y="4" width="6" height="6" rx="1"/>
+
+                <rect x="4" y="14" width="6" height="6" rx="1"/>
+
+                <rect x="14" y="14" width="6" height="6" rx="1"/>
+
+              </svg>
+
+            </span>
+
+
+            <span>CATEGOR&Iacute;AS</span>
+
+
+            <svg
+
+              class="prh-nav__arrow"
+
+              viewBox="0 0 10 6"
+
+              aria-hidden="true"
+
+            >
+
+              <path d="m1 1 4 4 4-4"/>
+
+            </svg>
+
+          </summary>
+
+
+          <div class="prh-nav__menu">
+
+
+            <a href="/collections/computadores">
+
+              <span class="prh-nav__menu-icon">
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                  <rect x="3" y="4" width="18" height="13" rx="1"/>
+
+                  <path d="M8 21h8"/>
+
+                  <path d="M12 17v4"/>
+
+                </svg>
+
+              </span>
+
+              <span>Tecnolog&iacute;a</span>
+
+            </a>
+
+
+            <a href="/collections/ropa-y-moda">
+
+              <span class="prh-nav__menu-icon">
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                  <path d="M9 4c.5 2 1.5 3 3 3s2.5-1 3-3"/>
+
+                  <path d="m8 5-5 3 2 5 3-1v8h8v-8l3 1 2-5-5-3"/>
+
+                </svg>
+
+              </span>
+
+              <span>Ropa y Moda</span>
+
+            </a>
+
+
+            <a href="/collections/deporte">
+
+              <span class="prh-nav__menu-icon">
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                  <circle cx="12" cy="12" r="8"/>
+
+                  <path d="M12 4v16"/>
+
+                  <path d="M4 12h16"/>
+
+                </svg>
+
+              </span>
+
+              <span>Deporte y F&uacute;tbol</span>
+
+            </a>
+
+
+            <a href="/collections/herramientas">
+
+              <span class="prh-nav__menu-icon">
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                  <path d="m14.5 5.5 4-4 4 4-4 4"/>
+
+                  <path d="m18.5 9.5-9 9"/>
+
+                  <path d="m5 22 4.5-4.5"/>
+
+                  <path d="m3 19 2 2"/>
+
+                </svg>
+
+              </span>
+
+              <span>Herramientas</span>
+
+            </a>
+
+
+            <a href="{{ routes.collections_url }}">
+
+              <span class="prh-nav__menu-icon">
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                  <circle cx="5" cy="12" r="1"/>
+
+                  <circle cx="12" cy="12" r="1"/>
+
+                  <circle cx="19" cy="12" r="1"/>
+
+                </svg>
+
+              </span>
+
+              <span>Ver todas</span>
+
+            </a>
+
+
+          </div>
+
+        </details>
+
+
+        <!-- OFERTAS -->
+
+        <a
+
+          href="/pages/ofertas"
+
+          class="prh-nav__link {% if request.page_type == 'page' and page.handle == 'ofertas' %}is-active{% endif %}"
+
+        >
+
+          <span class="prh-nav__icon prh-nav__icon--offer">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+
+              <path d="M20 12v7H4v-7"/>
+
+              <path d="M3 7h18v5H3z"/>
+
+              <path d="M12 7v12"/>
+
+              <path d="M12 7H8.5C7.1 7 6 5.9 6 4.5S7.1 2 8.5 2C10.7 2 12 7 12 7Z"/>
+
+              <path d="M12 7h3.5C16.9 7 18 5.9 18 4.5S16.9 2 15.5 2C13.3 2 12 7 12 7Z"/>
+
+            </svg>
+
+          </span>
+
+          <span>OFERTAS</span>
+
+        </a>
+
+
+        <!-- CONTACTO -->
+
+        <a
+
+          href="/pages/contact"
+
+          class="prh-nav__link {% if request.page_type == 'page' and page.handle == 'contact' %}is-active{% endif %}"
+
+        >
+
+          <span class="prh-nav__icon">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+
+              <path d="M4 5h16v12H8l-4 4V5Z"/>
+
+              <path d="M8 9h8"/>
+
+              <path d="M8 13h5"/>
+
+            </svg>
+
+          </span>
+
+          <span>CONTACTO</span>
+
+        </a>
+
+
+      </nav>
+
+
+      <!-- ACCIONES -->
+
+      <div class="prh-header__actions">
+
+
+        <!-- BUSCAR -->
+
+        <a
+
+          href="{{ routes.search_url }}"
+
+          aria-label="Buscar"
+
+          class="prh-action"
+
+        >
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+
+            <circle cx="11" cy="11" r="6.5"/>
+
+            <path d="m16 16 5 5"/>
+
+          </svg>
+
+        </a>
+
+
+        <!-- CUENTA -->
+
+        {% if shop.customer_accounts_enabled %}
+
+          <a
+
+            href="{{ routes.account_url }}"
+
+            aria-label="Cuenta"
+
+            class="prh-action"
+
+          >
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+
+              <circle cx="12" cy="8" r="3.5"/>
+
+              <path d="M5 20c.8-3.3 3.1-5 7-5s6.2 1.7 7 5"/>
+
+            </svg>
+
+          </a>
+
+        {% endif %}
+
+
+        <!-- CARRITO -->
+
+        <a
+
+          href="{{ routes.cart_url }}"
+
+          aria-label="Carrito"
+
+          class="prh-action prh-cart"
+
+        >
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+
+            <path d="M4 5h2l1.5 10h10L20 8H7"/>
+
+            <circle cx="9" cy="19" r="1.2"/>
+
+            <circle cx="17" cy="19" r="1.2"/>
+
+          </svg>
+
+
+          {% if cart.item_count > 0 %}
+
+            <span class="prh-cart__count">
+
+              {{ cart.item_count }}
+
+            </span>
+
+          {% endif %}
+
+        </a>
+
+
+        <!-- MENÚ MÓVIL -->
+
+        <button
+
+          class="prh-menu-toggle"
+
+          type="button"
+
+          aria-expanded="false"
+
+          aria-controls="prh-mobile-nav"
+
+          aria-label="Abrir men&uacute;"
+
+        >
+
+          <span></span>
+
+          <span></span>
+
+          <span></span>
+
+        </button>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- MENÚ MÓVIL -->
+
+  <div
+
+    class="prh-mobile-nav"
+
+    id="prh-mobile-nav"
+
+    hidden
+
+  >
+
+
+    <a href="{{ routes.root_url }}">
+
+      <span class="prh-mobile-icon">
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+          <path d="M3 10.5 12 3l9 7.5"/>
+
+          <path d="M5.5 9.5V21h13V9.5"/>
+
+          <path d="M9.5 21v-6h5v6"/>
+
+        </svg>
+
+      </span>
+
+      INICIO
+
+    </a>
+
+
+    <a href="{{ routes.all_products_collection_url }}">
+
+      <span class="prh-mobile-icon">
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+          <path d="M4 8h16"/>
+
+          <path d="M6 8l1-4h10l1 4"/>
+
+          <path d="M5 8v12h14V8"/>
+
+        </svg>
+
+      </span>
+
+      PRODUCTOS
+
+    </a>
+
+
+    <details>
+
+      <summary>
+
+        <span class="prh-mobile-icon">
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+
+            <rect x="4" y="4" width="6" height="6" rx="1"/>
+
+            <rect x="14" y="4" width="6" height="6" rx="1"/>
+
+            <rect x="4" y="14" width="6" height="6" rx="1"/>
+
+            <rect x="14" y="14" width="6" height="6" rx="1"/>
+
+          </svg>
+
+        </span>
+
+        CATEGOR&Iacute;AS
+
+      </summary>
+
+
+      <a href="/collections/computadores">Tecnolog&iacute;a</a>
+
+      <a href="/collections/ropa-y-moda">Ropa y Moda</a>
+
+      <a href="/collections/deporte">Deporte y F&uacute;tbol</a>
+
+      <a href="/collections/herramientas">Herramientas</a>
+
+      <a href="{{ routes.collections_url }}">Ver todas</a>
+
+    </details>
+
+
+    <a href="/pages/ofertas">
+
+      <span class="prh-mobile-icon">
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+          <path d="M20 12v7H4v-7"/>
+
+          <path d="M3 7h18v5H3z"/>
+
+          <path d="M12 7v12"/>
+
+        </svg>
+
+      </span>
+
+      OFERTAS
+
+    </a>
+
+
+    <a href="/pages/contact">
+
+      <span class="prh-mobile-icon">
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+          <path d="M4 5h16v12H8l-4 4V5Z"/>
+
+        </svg>
+
+      </span>
+
+      CONTACTO
+
+    </a>
+
+
+  </div>
+
+</header>
+
+
+<script>
+
+  (() => {
+
+    const toggle = document.querySelector('.prh-menu-toggle');
+
+    const mobile = document.getElementById('prh-mobile-nav');
+
+
+    if (!toggle || !mobile) return;
+
+
+    toggle.addEventListener('click', () => {
+
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+
+
+      toggle.setAttribute(
+
+        'aria-expanded',
+
+        String(!open)
+
+      );
+
+
+      mobile.hidden = open;
+
+
+      document.body.classList.toggle(
+
+        'prh-menu-open',
+
+        !open
+
+      );
+
+    });
+
+  })();
+
+</script>
+
+
+{% stylesheet %}
+.prh-header__announcement .prh-container{
+  min-height:34px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:28px;
+}
+.prh-header__announcement .prh-container > span{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  white-space:nowrap;
+}
+.prh-header__announcement svg{
+  width:16px;
+  height:16px;
+  flex:0 0 16px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+@media (max-width:700px){
+  .prh-header__announcement .prh-container{
+    gap:14px;
+  }
+  .prh-header__announcement .prh-container > span{
+    font-size:10px;
+  }
+}
+
+
+  :root {
+
+    --prh-green: #86B96B;
+
+    --prh-green-dark: #5E8D49;
+
+    --prh-brown: #74543D;
+
+    --prh-brown-dark: #4A3628;
+
+    --prh-beige: #D7B68A;
+
+    --prh-cream: #FBF8F2;
+
+    --prh-border: #e7ddd1;
+
+    --prh-white: #ffffff;
+
+  }
+
+
+  /* =========================================================
+
+     HEADER GENERAL
+
+     ========================================================= */
+
+
+  .prh-header {
+
+    position: relative;
+
+    z-index: 50;
+
+    background: var(--prh-white);
+
+    color: var(--prh-brown-dark);
+
+    border-bottom: 1px solid var(--prh-border);
+
+    box-shadow: 0 4px 20px rgba(91, 70, 52, .08);
+
+  }
+
+
+  .prh-container {
+
+    width: min(1380px, calc(100% - 56px));
+
+    margin: 0 auto;
+
+  }
+
+
+  /* =========================================================
+
+     BARRA SUPERIOR
+
+     ========================================================= */
+
+
+  .prh-header__announcement {
+
+    background: var(--prh-brown-dark);
+
+    color: #fff;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    letter-spacing: .025em;
+
+  }
+
+
+  .prh-header__announcement .prh-container {
+
+    min-height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+  }
+
+
+  /* =========================================================
+
+     ZONA PRINCIPAL
+
+     ========================================================= */
+
+
+  .prh-header__main {
+
+    background: var(--prh-white);
+
+  }
+
+
+  .prh-header__inner {
+
+    min-height: 88px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 34px;
+
+  }
+
+
+  /* =========================================================
+
+     LOGO
+
+     ========================================================= */
+
+
+.prh-header__logo {
+
+  width: 300px;
+
+  min-width: 300px;
+
+  height: 90px;
+
+}
+
+
+.prh-header__logo-image {
+
+  width: 300px;
+
+  height: 90px;
+
+  max-width: 300px;
+
+  max-height: 90px;
+
+  object-fit: contain;
+
+  object-position: left center;
+
+}
+
+
+  /* =========================================================
+
+     NAVEGACIÓN
+
+     ========================================================= */
+
+
+  .prh-nav {
+
+    flex: 1 1 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    min-width: 0;
+
+    padding: 5px 7px;
+
+    border: 1px solid var(--prh-border);
+
+    border-radius: 14px;
+
+    background: linear-gradient(180deg, #ffffff 0%, var(--prh-cream) 100%);
+
+  }
+
+
+  .prh-nav__link,
+
+  .prh-nav__dropdown > summary {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    min-height: 44px;
+
+    padding: 8px 12px;
+
+    border-radius: 9px;
+
+    color: var(--prh-brown);
+
+    background: transparent;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: .055em;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    list-style: none;
+
+    transition:
+
+      color .2s ease,
+
+      background .2s ease,
+
+      transform .2s ease;
+
+  }
+
+
+  .prh-nav__link::after,
+
+  .prh-nav__dropdown > summary::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 12px;
+
+    right: 12px;
+
+    bottom: 2px;
+
+    height: 2px;
+
+    border-radius: 20px;
+
+    background: var(--prh-green);
+
+    transform: scaleX(0);
+
+    transform-origin: center;
+
+    transition: transform .2s ease;
+
+  }
+
+
+  .prh-nav__link:hover,
+
+  .prh-nav__dropdown > summary:hover,
+
+  .prh-nav__link.is-active,
+
+  .prh-nav__dropdown > summary.is-active {
+
+    color: var(--prh-green-dark);
+
+    background: var(--prh-cream);
+
+  }
+
+
+  .prh-nav__link:hover::after,
+
+  .prh-nav__link.is-active::after,
+
+  .prh-nav__dropdown > summary:hover::after,
+
+  .prh-nav__dropdown > summary.is-active::after {
+
+    transform: scaleX(1);
+
+  }
+
+
+  .prh-nav__icon {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    color: var(--prh-green);
+
+  }
+
+
+  .prh-nav__icon svg {
+
+    width: 18px;
+
+    height: 18px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+  }
+
+
+  .prh-nav__icon--offer {
+
+    color: var(--prh-beige);
+
+  }
+
+
+  .prh-nav__arrow {
+
+    width: 9px;
+
+    height: 6px;
+
+    margin-left: 1px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+    transition: transform .2s ease;
+
+  }
+
+
+  .prh-nav__dropdown[open] > summary .prh-nav__arrow {
+
+    transform: rotate(180deg);
+
+  }
+
+
+  .prh-nav__dropdown {
+
+    position: relative;
+
+  }
+
+
+  .prh-nav__dropdown > summary::-webkit-details-marker {
+
+    display: none;
+
+  }
+
+
+  /* =========================================================
+
+     DROPDOWN CATEGORÍAS
+
+     ========================================================= */
+
+
+  .prh-nav__menu {
+
+    position: absolute;
+
+    top: calc(100% + 9px);
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 245px;
+
+    padding: 9px;
+
+    background: var(--prh-white);
+
+    border: 1px solid var(--prh-border);
+
+    border-top: 3px solid var(--prh-green);
+
+    border-radius: 11px;
+
+    box-shadow: 0 18px 45px rgba(68, 52, 38, .15);
+
+  }
+
+
+  .prh-nav__menu a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 11px 12px;
+
+    border-radius: 7px;
+
+    color: var(--prh-brown);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+
+      background .2s ease,
+
+      color .2s ease,
+
+      padding-left .2s ease;
+
+  }
+
+
+  .prh-nav__menu a:hover {
+
+    color: var(--prh-green-dark);
+
+    background: var(--prh-cream);
+
+    padding-left: 16px;
+
+  }
+
+
+  .prh-nav__menu-icon {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 28px;
+
+    height: 28px;
+
+    flex: 0 0 28px;
+
+    border-radius: 7px;
+
+    color: var(--prh-green);
+
+    background: #f2f6ee;
+
+  }
+
+
+  .prh-nav__menu-icon svg {
+
+    width: 16px;
+
+    height: 16px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.6;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+  }
+
+
+  /* =========================================================
+
+     ACCIONES: BUSCAR / CUENTA / CARRITO
+
+     ========================================================= */
+
+
+  .prh-header__actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+
+    flex: 0 0 auto;
+
+  }
+
+
+  .prh-action {
+
+    position: relative;
+
+    width: 41px;
+
+    height: 41px;
+
+    display: grid;
+
+    place-items: center;
+
+    color: var(--prh-brown);
+
+    text-decoration: none;
+
+    border-radius: 50%;
+
+    transition:
+
+      color .2s ease,
+
+      background .2s ease,
+
+      transform .2s ease;
+
+  }
+
+
+  .prh-action:hover {
+
+    color: var(--prh-green-dark);
+
+    background: var(--prh-cream);
+
+    transform: translateY(-1px);
+
+  }
+
+
+  .prh-action svg {
+
+    width: 20px;
+
+    height: 20px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.6;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+  }
+
+
+  /* =========================================================
+
+     CARRITO
+
+     ========================================================= */
+
+
+  .prh-cart__count {
+
+    position: absolute;
+
+    top: 0;
+
+    right: -1px;
+
+    min-width: 18px;
+
+    height: 18px;
+
+    padding: 0 4px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 99px;
+
+    background: var(--prh-green);
+
+    color: #fff;
+
+    border: 2px solid #fff;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+  }
+
+
+  /* =========================================================
+
+     MENÚ MÓVIL
+
+     ========================================================= */
+
+
+  .prh-menu-toggle {
+
+    display: none;
+
+    border: 0;
+
+    background: transparent;
+
+    padding: 9px 4px;
+
+    cursor: pointer;
+
+  }
+
+
+  .prh-menu-toggle span {
+
+    display: block;
+
+    width: 24px;
+
+    height: 2px;
+
+    margin: 4px 0;
+
+    border-radius: 10px;
+
+    background: var(--prh-brown);
+
+    transition: transform .2s ease;
+
+  }
+
+
+  .prh-mobile-nav {
+
+    display: none;
+
+  }
+
+
+  /* =========================================================
+
+     TABLET / MÓVIL
+
+     ========================================================= */
+
+
+  @media (max-width: 1100px) {
+
+
+    .prh-container {
+
+      width: min(100% - 36px, 1100px);
+
+    }
+
+
+    .prh-header__inner {
+
+      gap: 18px;
+
+    }
+
+
+    .prh-header__logo {
+
+      width: 185px;
+
+      min-width: 185px;
+
+    }
+
+
+    .prh-header__logo-image {
+
+      width: 185px;
+
+      height: 64px;
+
+      max-width: 185px;
+
+      max-height: 64px;
+
+    }
+
+
+    .prh-nav {
+
+      gap: 2px;
+
+    }
+
+
+    .prh-nav__link,
+
+    .prh-nav__dropdown > summary {
+
+      padding-inline: 8px;
+
+      font-size: 11px;
+
+    }
+
+
+  }
+
+
+  @media (max-width: 900px) {
+
+
+    .prh-container {
+
+      width: min(100% - 28px, 700px);
+
+    }
+
+
+    .prh-header__announcement .prh-container {
+
+      justify-content: center;
+
+      text-align: center;
+
+    }
+
+
+    .prh-header__announcement span:last-child {
+
+      display: none;
+
+    }
+
+
+    .prh-header__inner {
+
+      min-height: 76px;
+
+      gap: 10px;
+
+    }
+
+
+    .prh-header__logo {
+
+      width: 165px;
+
+      min-width: 165px;
+
+      height: 60px;
+
+    }
+
+
+    .prh-header__logo-image {
+
+      width: 165px;
+
+      height: 58px;
+
+      max-width: 165px;
+
+      max-height: 58px;
+
+    }
+
+
+    .prh-nav {
+
+      display: none;
+
+    }
+
+
+    .prh-header__actions {
+
+      margin-left: auto;
+
+    }
+
+
+    .prh-menu-toggle {
+
+      display: block;
+
+    }
+
+
+    .prh-mobile-nav[hidden] {
+
+      display: none;
+
+    }
+
+
+    .prh-mobile-nav {
+
+      display: block;
+
+      border-top: 1px solid var(--prh-border);
+
+      padding: 8px 20px 20px;
+
+      background: var(--prh-white);
+
+      box-shadow: 0 12px 30px rgba(68, 52, 38, .08);
+
+    }
+
+
+    .prh-mobile-nav > a,
+
+    .prh-mobile-nav summary {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 11px;
+
+      color: var(--prh-brown);
+
+      text-decoration: none;
+
+      padding: 14px 4px;
+
+      font-size: 14px;
+
+      font-weight: 800;
+
+      letter-spacing: .035em;
+
+      border-bottom: 1px solid #f0e9e1;
+
+    }
+
+
+    .prh-mobile-nav details summary {
+
+      cursor: pointer;
+
+      list-style: none;
+
+    }
+
+
+    .prh-mobile-nav details summary::-webkit-details-marker {
+
+      display: none;
+
+    }
+
+
+    .prh-mobile-nav details a {
+
+      display: block;
+
+      color: var(--prh-brown);
+
+      text-decoration: none;
+
+      padding: 10px 12px 10px 44px;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+    }
+
+
+    .prh-mobile-nav details a:hover {
+
+      color: var(--prh-green-dark);
+
+      background: var(--prh-cream);
+
+    }
+
+
+    .prh-mobile-icon {
+
+      width: 25px;
+
+      height: 25px;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      flex: 0 0 25px;
+
+      color: var(--prh-green);
+
+    }
+
+
+    .prh-mobile-icon svg {
+
+      width: 18px;
+
+      height: 18px;
+
+      fill: none;
+
+      stroke: currentColor;
+
+      stroke-width: 1.6;
+
+      stroke-linecap: round;
+
+      stroke-linejoin: round;
+
+    }
+
+
+  }
+
+
+  @media (max-width: 520px) {
+
+
+    .prh-container {
+
+      width: calc(100% - 20px);
+
+    }
+
+
+    .prh-header__inner {
+
+      min-height: 68px;
+
+    }
+
+
+    .prh-header__logo {
+
+      width: 140px;
+
+      min-width: 140px;
+
+      height: 52px;
+
+    }
+
+
+    .prh-header__logo-image {
+
+      width: 140px;
+
+      height: 50px;
+
+      max-width: 140px;
+
+      max-height: 50px;
+
+    }
+
+
+    .prh-action {
+
+      width: 36px;
+
+      height: 36px;
+
+    }
+
+
+    .prh-action svg {
+
+      width: 18px;
+
+      height: 18px;
+
+    }
+
+
+    .prh-menu-toggle {
+
+      padding-left: 2px;
+
+    }
+
+
+  }
+
+
+{% endstylesheet %}
+
+
+{% schema %}
+
+{
+
+  "name": "PRH Header",
+
+  "settings": [],
+
+  "enabled_on": {
+
+    "groups": ["header"]
+
+  }
+
+}
+
+{% endschema %}
+

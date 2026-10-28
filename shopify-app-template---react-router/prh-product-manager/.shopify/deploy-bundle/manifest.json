@@ -1,0 +1,50 @@
+{
+  "name": "PRH-Product-Manager",
+  "handle": "",
+  "modules": [
+    {
+      "type": "app_access",
+      "handle": "app_access",
+      "uid": "app_access",
+      "assets": "app_access",
+      "target": "",
+      "config": {
+        "scopes": "write_metaobject_definitions,write_metaobjects,write_products",
+        "redirect_url_allowlist": [
+          "https://example.com/api/auth"
+        ]
+      }
+    },
+    {
+      "type": "webhooks",
+      "handle": "webhooks",
+      "uid": "webhooks",
+      "assets": "webhooks",
+      "target": "",
+      "config": {
+        "api_version": "2026-10"
+      }
+    },
+    {
+      "type": "app_home",
+      "handle": "app_home",
+      "uid": "app_home",
+      "assets": "app_home",
+      "target": "",
+      "config": {
+        "app_url": "https://example.com",
+        "embedded": true
+      }
+    },
+    {
+      "type": "branding",
+      "handle": "branding",
+      "uid": "branding",
+      "assets": "branding",
+      "target": "",
+      "config": {
+        "name": "PRH-Product-Manager"
+      }
+    }
+  ]
+}

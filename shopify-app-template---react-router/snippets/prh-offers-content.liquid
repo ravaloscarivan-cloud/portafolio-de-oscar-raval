@@ -1,0 +1,1214 @@
+<section class="prh-offers">
+
+  <!-- HERO -->
+
+  <div class="prh-offers__hero">
+
+    <!-- DECORACIÓN IZQUIERDA -->
+
+    <div class="prh-offers__decoration prh-offers__decoration--left">
+
+      <div class="prh-offers__tag">
+        <span>%</span>
+      </div>
+
+      <div class="prh-offers__arrow">
+        ↗
+      </div>
+
+      <p>
+        Grandes<br>
+        oportunidades
+      </p>
+
+    </div>
+
+
+    <!-- CONTENIDO CENTRAL -->
+
+    <div class="prh-offers__content">
+
+      <span class="prh-offers__eyebrow">
+        PRH STORE
+      </span>
+
+      <h1>
+        OFERTAS
+      </h1>
+
+      <h2>
+        Muy pronto nuevas oportunidades para ti
+      </h2>
+
+      <p class="prh-offers__description">
+        Estamos preparando descuentos especiales,
+        promociones exclusivas<br class="prh-offers__desktop">
+        y productos seleccionados. ¡No te los pierdas!
+      </p>
+
+
+      <!-- FORMULARIO -->
+
+      {% form 'customer', class: 'prh-offers__notify-form' %}
+
+        <input
+          type="hidden"
+          name="contact[tags]"
+          value="ofertas"
+        >
+
+        <div class="prh-offers__notify-header">
+
+          <div class="prh-offers__mail-icon">
+            ✉
+          </div>
+
+          <div>
+
+            <h3>
+              SÉ EL PRIMERO EN ENTERARTE
+            </h3>
+
+            <p>
+              Suscríbete y recibe una notificación cuando lancemos nuevas ofertas.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        {% if form.posted_successfully? %}
+
+          <div class="prh-offers__success">
+            ✓ ¡Listo! Te avisaremos cuando tengamos nuevas ofertas.
+          </div>
+
+        {% else %}
+
+          {% if form.errors %}
+
+            <div class="prh-offers__error">
+              {{ form.errors | default_errors }}
+            </div>
+
+          {% endif %}
+
+          <div class="prh-offers__input-row">
+
+            <input
+              type="email"
+              name="contact[email]"
+              placeholder="Tu correo electrónico"
+              autocomplete="email"
+              required
+            >
+
+            <button type="submit">
+              NOTIFICARME
+            </button>
+
+          </div>
+
+          <p class="prh-offers__privacy">
+            No enviamos spam. Solo noticias importantes.
+          </p>
+
+        {% endif %}
+
+      {% endform %}
+
+    </div>
+
+
+    <!-- DECORACIÓN DERECHA -->
+
+    <div class="prh-offers__decoration prh-offers__decoration--right">
+
+      <div class="prh-offers__gift">
+
+        <div class="prh-offers__gift-ribbon"></div>
+
+        <div class="prh-offers__gift-top"></div>
+
+        <div class="prh-offers__gift-box"></div>
+
+      </div>
+
+      <div class="prh-offers__arrow">
+        ↙
+      </div>
+
+      <p>
+        Pronto<br>
+        nuevas ofertas
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- BENEFICIOS -->
+
+  <div class="prh-offers__benefits">
+
+    <div class="prh-offers__benefit">
+
+      <div class="prh-offers__benefit-icon">
+        %
+      </div>
+
+      <div>
+        <strong>Descuentos exclusivos</strong>
+        <span>Productos seleccionados</span>
+      </div>
+
+    </div>
+
+
+    <div class="prh-offers__benefit">
+
+      <div class="prh-offers__benefit-icon">
+        🚚
+      </div>
+
+      <div>
+        <strong>Envíos a toda Colombia</strong>
+        <span>Compra con tranquilidad</span>
+      </div>
+
+    </div>
+
+
+    <div class="prh-offers__benefit">
+
+      <div class="prh-offers__benefit-icon">
+        🔒
+      </div>
+
+      <div>
+        <strong>Compra segura</strong>
+        <span>Tus datos protegidos</span>
+      </div>
+
+    </div>
+
+
+    <div class="prh-offers__benefit">
+
+      <div class="prh-offers__benefit-icon">
+        ♡
+      </div>
+
+      <div>
+        <strong>Atención personalizada</strong>
+        <span>Estamos para ayudarte</span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- EXPLORAR PRODUCTOS -->
+
+  <div class="prh-offers__explore">
+
+    <h2>
+      MIENTRAS TANTO, EXPLORA NUESTROS PRODUCTOS
+    </h2>
+
+    <p>
+      Descubre nuestra variedad y encuentra algo que te guste.
+    </p>
+
+    <a href="{{ routes.all_products_collection_url }}">
+      VER TODOS LOS PRODUCTOS
+      <span>→</span>
+    </a>
+
+  </div>
+
+</section>
+
+
+<style>
+
+/* =========================================
+   PRH OFERTAS
+   ========================================= */
+
+.prh-offers {
+
+  width: 100%;
+
+  background: #fffaf2;
+
+  color: #4f3624;
+
+  overflow: hidden;
+
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.prh-offers__hero {
+
+  position: relative;
+
+  min-height: 520px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 55px 40px 70px;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #fffdf9 0%,
+      #fffaf2 65%,
+      #f7eee1 100%
+    );
+
+}
+
+
+/* =========================================
+   CONTENIDO CENTRAL
+   ========================================= */
+
+.prh-offers__content {
+
+  position: relative;
+
+  z-index: 5;
+
+  width: min(650px, 100%);
+
+  text-align: center;
+
+}
+
+
+.prh-offers__eyebrow {
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #79a653;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  letter-spacing: .15em;
+
+}
+
+
+.prh-offers__content h1 {
+
+  margin: 0;
+
+  color: #4b2f1b;
+
+  font-family: var(--font-body--family);
+
+  font-size: clamp(58px, 7vw, 92px);
+
+  font-weight: 800;
+
+  line-height: .95;
+
+  letter-spacing: .01em;
+
+}
+
+
+.prh-offers__content h2 {
+
+  margin: 12px 0 10px;
+
+  color: #4b2f1b;
+
+  font-size: clamp(20px, 2.2vw, 28px);
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+}
+
+
+.prh-offers__description {
+
+  margin: 0 auto 25px;
+
+  max-width: 620px;
+
+  color: #6e5847;
+
+  font-size: 15px;
+
+  line-height: 1.55;
+
+}
+
+
+/* =========================================
+   FORMULARIO
+   ========================================= */
+
+.prh-offers__notify-form {
+
+  width: min(580px, 100%);
+
+  margin: 0 auto;
+
+  padding: 22px;
+
+  background: rgba(255,255,255,.72);
+
+  border: 1px solid #e5d8c8;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 8px 25px rgba(91,65,40,.06);
+
+  box-sizing: border-box;
+
+}
+
+
+.prh-offers__notify-header {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  text-align: left;
+
+}
+
+
+.prh-offers__mail-icon {
+
+  flex: 0 0 auto;
+
+  width: 47px;
+
+  height: 47px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f1e2cf;
+
+  color: #70451f;
+
+  font-size: 22px;
+
+}
+
+
+.prh-offers__notify-header h3 {
+
+  margin: 0;
+
+  color: #4b2f1b;
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+}
+
+
+.prh-offers__notify-header p {
+
+  margin: 4px 0 0;
+
+  color: #765f4d;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+
+}
+
+
+.prh-offers__input-row {
+
+  display: grid;
+
+  grid-template-columns: 1fr 180px;
+
+  margin-top: 16px;
+
+}
+
+
+.prh-offers__input-row input {
+
+  width: 100%;
+
+  min-width: 0;
+
+  height: 46px;
+
+  padding: 0 14px;
+
+  border: 1px solid #dfd1c0;
+
+  border-right: 0;
+
+  border-radius: 7px 0 0 7px;
+
+  background: #fff;
+
+  color: #4b2f1b;
+
+  font-size: 13px;
+
+  outline: none;
+
+  box-sizing: border-box;
+
+}
+
+
+.prh-offers__input-row input:focus {
+
+  border-color: #9a754f;
+
+}
+
+
+.prh-offers__input-row button {
+
+  height: 46px;
+
+  border: 0;
+
+  border-radius: 0 7px 7px 0;
+
+  background: #70451f;
+
+  color: #fff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: .06em;
+
+  cursor: pointer;
+
+  transition:
+    background .2s ease,
+    transform .2s ease;
+
+}
+
+
+.prh-offers__input-row button:hover {
+
+  background: #533317;
+
+}
+
+
+.prh-offers__privacy {
+
+  margin: 8px 0 0;
+
+  color: #8a7665;
+
+  font-size: 11px;
+
+}
+
+
+.prh-offers__success {
+
+  margin-top: 16px;
+
+  padding: 12px;
+
+  border-radius: 7px;
+
+  background: #edf5e5;
+
+  color: #527336;
+
+  font-size: 13px;
+
+}
+
+
+.prh-offers__error {
+
+  margin-top: 12px;
+
+  color: #a33e32;
+
+  font-size: 12px;
+
+}
+
+
+/* =========================================
+   DECORACIONES
+   ========================================= */
+
+.prh-offers__decoration {
+
+  position: absolute;
+
+  z-index: 2;
+
+  width: 230px;
+
+  text-align: center;
+
+}
+
+
+.prh-offers__decoration p {
+
+  margin: 0;
+
+  color: #76523a;
+
+  font-family: cursive;
+
+  font-size: 19px;
+
+  line-height: 1.15;
+
+}
+
+
+/* =========================================
+   ETIQUETA DE DESCUENTO
+   ========================================= */
+
+.prh-offers__decoration--left {
+
+  left: max(25px, calc(50% - 610px));
+
+  top: 105px;
+
+}
+
+
+.prh-offers__tag {
+
+  position: relative;
+
+  width: 115px;
+
+  height: 165px;
+
+  margin: 0 auto 8px;
+
+  transform: rotate(-14deg);
+
+  border-radius: 10px 10px 16px 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #8b5529,
+      #663b1d
+    );
+
+  box-shadow:
+    7px 12px 18px rgba(65,39,20,.22);
+
+}
+
+
+.prh-offers__tag::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 15px;
+
+  left: 50%;
+
+  width: 20px;
+
+  height: 20px;
+
+  transform: translateX(-50%);
+
+  border: 6px solid #fff9ef;
+
+  border-radius: 50%;
+
+}
+
+
+.prh-offers__tag span {
+
+  position: absolute;
+
+  inset: 48px 0 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  color: #fffaf2;
+
+  font-size: 60px;
+
+  font-weight: 700;
+
+}
+
+
+.prh-offers__arrow {
+
+  color: #70451f;
+
+  font-size: 45px;
+
+  line-height: .8;
+
+  transform: rotate(-10deg);
+
+}
+
+
+/* =========================================
+   REGALO
+   ========================================= */
+
+.prh-offers__decoration--right {
+
+  right: max(25px, calc(50% - 610px));
+
+  top: 100px;
+
+}
+
+
+.prh-offers__gift {
+
+  position: relative;
+
+  width: 155px;
+
+  height: 145px;
+
+  margin: 0 auto 10px;
+
+  transform: rotate(8deg);
+
+}
+
+
+.prh-offers__gift-box {
+
+  position: absolute;
+
+  left: 12px;
+
+  right: 12px;
+
+  bottom: 0;
+
+  height: 105px;
+
+  border-radius: 5px 5px 10px 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #eee3d0 0 39%,
+      #71451f 39% 57%,
+      #f4ead9 57%
+    );
+
+  box-shadow:
+    8px 12px 20px rgba(72,44,23,.18);
+
+}
+
+
+.prh-offers__gift-top {
+
+  position: absolute;
+
+  left: 4px;
+
+  right: 4px;
+
+  top: 30px;
+
+  height: 32px;
+
+  z-index: 3;
+
+  border-radius: 5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f2e6d3 0 38%,
+      #70441e 38% 58%,
+      #f2e6d3 58%
+    );
+
+}
+
+
+.prh-offers__gift-ribbon {
+
+  position: absolute;
+
+  z-index: 4;
+
+  top: 0;
+
+  left: 50%;
+
+  width: 24px;
+
+  height: 48px;
+
+  transform: translateX(-50%);
+
+  background: #70441e;
+
+  border-radius: 5px;
+
+}
+
+
+.prh-offers__gift-ribbon::before,
+.prh-offers__gift-ribbon::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: -15px;
+
+  width: 55px;
+
+  height: 32px;
+
+  border: 10px solid #70441e;
+
+  border-radius: 50%;
+
+}
+
+
+.prh-offers__gift-ribbon::before {
+
+  right: 5px;
+
+  transform: rotate(25deg);
+
+}
+
+
+.prh-offers__gift-ribbon::after {
+
+  left: 5px;
+
+  transform: rotate(-25deg);
+
+}
+
+
+/* =========================================
+   BENEFICIOS
+   ========================================= */
+
+.prh-offers__benefits {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  width: min(1200px, 92%);
+
+  margin: 0 auto;
+
+  padding: 35px 0;
+
+  border-bottom: 1px solid #eadfce;
+
+}
+
+
+.prh-offers__benefit {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 13px;
+
+  padding: 0 22px;
+
+  border-right: 1px solid #eadfce;
+
+}
+
+
+.prh-offers__benefit:last-child {
+
+  border-right: 0;
+
+}
+
+
+.prh-offers__benefit-icon {
+
+  flex: 0 0 auto;
+
+  width: 45px;
+
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f1e2cf;
+
+  color: #70451f;
+
+  font-size: 18px;
+
+}
+
+
+.prh-offers__benefit strong {
+
+  display: block;
+
+  color: #4b2f1b;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+}
+
+
+.prh-offers__benefit span {
+
+  display: block;
+
+  margin-top: 3px;
+
+  color: #806d5b;
+
+  font-size: 11px;
+
+}
+
+
+/* =========================================
+   EXPLORAR PRODUCTOS
+   ========================================= */
+
+.prh-offers__explore {
+
+  width: min(1100px, 92%);
+
+  margin: 35px auto 55px;
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  background: #f7f0e5;
+
+  border: 1px solid #e7dac8;
+
+  border-radius: 18px;
+
+}
+
+
+.prh-offers__explore h2 {
+
+  margin: 0;
+
+  color: #4b2f1b;
+
+  font-size: 22px;
+
+  font-weight: 800;
+
+}
+
+
+.prh-offers__explore p {
+
+  margin: 7px 0 20px;
+
+  color: #776251;
+
+  font-size: 13px;
+
+}
+
+
+.prh-offers__explore a{display:inline-flex;align-items:center;justify-content:center;gap:18px;min-width:400px;height:80px;padding:0 38px;border:1.5px solid #74543D;border-radius:10px;background:transparent;color:#74543D;text-decoration:none;font-size:16px;font-weight:700;letter-spacing:.03em;box-shadow:none;transition:none;transform:none;box-sizing:border-box;}
+
+
+.prh-offers__explore a:hover{background:transparent;color:#74543D;border-color:#74543D;box-shadow:none;transform:none;}
+
+
+.prh-offers__explore a span {
+
+  font-size: 18px;
+
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media screen and (max-width: 1000px) {
+
+  .prh-offers__decoration {
+
+    opacity: .7;
+
+    transform: scale(.8);
+
+  }
+
+  .prh-offers__decoration--left {
+
+    left: -25px;
+
+  }
+
+  .prh-offers__decoration--right {
+
+    right: -25px;
+
+  }
+
+  .prh-offers__content {
+
+    width: min(620px, 75%);
+
+  }
+
+  .prh-offers__benefit {
+
+    padding: 0 10px;
+
+  }
+
+}
+
+
+/* =========================================
+   MÓVIL
+   ========================================= */
+
+@media screen and (max-width: 700px) {
+
+  .prh-offers__hero {
+
+    min-height: auto;
+
+    padding: 45px 18px 50px;
+
+  }
+
+  .prh-offers__decoration {
+
+    display: none;
+
+  }
+
+  .prh-offers__content {
+
+    width: 100%;
+
+  }
+
+  .prh-offers__content h1 {
+
+    font-size: 58px;
+
+  }
+
+  .prh-offers__content h2 {
+
+    font-size: 20px;
+
+  }
+
+  .prh-offers__description {
+
+    font-size: 13px;
+
+  }
+
+  .prh-offers__desktop {
+
+    display: none;
+
+  }
+
+  .prh-offers__notify-form {
+
+    padding: 17px;
+
+  }
+
+  .prh-offers__notify-header {
+
+    align-items: flex-start;
+
+  }
+
+  .prh-offers__input-row {
+
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+
+  }
+
+  .prh-offers__input-row input {
+
+    border-right: 1px solid #dfd1c0;
+
+    border-radius: 7px;
+
+  }
+
+  .prh-offers__input-row button {
+
+    border-radius: 7px;
+
+  }
+
+  .prh-offers__benefits {
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0;
+
+    padding: 25px 0;
+
+  }
+
+  .prh-offers__benefit {
+
+    justify-content: flex-start;
+
+    padding: 15px 10px;
+
+    border-right: 0;
+
+  }
+
+  .prh-offers__benefit-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+  }
+
+  .prh-offers__explore {
+
+    margin-top: 25px;
+
+  }
+
+}
+
+
+/* =========================================
+   MÓVIL PEQUEÑO
+   ========================================= */
+
+@media screen and (max-width: 450px) {
+
+  .prh-offers__content h1 {
+
+    font-size: 48px;
+
+  }
+
+  .prh-offers__content h2 {
+
+    font-size: 18px;
+
+  }
+
+  .prh-offers__notify-header h3 {
+
+    font-size: 15px;
+
+  }
+
+  .prh-offers__notify-header p {
+
+    font-size: 11px;
+
+  }
+
+  .prh-offers__benefits {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .prh-offers__benefit {
+
+    justify-content: center;
+
+  }
+
+}
+
+</style>

@@ -1,0 +1,55 @@
+{%- doc -%}
+  Intended for use in a block similar to the button block.
+
+  @param {string} link - link to render
+  @param {object} [block] - The block
+
+  @example
+  {% render 'button', link: '/collections/all' %}
+{%- enddoc -%}
+
+{% assign block_settings = block.settings %}
+{% render 'button-custom-styles', block_settings: block_settings, block_id: block.id %}
+
+{% if block.id == 'cqykcx' %}
+  {% style %}
+    .button-custom--cqykcx {
+      --button-background-color: rgba(0, 0, 0, 0) !important;
+      --button-color: #ffffff !important;
+      --button-border-color: #8FBC5A !important;
+      --button-border-width: 2px !important;
+      margin-top: 15px !important;
+    }
+
+    .button-custom--cqykcx:hover,
+    .button-custom--cqykcx:focus,
+    .button-custom--cqykcx:active {
+      --button-background-color: rgba(0, 0, 0, 0) !important;
+      --button-color: #ffffff !important;
+      --button-border-color: #8FBC5A !important;
+      --button-border-width: 2px !important;
+    }
+  {% endstyle %}
+{% endif %}
+
+<a
+  {% if link == blank %}
+    role="link"
+    aria-disabled="true"
+  {% else %}
+    href="{{ link }}"
+  {% endif %}
+  class="
+    size-style
+    {{ block_settings.style_class }}
+    {{ block_settings.style_class }}--{{ block.id }}
+  "
+  style="{% render 'size-style', settings: block_settings %}"
+  {%- if block_settings.open_in_new_tab -%}
+    target="_blank"
+    rel="noopener noreferrer"
+  {%- endif -%}
+  {{ block.shopify_attributes }}
+>
+  {{ block_settings.label }}
+</a>

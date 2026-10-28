@@ -1,0 +1,94 @@
+<div class="prh-hero-button-wrapper">
+  <a
+    href="/collections"
+    class="prh-hero-button"
+    aria-label="Ver categorías"
+  >
+    <span>Ver categorías</span>
+    <span class="prh-hero-button__arrow">→</span>
+  </a>
+</div>
+
+<style>
+  .prh-hero-button-wrapper {
+    width: max-content;
+    display: block;
+
+    /* Botón más arriba */
+    margin-top: -10px;
+
+    margin-left: 0;
+    margin-right: auto;
+
+    padding: 0;
+
+    position: relative;
+
+    /* Mantiene la alineación horizontal */
+    transform: translateX(-380px);
+  }
+
+  .prh-hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 13px 25px;
+
+    background: transparent;
+    color: #ffffff;
+
+    border: 2px solid #b7d9a8;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+
+    text-decoration: none;
+
+    box-shadow: none;
+    outline: none;
+    text-shadow: none;
+
+    transition: none;
+    transform: none;
+  }
+
+  .prh-hero-button:hover,
+  .prh-hero-button:focus,
+  .prh-hero-button:focus-visible,
+  .prh-hero-button:active,
+  .prh-hero-button:visited {
+    background: transparent;
+    color: #ffffff;
+
+    border: 2px solid #b7d9a8;
+    border-radius: 8px;
+
+    box-shadow: none;
+    outline: none;
+    text-shadow: none;
+
+    transition: none;
+    transform: none;
+  }
+
+  .prh-hero-button__arrow {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  @media screen and (max-width: 749px) {
+    .prh-hero-button-wrapper {
+      margin-top: -10px;
+      transform: translateX(-40px);
+    }
+
+    .prh-hero-button {
+      padding: 12px 21px;
+      font-size: 15px;
+    }
+  }
+</style>

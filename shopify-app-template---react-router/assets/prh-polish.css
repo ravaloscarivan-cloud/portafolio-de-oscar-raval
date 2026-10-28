@@ -1,0 +1,163 @@
+/* =========================================================
+   PRH POLISH
+   Capa de estilos de marca sobre el tema Horizon.
+   Para revertir: quitar la línea 'prh-polish.css' en layout/theme.liquid
+   ========================================================= */
+
+:root {
+  --prh-polish-brown: #74543D;
+  --prh-polish-brown-dark: #4A3628;
+  --prh-polish-green: #86B96B;
+  --prh-polish-green-dark: #5E8D49;
+  --prh-polish-beige: #D7B68A;
+  --prh-polish-cream: #FBF8F2;
+  --prh-polish-border: #e7ddd1;
+  --prh-polish-shadow: 0 10px 28px rgba(74, 54, 40, .12);
+  --prh-polish-ease: cubic-bezier(.22, .61, .36, 1);
+}
+
+/* ---------- Tipografía ---------- */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3,
+.h1, .h2, .h3 {
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: var(--prh-polish-beige);
+  color: var(--prh-polish-brown-dark);
+}
+
+/* Menú PRH con la fuente de títulos */
+.prh-header .prh-nav__link,
+.prh-header .prh-nav__menu a,
+.prh-mobile-nav > a,
+.prh-mobile-nav summary,
+.prh-mobile-nav details a {
+  font-family: var(--font-heading--family);
+}
+
+/* ---------- Botones principales ---------- */
+
+.button:not(.button-secondary, .button-unstyled, .button-custom),
+button.shopify-payment-button__button--unbranded {
+  --button-color: #ffffff;
+  --button-background-color: var(--prh-polish-brown);
+  --button-border-color: var(--prh-polish-brown);
+  font-family: var(--font-heading--family);
+  font-weight: 600;
+  letter-spacing: .03em;
+  transition: background-color .25s var(--prh-polish-ease),
+    box-shadow .25s var(--prh-polish-ease),
+    transform .25s var(--prh-polish-ease);
+}
+
+.button:not(.button-secondary, .button-unstyled, .button-custom):hover,
+button.shopify-payment-button__button--unbranded:hover:not([disabled]) {
+  --button-color: #ffffff;
+  --button-background-color: var(--prh-polish-green-dark);
+  --button-border-color: var(--prh-polish-green-dark);
+  transform: translateY(-1px);
+}
+
+.button-secondary {
+  font-family: var(--font-heading--family);
+  font-weight: 600;
+  letter-spacing: .03em;
+}
+
+/* ---------- Botones de compra en la ficha de producto ----------
+   Sobrios y sin cambio de color al pasar el mouse:
+   "Comprar ahora" sólido oscuro, "Agregar al carrito" contorneado. */
+
+.product-form-buttons {
+  --prh-buy-ink: #1f1a17;
+}
+
+.product-form-buttons .button.add-to-cart-button,
+.product-form-buttons .button.add-to-cart-button:hover {
+  --button-color: var(--prh-buy-ink);
+  --button-background-color: #ffffff;
+  --button-border-color: var(--prh-buy-ink);
+  border: 1.5px solid var(--prh-buy-ink);
+  transform: none;
+}
+
+.product-form-buttons button.shopify-payment-button__button--unbranded,
+.product-form-buttons button.shopify-payment-button__button--unbranded:hover:not([disabled]) {
+  --button-color: #ffffff;
+  --button-background-color: var(--prh-buy-ink);
+  --button-border-color: var(--prh-buy-ink);
+  background-color: var(--prh-buy-ink);
+  color: #ffffff;
+  transform: none;
+}
+
+.product-form-buttons .button.add-to-cart-button,
+.product-form-buttons button.shopify-payment-button__button--unbranded {
+  transition: box-shadow .2s var(--prh-polish-ease);
+}
+
+@media (hover: hover) {
+  .product-form-buttons .button.add-to-cart-button:hover,
+  .product-form-buttons button.shopify-payment-button__button--unbranded:hover:not([disabled]) {
+    box-shadow: 0 6px 18px rgba(31, 26, 23, .16);
+  }
+}
+
+.product-form-buttons .button.add-to-cart-button:active,
+.product-form-buttons button.shopify-payment-button__button--unbranded:active {
+  box-shadow: none;
+}
+
+/* ---------- Tarjetas de producto ---------- */
+
+@media (hover: hover) {
+  .product-card {
+    transition: transform .3s var(--prh-polish-ease), box-shadow .3s var(--prh-polish-ease);
+  }
+
+  .product-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .product-card:hover .card-gallery,
+  .product-card:hover .product-card__content > .card-gallery {
+    box-shadow: var(--prh-polish-shadow);
+  }
+}
+
+.product-card .card-gallery {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow .3s var(--prh-polish-ease);
+}
+
+.product-card .price {
+  color: var(--prh-polish-brown);
+  font-weight: 700;
+}
+
+.product-card .compare-at-price {
+  color: rgba(74, 54, 40, .55);
+}
+
+/* ---------- Insignias (ofertas / agotado) ---------- */
+
+.product-badges__badge {
+  font-family: var(--font-heading--family);
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+/* ---------- Enlaces y foco ---------- */
+
+:focus-visible {
+  outline-color: var(--prh-polish-green-dark);
+}

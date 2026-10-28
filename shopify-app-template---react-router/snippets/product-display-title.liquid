@@ -1,0 +1,92 @@
+{%- liquid
+  assign source_title = title | default: product.title
+  assign normalized_title = source_title | downcase
+  assign source_vendor = vendor | default: product.vendor | downcase | strip
+  assign display_title = ''
+-%}
+
+{%- comment -%}Product-specific display names keep the identifying item and omit SEO keyword stuffing.{%- endcomment -%}
+{%- if normalized_title contains 'screwdriver' -%}
+  {%- if normalized_title contains 'insulated' -%}
+    {%- assign display_title = 'Kit de destornilladores aislados' -%}
+    {%- if normalized_title contains 'magnetic' -%}
+      {%- assign display_title = 'Kit de destornilladores aislados magnéticos' -%}
+    {%- endif -%}
+  {%- else -%}
+    {%- assign display_title = 'Kit de destornilladores' -%}
+  {%- endif -%}
+{%- elsif normalized_title contains 'nfc' and normalized_title contains 'card' and normalized_title contains 'google' -%}
+  {%- assign display_title = 'Tarjeta NFC para reseñas de Google' -%}
+{%- elsif normalized_title contains 'microscope' -%}
+  {%- assign display_title = 'Microscopio digital' -%}
+  {%- if normalized_title contains '4k' -%}
+    {%- assign display_title = 'Microscopio digital 4K' -%}
+  {%- elsif normalized_title contains '1080p' or normalized_title contains 'full hd' -%}
+    {%- assign display_title = 'Microscopio digital Full HD' -%}
+  {%- endif -%}
+{%- elsif normalized_title contains 'bra' and normalized_title contains 'push up' or normalized_title contains 'bra' and normalized_title contains 'push-up' -%}
+  {%- if normalized_title contains 'front closure' -%}
+    {%- assign display_title = 'Brasier push-up de cierre frontal' -%}
+  {%- else -%}
+    {%- assign display_title = 'Brasier push-up' -%}
+  {%- endif -%}
+{%- elsif normalized_title contains 'tool box' or normalized_title contains 'toolbox' or normalized_title contains 'socket wrench' and normalized_title contains 'motorcycle' -%}
+  {%- assign display_title = 'Kit de herramientas para auto y moto' -%}
+  {%- if normalized_title contains '150-piece' or normalized_title contains '150 piece' -%}
+    {%- assign display_title = 'Kit de herramientas para auto y moto · 150 piezas' -%}
+  {%- endif -%}
+{%- else -%}
+  {%- assign segments = source_title | split: '|' -%}
+  {%- assign seen_segments = '|' -%}
+  {%- assign assembled_title = '' -%}
+  {%- for segment in segments -%}
+    {%- assign clean_segment = segment | strip -%}
+    {%- assign segment_key = clean_segment | downcase | strip -%}
+    {%- assign segment_marker = '|' | append: segment_key | append: '|' -%}
+    {%- assign is_promotional = false -%}
+    {%- if segment_key contains 'envio gratis' or segment_key contains 'envío gratis' or segment_key contains 'compra ahora' or segment_key contains 'tienda oficial' or segment_key contains 'oferta exclusiva' or segment_key contains 'descuento especial' -%}
+      {%- assign is_promotional = true -%}
+    {%- endif -%}
+    {%- unless clean_segment == blank or source_vendor == segment_key or is_promotional or seen_segments contains segment_marker -%}
+      {%- assign seen_segments = seen_segments | append: segment_key | append: '|' -%}
+      {%- if assembled_title == blank -%}
+        {%- assign assembled_title = clean_segment -%}
+      {%- else -%}
+        {%- assign assembled_title = assembled_title | append: ' ' | append: clean_segment -%}
+      {%- endif -%}
+    {%- endunless -%}
+  {%- endfor -%}
+  {%- assign words = assembled_title | split: ' ' -%}
+  {%- assign previous_word = '' -%}
+  {%- assign concise_title = '' -%}
+  {%- assign word_count = 0 -%}
+  {%- for word in words -%}
+    {%- assign clean_word = word | strip -%}
+    {%- assign word_key = clean_word | downcase | remove: ',' | remove: '.' | remove: '!' | remove: '?' -%}
+    {%- assign is_keyword_filler = false -%}
+    {%- if word_key == 'premium' or word_key == 'professional' or word_key == 'reusable' or word_key == 'user-friendly' or word_key == 'wear-resistant' or word_key == 'high-quality' or word_key == 'original' or word_key == 'best' or word_key == 'new' or word_key == 'durable' or word_key == 'customizable' or word_key == 'oem' or word_key == 'warranty' -%}
+      {%- assign is_keyword_filler = true -%}
+    {%- endif -%}
+    {%- unless clean_word == blank or word_key == previous_word or is_keyword_filler -%}
+      {%- if word_count < 5 -%}
+        {%- if concise_title == blank -%}
+          {%- assign concise_title = clean_word -%}
+        {%- else -%}
+          {%- assign concise_title = concise_title | append: ' ' | append: clean_word -%}
+        {%- endif -%}
+        {%- assign word_count = word_count | plus: 1 -%}
+      {%- endif -%}
+    {%- endunless -%}
+    {%- assign previous_word = word_key -%}
+  {%- endfor -%}
+  {%- assign display_title = concise_title -%}
+{%- endif -%}
+
+{%- assign db_display_title = product.metafields.custom.nombre_breve_es.value -%}
+{%- if db_display_title != blank -%}
+  {{- db_display_title | truncate: 64 | escape -}}
+{%- elsif display_title == blank -%}
+  {{- source_title | escape -}}
+{%- else -%}
+  {{- display_title | truncate: 64 | escape -}}
+{%- endif -%}

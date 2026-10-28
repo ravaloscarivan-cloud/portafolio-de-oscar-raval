@@ -1,0 +1,517 @@
+<section class="prh-contact">
+
+  <div class="prh-contact__hero">
+    <span class="prh-contact__kicker">PRH STORE</span>
+    <h1>Cont&aacute;ctanos</h1>
+    <p>&iquest;Tienes una pregunta sobre un producto, un pedido o un env&iacute;o? Estamos para ayudarte.</p>
+  </div>
+
+  <div class="prh-contact__socials">
+
+    <a class="prh-social-card prh-social-card--whatsapp"
+       href="https://whatsapp.com/channel/0029Vb8N1d37dmeRtNTEgT14"
+       target="_blank"
+       rel="noopener">
+
+      <span class="prh-social-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.5 11.7a8.3 8.3 0 0 1-12.2 7.2L4 20l1.2-4.1A8.3 8.3 0 1 1 20.5 11.7Z"/>
+          <path d="M8.2 8.1c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4 0 .6l-.5.7c-.1.2-.1.3 0 .5.5.8 1.2 1.5 2 2 .2.1.4.1.5 0l.7-.6c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.3.3.5v.5c0 .3-.1.5-.4.7-.4.2-1 .4-1.5.3-1.2-.1-2.7-.9-4-2.2-1.4-1.3-2.2-2.8-2.3-4-.1-.5.1-1.1.4-1.3Z"/>
+        </svg>
+      </span>
+
+      <span class="prh-social-content">
+        <strong>WhatsApp</strong>
+        <small>Atenci&oacute;n y novedades</small>
+      </span>
+
+      <span class="prh-social-arrow">&rarr;</span>
+    </a>
+
+    <a class="prh-social-card prh-social-card--instagram"
+       href="https://ig.me/j/ta9fg9KnOhOrKjw5/"
+       target="_blank"
+       rel="noopener">
+
+      <span class="prh-social-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3.5" y="3.5" width="17" height="17" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.4" cy="6.7" r="1"/>
+        </svg>
+      </span>
+
+      <span class="prh-social-content">
+        <strong>Instagram</strong>
+        <small>&Uacute;nete a nuestra comunidad</small>
+      </span>
+
+      <span class="prh-social-arrow">&rarr;</span>
+    </a>
+
+    <a class="prh-social-card prh-social-card--tiktok"
+       href="https://www.tiktok.com/@prhstore_?is_from_webapp=1&sender_device=pc"
+       target="_blank"
+       rel="noopener">
+
+      <span class="prh-social-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15.5 4.2c.4 2.2 1.6 3.6 3.8 3.8v3.1a8 8 0 0 1-3.7-1.2v5.4a5.3 5.3 0 1 1-5.3-5.3c.4 0 .8 0 1.2.1v3.2a2.3 2.3 0 1 0 1 2v-11h3Z"/>
+        </svg>
+      </span>
+
+      <span class="prh-social-content">
+        <strong>TikTok</strong>
+        <small>Conoce nuestras novedades</small>
+      </span>
+
+      <span class="prh-social-arrow">&rarr;</span>
+    </a>
+
+  </div>
+
+  <div class="prh-contact__form-card">
+
+    <div class="prh-contact__form-heading">
+      <span class="prh-contact__form-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H11l-4.5 4v-4H6.5A2.5 2.5 0 0 1 4 13.5v-8Z"/>
+          <path d="M8 8h8M8 11h5"/>
+        </svg>
+      </span>
+
+      <div>
+        <span class="prh-contact__mini-title">ESTAMOS PARA AYUDARTE</span>
+        <h2>Env&iacute;anos un mensaje</h2>
+        <p>Cu&eacute;ntanos lo que necesitas y nos pondremos en contacto contigo.</p>
+      </div>
+    </div>
+
+    {% form 'contact', id: 'PRHContactForm' %}
+
+      {% if form.posted_successfully? %}
+        <div class="prh-contact__success">
+          <strong>Mensaje enviado correctamente</strong>
+          <span>Gracias por contactarnos. Hemos recibido tu mensaje.</span>
+        </div>
+      {% endif %}
+
+      {{ form.errors | default_errors }}
+
+      <div class="prh-contact__fields">
+
+        <label>
+          <span class="prh-field-label">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="8" r="3.5"/>
+              <path d="M5 20c.8-3.4 3-5 7-5s6.2 1.6 7 5"/>
+            </svg>
+            Nombre
+          </span>
+          <input type="text" name="contact[name]" autocomplete="name" placeholder="Tu nombre" required>
+        </label>
+
+        <label>
+          <span class="prh-field-label">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.5" y="5" width="17" height="14" rx="2"/>
+              <path d="m5 7 7 5 7-5"/>
+            </svg>
+            Correo electr&oacute;nico
+          </span>
+          <input type="email" name="contact[email]" autocomplete="email" placeholder="tu@email.com" required>
+        </label>
+
+      </div>
+
+      <label>
+        <span class="prh-field-label">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 4h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-4 3v-3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/>
+            <path d="M7 8h10M7 12h7"/>
+          </svg>
+          Mensaje
+        </span>
+        <textarea name="contact[body]" rows="6" placeholder="Escribe tu mensaje..." required></textarea>
+      </label>
+
+      <button class="prh-contact__submit" type="submit">
+        <span>ENVIAR MENSAJE</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 12h15M13 6l6 6-6 6"/>
+        </svg>
+      </button>
+
+    {% endform %}
+
+  </div>
+
+  <div class="prh-contact__bottom">
+    <span>PRH STORE</span>
+    <p>Gracias por elegirnos.</p>
+  </div>
+
+</section>
+
+{% stylesheet %}
+
+.prh-contact{
+  --prh-green:#86B96B;
+  --prh-green-dark:#5E8D49;
+  --prh-brown:#74543D;
+  --prh-brown-dark:#4A3628;
+  --prh-cream:#FBF8F2;
+  --prh-soft:#F3EEE6;
+  --prh-border:#E5DCD0;
+  max-width:1120px;
+  margin:0 auto;
+  padding:72px 24px 85px;
+  color:var(--prh-brown-dark);
+}
+
+.prh-contact__hero{
+  text-align:center;
+  max-width:720px;
+  margin:0 auto 42px;
+}
+
+.prh-contact__kicker{
+  display:inline-block;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.2em;
+  color:var(--prh-green-dark);
+  margin-bottom:10px;
+}
+
+.prh-contact__hero h1{
+  margin:0;
+  font-size:clamp(40px,6vw,64px);
+  line-height:1;
+  font-weight:750;
+  letter-spacing:-.035em;
+  color:var(--prh-brown-dark);
+}
+
+.prh-contact__hero p{
+  margin:18px auto 0;
+  max-width:650px;
+  color:#75685d;
+  font-size:15px;
+  line-height:1.7;
+}
+
+.prh-contact__socials{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-bottom:48px;
+}
+
+.prh-social-card{
+  position:relative;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  min-height:104px;
+  padding:20px;
+  background:#fffdf9;
+  border:1px solid var(--prh-border);
+  border-radius:16px;
+  color:var(--prh-brown-dark);
+  text-decoration:none;
+  box-shadow:0 5px 18px rgba(74,54,40,.07);
+  overflow:hidden;
+  transition:none;
+}
+
+.prh-social-card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:4px;
+  background:var(--prh-green);
+  opacity:.9;
+}
+
+.prh-social-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px rgba(74,54,40,.12);
+  border-color:#d6c8b8;
+}
+
+.prh-social-icon{width:48px;height:48px;display:flex;align-items:center;justify-content:center;border-radius:12px;flex-shrink:0;box-shadow:0 2px 6px rgba(0,0,0,.08);
+  flex:0 0 48px;
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+}
+
+.prh-social-icon svg{width:25px;height:25px;display:block;
+  width:25px;
+  height:25px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.prh-social-card--whatsapp .prh-social-icon{}
+
+.prh-social-card--instagram .prh-social-icon{}
+
+.prh-social-card--tiktok .prh-social-icon{}
+
+.prh-social-content{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+
+.prh-social-content strong{
+  font-size:16px;
+  font-weight:750;
+}
+
+.prh-social-content small{
+  color:#7b6d61;
+  font-size:12px;
+  line-height:1.4;
+}
+
+.prh-social-arrow{
+  margin-left:auto;
+  font-size:20px;
+  color:#a28d79;
+  transition:none;
+}
+
+.prh-social-card:hover .prh-social-arrow{
+  transform:translateX(4px);
+  color:var(--prh-green-dark);
+}
+
+.prh-contact__form-card{
+  background:var(--prh-cream);
+  border:1px solid var(--prh-border);
+  border-radius:22px;
+  padding:38px;
+  box-shadow:0 8px 28px rgba(74,54,40,.07);
+}
+
+.prh-contact__form-heading{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:30px;
+}
+
+.prh-contact__form-icon{
+  flex:0 0 54px;
+  width:54px;
+  height:54px;
+  display:grid;
+  place-items:center;
+  border-radius:15px;
+  background:#e8f1e2;
+  color:var(--prh-green-dark);
+}
+
+.prh-contact__form-icon svg{
+  width:27px;
+  height:27px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.prh-contact__mini-title{
+  display:block;
+  margin-bottom:5px;
+  color:var(--prh-green-dark);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.16em;
+}
+
+.prh-contact__form-heading h2{
+  margin:0;
+  color:var(--prh-brown-dark);
+  font-size:28px;
+  line-height:1.15;
+}
+
+.prh-contact__form-heading p{
+  margin:7px 0 0;
+  color:#77695e;
+  font-size:13px;
+}
+
+.prh-contact__fields{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.prh-contact label{
+  display:block;
+  margin-bottom:20px;
+}
+
+.prh-field-label{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  margin-bottom:8px;
+  color:var(--prh-brown-dark);
+  font-size:12px;
+  font-weight:750;
+}
+
+.prh-field-label svg{
+  width:16px;
+  height:16px;
+  fill:none;
+  stroke:var(--prh-green-dark);
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.prh-contact input,
+.prh-contact textarea{
+  display:block;
+  width:100%;
+  box-sizing:border-box;
+  border:1px solid #d9cfc2;
+  border-radius:11px;
+  background:#fff;
+  color:var(--prh-brown-dark);
+  padding:14px 15px;
+  font:inherit;
+  outline:none;
+  transition:none;
+}
+
+.prh-contact input{
+  height:48px;
+}
+
+.prh-contact textarea{
+  min-height:145px;
+  resize:vertical;
+}
+
+.prh-contact input::placeholder,
+.prh-contact textarea::placeholder{
+  color:#aaa099;
+}
+
+.prh-contact input:focus,
+.prh-contact textarea:focus{
+  border-color:var(--prh-green);
+  box-shadow:0 0 0 3px rgba(134,185,107,.16);
+}
+
+.prh-contact__submit{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:0 20px;border:1px solid #74543D;border-radius:8px;background:transparent;color:#74543D;font-family:inherit;font-size:13px;font-weight:700;letter-spacing:.04em;cursor:pointer;box-shadow:none;transition:none;appearance:none;-webkit-appearance:none;}
+
+.prh-contact__submit:hover{background:transparent;color:#74543D;border-color:#74543D;transform:none;box-shadow:none;}
+
+.prh-contact__submit svg{
+  width:18px;
+  height:18px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.prh-contact__success{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  margin-bottom:22px;
+  padding:16px 18px;
+  border:1px solid #cfe0c6;
+  border-radius:11px;
+  background:#edf6e9;
+  color:#416237;
+  font-size:13px;
+}
+
+.prh-contact__bottom{
+  text-align:center;
+  padding-top:34px;
+  color:#8a7b6d;
+}
+
+.prh-contact__bottom span{
+  color:var(--prh-green-dark);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.2em;
+}
+
+.prh-contact__bottom p{
+  margin:7px 0 0;
+  font-size:12px;
+}
+
+@media(max-width:800px){
+  .prh-contact{
+    padding:52px 18px 65px;
+  }
+
+  .prh-contact__socials{
+    grid-template-columns:1fr;
+  }
+
+  .prh-contact__form-card{
+    padding:25px 20px;
+    border-radius:18px;
+  }
+
+  .prh-contact__fields{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+}
+
+@media(max-width:520px){
+  .prh-contact__hero h1{
+    font-size:42px;
+  }
+
+  .prh-contact__hero p{
+    font-size:14px;
+  }
+
+  .prh-contact__form-heading{
+    align-items:flex-start;
+  }
+
+  .prh-contact__form-heading h2{
+    font-size:23px;
+  }
+
+  .prh-contact__form-heading p{
+    line-height:1.5;
+  }
+
+  .prh-social-card{
+    min-height:92px;
+  }
+
+  .prh-contact__submit{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:0 20px;border:1px solid #74543D;border-radius:8px;background:transparent;color:#74543D;font-family:inherit;font-size:13px;font-weight:700;letter-spacing:.04em;cursor:pointer;box-shadow:none;transition:none;appearance:none;-webkit-appearance:none;}
+}
+
+{% endstylesheet %}{% schema %}{"name":"PRH Contacto","settings":[]}{% endschema %}
