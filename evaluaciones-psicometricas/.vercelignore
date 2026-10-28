@@ -1,0 +1,17 @@
+16_pf
+.venv
+node_modules
+dist
+.env*
+*.db
+*.db-shm
+*.db-wal
+auth
+auth-wal
+db
+db-wal
+valanti.xls
+VALANTI_PRUEBA_IVAN.pdf
+*.antes-16pf.js
+*.antes-16pf.jsx
+.backup-*

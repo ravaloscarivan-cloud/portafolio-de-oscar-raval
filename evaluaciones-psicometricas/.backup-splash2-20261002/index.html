@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="/logo_valanti.png" as="image" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+    <title>VALANTI | Cuestionario</title>
+
+    <style>
+        /* Pantalla de carga: visible antes de que cargue la aplicación */
+        html,
+        body {
+            margin: 0;
+            background: #f4f7fb;
+        }
+
+        #splash {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+            background:
+                radial-gradient(900px 420px at 50% 0%, rgba(26, 115, 201, 0.08), transparent 70%),
+                #f4f7fb;
+            font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+            transition: opacity 0.45s ease, visibility 0.45s ease;
+        }
+
+        #splash.splash-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .splash-mark {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 132px;
+            height: 132px;
+            background: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 18px 40px -18px rgba(13, 27, 42, 0.25);
+            animation: splashRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        .splash-ring {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+
+        .splash-ring circle {
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .splash-ring .track {
+            stroke: #e3e9f1;
+        }
+
+        .splash-ring .arc {
+            stroke: #1a73c9;
+            stroke-linecap: round;
+            stroke-dasharray: 402;
+            stroke-dashoffset: 402;
+            animation: splashArc 1.9s cubic-bezier(0.65, 0, 0.35, 1) 0.1s forwards;
+        }
+
+        .splash-logo {
+            width: 84px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .splash-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            animation: splashRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+        }
+
+        .splash-title {
+            color: #0d1b2a;
+            font-family: "Sora", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 4px;
+        }
+
+        .splash-subtitle {
+            color: #64748b;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        .splash-dots::after {
+            content: "";
+            display: inline-block;
+            width: 1.2em;
+            text-align: left;
+            animation: splashDots 1.2s steps(4, end) infinite;
+        }
+
+        @keyframes splashRise {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes splashArc {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes splashDots {
+            0% { content: ""; }
+            25% { content: "."; }
+            50% { content: ".."; }
+            75% { content: "..."; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .splash-mark,
+            .splash-text,
+            .splash-ring .arc {
+                animation-duration: 0.01ms;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="splash" role="status" aria-label="Cargando aplicación">
+        <div class="splash-mark">
+            <svg class="splash-ring" viewBox="0 0 132 132" aria-hidden="true">
+                <circle class="track" cx="66" cy="66" r="64" />
+                <circle class="arc" cx="66" cy="66" r="64" />
+            </svg>
+            <img class="splash-logo" src="/logo_valanti.png" alt="VALANTI" />
+        </div>
+
+        <div class="splash-text">
+            <span class="splash-title">VALANTI</span>
+            <span class="splash-subtitle">Preparando su evaluación<span class="splash-dots"></span></span>
+        </div>
+    </div>
+
+    <div id="root"></div>
+
+    <script>
+        // Mantiene la pantalla de carga al menos 2 segundos y la oculta cuando la app ya montó
+        (function () {
+            var inicio = Date.now();
+            var DURACION_MINIMA = 2000;
+
+            window.__ocultarSplash = function () {
+                var restante = Math.max(0, DURACION_MINIMA - (Date.now() - inicio));
+
+                setTimeout(function () {
+                    var splash = document.getElementById("splash");
+                    if (!splash) return;
+                    splash.classList.add("splash-hidden");
+                    setTimeout(function () {
+                        splash.remove();
+                    }, 500);
+                }, restante);
+            };
+        })();
+    </script>
+
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# Dependencias y builds
+node_modules/
+dist/
+.venv/
+.vercel/
+
+# Secretos (usar .env.example como plantilla)
+.env*
+!.env.example
+
+# Bases de datos locales y datos de participantes
+*.db
+*.db-shm
+*.db-wal
+auth
+auth-wal
+db
+db-wal
+valanti.xls
+VALANTI_PRUEBA_IVAN.pdf
+reportes/*.pdf
+reportes/resultados.json
+
+# Material de referencia con copyright
+16_pf/
+
+# Copias de seguridad
+.backup-*/

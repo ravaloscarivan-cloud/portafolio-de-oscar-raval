@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VALANTI | Cuestionario</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ENCABEZADO -->
+        <header class="header">
+
+            <div class="header-content">
+
+                <div class="logo">
+                    V
+                </div>
+
+                <div>
+                    <h1>VALANTI</h1>
+                    <p>Cuestionario de valores</p>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="container">
+
+
+            <!-- INFORMACIÓN PERSONAL -->
+            <section class="card">
+
+                <div class="section-header">
+
+                    <div class="section-number">
+                        01
+                    </div>
+
+                    <div>
+                        <h2>Información personal</h2>
+                        <p>Complete sus datos antes de comenzar.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="nombre">
+                            Nombre
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Ingrese su nombre"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="edad">
+                            Edad
+                        </label>
+
+                        <input
+                            type="number"
+                            id="edad"
+                            name="edad"
+                            min="1"
+                            max="120"
+                            placeholder="Edad"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="sexo">
+                            Sexo
+                        </label>
+
+                        <select id="sexo" name="sexo">
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="Hombre">
+                                Hombre
+                            </option>
+
+                            <option value="Mujer">
+                                Mujer
+                            </option>
+
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="ciudad">
+                            Ciudad
+                        </label>
+
+                        <input
+                            type="text"
+                            id="ciudad"
+                            name="ciudad"
+                            placeholder="Ciudad"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="ocupacion">
+                            Ocupación
+                        </label>
+
+                        <input
+                            type="text"
+                            id="ocupacion"
+                            name="ocupacion"
+                            placeholder="Ocupación"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="empresa">
+                            Empresa
+                        </label>
+
+                        <input
+                            type="text"
+                            id="empresa"
+                            name="empresa"
+                            placeholder="Empresa"
+                        >
+                    </div>
+
+                </div>
+
+
+                <div class="studies">
+
+                    <label>
+                        Estudios
+                    </label>
+
+                    <div class="study-options">
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="estudios"
+                                value="Secundaria"
+                            >
+                            <span>Secundaria</span>
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="estudios"
+                                value="Técnico"
+                            >
+                            <span>Técnico</span>
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="estudios"
+                                value="Universitario"
+                            >
+                            <span>Universitario</span>
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="estudios"
+                                value="Otro"
+                            >
+                            <span>Otro</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- INSTRUCCIONES PRIMERA PARTE -->
+            <section class="instructions">
+
+                <div class="info-icon">
+                    i
+                </div>
+
+                <div class="instructions-content">
+
+                    <h3>Primera parte</h3>
+
+                    <p>
+                        En las preguntas del 1 al 9, distribuya
+                        cero, uno, dos o tres puntos entre las
+                        dos frases, según la importancia que usted
+                        le da a cada frase en su vida personal.
+                    </p>
+
+                    <p>
+                        Las únicas opciones de respuesta son:
+                    </p>
+
+                    <div class="score-options">
+
+                        <span>3 - 0</span>
+                        <span>0 - 3</span>
+                        <span>2 - 1</span>
+                        <span>1 - 2</span>
+
+                    </div>
+
+                    <p class="important">
+                        La suma de puntos de las dos casillas
+                        siempre debe ser 3.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- PRIMERA PARTE -->
+            <section class="card">
+
+                <div class="section-header">
+
+                    <div class="section-number">
+                        02
+                    </div>
+
+                    <div>
+                        <h2>Importancia en su vida personal</h2>
+                        <p>Preguntas 1 a 9</p>
+                    </div>
+
+                </div>
+
+
+                <!-- LAS PREGUNTAS SE CARGARÁN DESDE JAVASCRIPT -->
+                <div id="parte1">
+
+                </div>
+
+            </section>
+
+
+
+            <!-- INSTRUCCIONES SEGUNDA PARTE -->
+            <section class="instructions">
+
+                <div class="info-icon">
+                    i
+                </div>
+
+                <div class="instructions-content">
+
+                    <h3>Segunda parte</h3>
+
+                    <p>
+                        En las preguntas del 10 al 30, distribuya
+                        cero, uno, dos o tres puntos entre las dos
+                        frases para indicar cuál considera más
+                        inaceptable, según su juicio.
+                    </p>
+
+                    <p>
+                        El puntaje más alto será para la frase
+                        que indique lo peor.
+                    </p>
+
+                    <p>
+                        Las únicas opciones de respuesta son:
+                    </p>
+
+                    <div class="score-options">
+
+                        <span>3 - 0</span>
+                        <span>0 - 3</span>
+                        <span>2 - 1</span>
+                        <span>1 - 2</span>
+
+                    </div>
+
+                    <p class="important">
+                        La suma de puntos de las dos casillas
+                        siempre debe ser 3.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- SEGUNDA PARTE -->
+            <section class="card">
+
+                <div class="section-header">
+
+                    <div class="section-number">
+                        03
+                    </div>
+
+                    <div>
+                        <h2>Frases más inaceptables</h2>
+                        <p>Preguntas 10 a 30</p>
+                    </div>
+
+                </div>
+
+
+                <!-- LAS PREGUNTAS SE CARGARÁN DESDE JAVASCRIPT -->
+                <div id="parte2">
+
+                </div>
+
+            </section>
+
+
+
+            <!-- BOTONES -->
+            <section class="actions">
+
+                <button
+                    type="button"
+                    id="limpiar"
+                    class="btn btn-secondary"
+                >
+                    Limpiar
+                </button>
+
+
+                <button
+                    type="button"
+                    id="enviar"
+                    class="btn btn-primary"
+                >
+                    Finalizar cuestionario
+                </button>
+
+            </section>
+
+
+        </main>
+
+
+        <!-- PIE DE PÁGINA -->
+        <footer class="footer">
+
+            <p>
+                VALANTI · Cuestionario
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
