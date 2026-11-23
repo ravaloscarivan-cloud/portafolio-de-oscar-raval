@@ -1,0 +1,361 @@
+[
+  {
+    "id": "2fd06c27-c70e-457c-8c74-8e4d5d9aa2d1",
+    "name": "Prueba Automatizada",
+    "email": "prueba.automatizada@sanithelp.test",
+    "createdAt": "2026-10-28T15:21:53.469Z",
+    "updatedAt": "2026-10-28T15:22:06.806Z",
+    "completo": true,
+    "pasos": {
+      "hv": true,
+      "soportes": true,
+      "induccion": true,
+      "evaluaciones": true
+    },
+    "pdfUrl": "/api/people/2fd06c27-c70e-457c-8c74-8e4d5d9aa2d1/pdf",
+    "documentos": [
+      {
+        "id": "induccion",
+        "nombre": "",
+        "desde": 1,
+        "hasta": 1
+      },
+      {
+        "id": "evaluaciones",
+        "nombre": "",
+        "desde": 2,
+        "hasta": 2
+      },
+      {
+        "id": "hv",
+        "nombre": "",
+        "desde": 3,
+        "hasta": 4
+      },
+      {
+        "id": "completed-cv",
+        "nombre": "hoja-de-vida-personal.pdf",
+        "desde": 5,
+        "hasta": 5
+      },
+      {
+        "id": "contract",
+        "nombre": "contrato.pdf",
+        "desde": 6,
+        "hasta": 6
+      },
+      {
+        "id": "identity",
+        "nombre": "cedula.pdf",
+        "desde": 7,
+        "hasta": 7
+      }
+    ]
+  },
+  {
+    "id": "e64f8596-59f3-4050-abce-0396ca0c20e6",
+    "name": "Prueba Automatizada",
+    "email": "prueba.automatizada@sanithelp.test",
+    "createdAt": "2026-10-28T15:21:23.622Z",
+    "updatedAt": "2026-10-28T15:21:35.576Z",
+    "completo": true,
+    "pasos": {
+      "hv": true,
+      "soportes": true,
+      "induccion": true,
+      "evaluaciones": true
+    },
+    "pdfUrl": "/api/people/e64f8596-59f3-4050-abce-0396ca0c20e6/pdf",
+    "documentos": [
+      {
+        "id": "induccion",
+        "nombre": "",
+        "desde": 1,
+        "hasta": 1
+      },
+      {
+        "id": "evaluaciones",
+        "nombre": "",
+        "desde": 2,
+        "hasta": 2
+      },
+      {
+        "id": "hv",
+        "nombre": "",
+        "desde": 3,
+        "hasta": 4
+      },
+      {
+        "id": "completed-cv",
+        "nombre": "hoja-de-vida-personal.pdf",
+        "desde": 5,
+        "hasta": 5
+      },
+      {
+        "id": "contract",
+        "nombre": "contrato.pdf",
+        "desde": 6,
+        "hasta": 6
+      },
+      {
+        "id": "identity",
+        "nombre": "cedula.pdf",
+        "desde": 7,
+        "hasta": 7
+      }
+    ]
+  },
+  {
+    "id": "8f446ab4-6585-4e7d-934c-57247628b99a",
+    "name": "Prueba Automatizada",
+    "email": "prueba.automatizada@sanithelp.test",
+    "createdAt": "2026-10-28T15:20:29.392Z",
+    "updatedAt": "2026-10-28T15:20:47.724Z",
+    "completo": true,
+    "pasos": {
+      "hv": true,
+      "soportes": true,
+      "induccion": true,
+      "evaluaciones": true
+    },
+    "pdfUrl": "/api/people/8f446ab4-6585-4e7d-934c-57247628b99a/pdf",
+    "documentos": [
+      {
+        "id": "induccion",
+        "nombre": "",
+        "desde": 1,
+        "hasta": 1
+      },
+      {
+        "id": "evaluaciones",
+        "nombre": "",
+        "desde": 2,
+        "hasta": 2
+      },
+      {
+        "id": "hv",
+        "nombre": "",
+        "desde": 3,
+        "hasta": 4
+      },
+      {
+        "id": "completed-cv",
+        "nombre": "hoja-de-vida-personal.pdf",
+        "desde": 5,
+        "hasta": 5
+      },
+      {
+        "id": "contract",
+        "nombre": "contrato.pdf",
+        "desde": 6,
+        "hasta": 6
+      },
+      {
+        "id": "identity",
+        "nombre": "cedula.pdf",
+        "desde": 7,
+        "hasta": 7
+      }
+    ]
+  },
+  {
+    "id": "0b2caad8-0745-4e02-91b8-25bbdd308434",
+    "name": "Prueba Automatizada",
+    "email": "prueba.automatizada@sanithelp.test",
+    "createdAt": "2026-10-28T15:19:54.113Z",
+    "updatedAt": "2026-10-28T15:19:58.782Z",
+    "completo": false,
+    "pasos": {
+      "hv": true,
+      "soportes": true,
+      "induccion": true,
+      "evaluaciones": false
+    },
+    "pdfUrl": "/api/people/0b2caad8-0745-4e02-91b8-25bbdd308434/pdf",
+    "documentos": [
+      {
+        "id": "induccion",
+        "nombre": "",
+        "desde": 1,
+        "hasta": 1
+      },
+      {
+        "id": "hv",
+        "nombre": "",
+        "desde": 2,
+        "hasta": 3
+      },
+      {
+        "id": "completed-cv",
+        "nombre": "hoja-de-vida-personal.pdf",
+        "desde": 4,
+        "hasta": 4
+      },
+      {
+        "id": "contract",
+        "nombre": "contrato.pdf",
+        "desde": 5,
+        "hasta": 5
+      },
+      {
+        "id": "identity",
+        "nombre": "cedula.pdf",
+        "desde": 6,
+        "hasta": 6
+      }
+    ]
+  },
+  {
+    "id": "d454e1d8-3af1-4d97-88c8-8aa2866acd27",
+    "name": "NATALI DE LA HOZ NATERA",
+    "email": "natalydelahoznatera@gmail.com",
+    "pasos": {
+      "hv": true,
+      "soportes": true,
+      "induccion": true,
+      "evaluaciones": true
+    },
+    "pdfUrl": "/api/people/d454e1d8-3af1-4d97-88c8-8aa2866acd27/pdf",
+    "completo": true,
+    "createdAt": "2026-10-14T21:38:57.124Z",
+    "updatedAt": "2026-10-15T21:53:42.195Z",
+    "documentos": [
+      {
+        "id": "induccion",
+        "desde": 1,
+        "hasta": 1,
+        "nombre": ""
+      },
+      {
+        "id": "evaluaciones",
+        "desde": 2,
+        "hasta": 2,
+        "nombre": ""
+      },
+      {
+        "id": "hv",
+        "desde": 3,
+        "hasta": 3,
+        "nombre": ""
+      },
+      {
+        "id": "completed-cv",
+        "desde": 4,
+        "hasta": 5,
+        "nombre": "NATALY DE LA HOZ_CV.pdf"
+      },
+      {
+        "id": "contract",
+        "desde": 6,
+        "hasta": 7,
+        "nombre": "OTRO SI - NATALY DE LA HOZ (1) (1).pdf"
+      },
+      {
+        "id": "studies",
+        "desde": 8,
+        "hasta": 12,
+        "nombre": "ilovepdf_merged (1) (2)-5-9.pdf"
+      },
+      {
+        "id": "identity",
+        "desde": 13,
+        "hasta": 13,
+        "nombre": "ilovepdf_merged (1) (2)-4.pdf"
+      },
+      {
+        "id": "background",
+        "desde": 14,
+        "hasta": 15,
+        "nombre": "Policía Nacional de Colombia.pdf"
+      }
+    ]
+  },
+  {
+    "id": "d42d64d9-156a-4b18-9368-83656f5f8b99",
+    "name": "ISABELLA BELTRAN CASARES",
+    "email": "BELTRANISABELLA982@GMAIL.COM",
+    "pasos": {
+      "hv": true,
+      "soportes": false,
+      "induccion": false,
+      "evaluaciones": false
+    },
+    "pdfUrl": "/api/people/d42d64d9-156a-4b18-9368-83656f5f8b99/pdf",
+    "completo": false,
+    "createdAt": "2026-10-09T19:42:25.947Z",
+    "updatedAt": "2026-10-09T19:42:26.641Z",
+    "documentos": [
+      {
+        "id": "hv",
+        "desde": 1,
+        "hasta": 1,
+        "nombre": ""
+      },
+      {
+        "id": "completed-cv",
+        "desde": 2,
+        "hasta": 2,
+        "nombre": ""
+      },
+      {
+        "id": "anteriores",
+        "desde": 3,
+        "hasta": 5,
+        "nombre": ""
+      }
+    ]
+  },
+  {
+    "id": "8813fe88-d25d-4907-9d08-acc83835243c",
+    "name": "Eilin Loraine Licona Camargo",
+    "email": "elin_licona@hotmail.com",
+    "pasos": {
+      "hv": true,
+      "soportes": true,
+      "induccion": true,
+      "evaluaciones": true
+    },
+    "pdfUrl": "/api/people/8813fe88-d25d-4907-9d08-acc83835243c/pdf",
+    "completo": true,
+    "createdAt": "2026-10-08T23:02:51.114Z",
+    "updatedAt": "2026-10-08T23:03:41.524Z",
+    "documentos": [
+      {
+        "id": "induccion",
+        "desde": 1,
+        "hasta": 1,
+        "nombre": ""
+      },
+      {
+        "id": "evaluaciones",
+        "desde": 2,
+        "hasta": 2,
+        "nombre": ""
+      },
+      {
+        "id": "hv",
+        "desde": 3,
+        "hasta": 3,
+        "nombre": ""
+      },
+      {
+        "id": "completed-cv",
+        "desde": 4,
+        "hasta": 4,
+        "nombre": ""
+      },
+      {
+        "id": "anteriores",
+        "desde": 5,
+        "hasta": 34,
+        "nombre": ""
+      },
+      {
+        "id": "background",
+        "desde": 35,
+        "hasta": 36,
+        "nombre": ""
+      }
+    ]
+  }
+]

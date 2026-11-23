@@ -1,0 +1,24 @@
+{
+  "fecha": "2026-10-21T13:47:24.918Z",
+  "proyecto": "iarabouukzjllghssksn",
+  "bucket": "hv-sanithelp",
+  "documentos": [
+    {
+      "nombre": "migracion-blob.json",
+      "version": 17,
+      "actualizado_en": "2026-10-21T11:21:44.233+00:00"
+    },
+    {
+      "nombre": "respuestas.json",
+      "version": 154,
+      "actualizado_en": "2026-10-16T13:39:27.543+00:00"
+    },
+    {
+      "nombre": "personas.json",
+      "version": 116,
+      "actualizado_en": "2026-10-16T13:39:27.387+00:00"
+    }
+  ],
+  "archivosStorage": 4,
+  "bytesStorage": 22321340
+}

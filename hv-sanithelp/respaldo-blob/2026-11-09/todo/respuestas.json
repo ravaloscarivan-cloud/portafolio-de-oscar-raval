@@ -1,0 +1,314 @@
+{
+  "ultimoId": 5,
+  "respuestas": [
+    {
+      "_id": "01",
+      "resultadoId": "616516c6-0ad2-44e4-a9de-475d583c9235",
+      "nombre": "katheryn",
+      "apellido": "pianeta de la hoz",
+      "telefono": "3008455083",
+      "correo": "kate-delahoz-1911@hotmail.com",
+      "empresa": "",
+      "evaluaciones": [
+        {
+          "codigo": "PL-GH-001",
+          "politica": "Política de desconexión laboral",
+          "pre": "Pendiente",
+          "pos": "Pendiente"
+        },
+        {
+          "codigo": "PL-GH-002",
+          "politica": "Política de alcohol y no drogas",
+          "pre": "Pendiente",
+          "pos": "Pendiente"
+        },
+        {
+          "codigo": "PL-GH-003",
+          "politica": "Política de orden y aseo",
+          "pre": "Pendiente",
+          "pos": "Pendiente"
+        },
+        {
+          "codigo": "PL-GH-005",
+          "politica": "Política de acoso laboral",
+          "pre": "Pendiente",
+          "pos": "Pendiente"
+        },
+        {
+          "codigo": "PL-GH-006",
+          "politica": "Política de seguridad y salud en el trabajo",
+          "pre": "Pendiente",
+          "pos": "Pendiente"
+        },
+        {
+          "codigo": "R-SST-01",
+          "politica": "Política de seguridad y salud en el trabajo",
+          "pre": "Pendiente",
+          "pos": "Pendiente"
+        }
+      ],
+      "constanciaEvaluaciones": {
+        "firmada": false
+      },
+      "procesoCompleto": false,
+      "pasos": {
+        "hv": true,
+        "soportes": false,
+        "induccion": true,
+        "evaluaciones": false
+      },
+      "actualizadoEn": "2026-10-02T19:50:07.596Z",
+      "completadoEn": null,
+      "pdfUrl": "/api/people/616516c6-0ad2-44e4-a9de-475d583c9235/pdf"
+    },
+    {
+      "_id": "02",
+      "resultadoId": "5eee31dc-d491-4ee7-bc08-16cef94d627d",
+      "nombre": "ANDERSON DE JESUS",
+      "apellido": "CANTOR RAMBAO",
+      "telefono": "3016151928",
+      "correo": "andercantor07@gmail.com",
+      "empresa": "",
+      "evaluaciones": [
+        {
+          "codigo": "PL-GH-001",
+          "politica": "Política de desconexión laboral",
+          "pre": "Completado",
+          "pos": "Completado"
+        },
+        {
+          "codigo": "PL-GH-002",
+          "politica": "Política de alcohol y no drogas",
+          "pre": "Completado",
+          "pos": "Completado"
+        },
+        {
+          "codigo": "PL-GH-003",
+          "politica": "Política de orden y aseo",
+          "pre": "Completado",
+          "pos": "Completado"
+        },
+        {
+          "codigo": "PL-GH-005",
+          "politica": "Política de acoso laboral",
+          "pre": "Completado",
+          "pos": "Completado"
+        },
+        {
+          "codigo": "PL-GH-006",
+          "politica": "Política de seguridad y salud en el trabajo",
+          "pre": "Completado",
+          "pos": "Completado"
+        },
+        {
+          "codigo": "R-SST-01",
+          "politica": "Política de seguridad y salud en el trabajo",
+          "pre": "Completado",
+          "pos": "Completado"
+        }
+      ],
+      "constanciaEvaluaciones": {
+        "firmada": true,
+        "cedula": "1042449581",
+        "cargo": "COORD DE SERVICIOS",
+        "fecha": "2026-10-07T13:00:07.475Z"
+      },
+      "procesoCompleto": true,
+      "pasos": {
+        "hv": true,
+        "soportes": true,
+        "induccion": true,
+        "evaluaciones": true
+      },
+      "actualizadoEn": "2026-10-07T13:03:54.264Z",
+      "completadoEn": "2026-10-07T13:03:54.264Z",
+      "pdfUrl": "/api/people/5eee31dc-d491-4ee7-bc08-16cef94d627d/pdf"
+    },
+    {
+      "_id": "03",
+      "resultadoId": "d42d64d9-156a-4b18-9368-83656f5f8b99",
+      "nombre": "ISABELLA",
+      "apellido": "BELTRAN CASARES",
+      "telefono": "3045848095",
+      "correo": "BELTRANISABELLA982@GMAIL.COM",
+      "empresa": "",
+      "evaluaciones": [
+        {
+          "codigo": "PL-GH-001",
+          "politica": "Política de desconexión laboral",
+          "pre": "Completado",
+          "pos": "Pendiente"
+        },
+        {
+          "codigo": "PL-GH-002",
+          "politica": "Política de alcohol y no drogas",
+          "pre": "Pendiente",
+          "pos": "Pendiente"
+        },
+        {
+          "codigo": "PL-GH-003",
+          "politica": "Política de orden y aseo",
+          "pre": "Pendiente",
+          "pos": "Pendiente"
+        },
+        {
+          "codigo": "PL-GH-005",
+          "politica": "Política de acoso laboral",
+          "pre": "Pendiente",
+          "pos": "Pendiente"
+        },
+        {
+          "codigo": "PL-GH-006",
+          "politica": "Política de seguridad y salud en el trabajo",
+          "pre": "Pendiente",
+          "pos": "Pendiente"
+        },
+        {
+          "codigo": "R-SST-01",
+          "politica": "Política de seguridad y salud en el trabajo",
+          "pre": "Pendiente",
+          "pos": "Pendiente"
+        }
+      ],
+      "constanciaEvaluaciones": {
+        "firmada": false
+      },
+      "procesoCompleto": false,
+      "pasos": {
+        "hv": true,
+        "soportes": false,
+        "induccion": false,
+        "evaluaciones": false
+      },
+      "actualizadoEn": "2026-10-06T19:48:18.184Z",
+      "completadoEn": null,
+      "pdfUrl": "/api/people/d42d64d9-156a-4b18-9368-83656f5f8b99/pdf"
+    },
+    {
+      "_id": "04",
+      "resultadoId": "8813fe88-d25d-4907-9d08-acc83835243c",
+      "nombre": "Eilin Loraine",
+      "apellido": "Licona Camargo",
+      "telefono": "3022700107",
+      "correo": "elin_licona@hotmail.com",
+      "empresa": "",
+      "evaluaciones": [
+        {
+          "codigo": "PL-GH-001",
+          "politica": "Política de desconexión laboral",
+          "pre": "Completado",
+          "pos": "Completado"
+        },
+        {
+          "codigo": "PL-GH-002",
+          "politica": "Política de alcohol y no drogas",
+          "pre": "Completado",
+          "pos": "Completado"
+        },
+        {
+          "codigo": "PL-GH-003",
+          "politica": "Política de orden y aseo",
+          "pre": "Completado",
+          "pos": "Completado"
+        },
+        {
+          "codigo": "PL-GH-005",
+          "politica": "Política de acoso laboral",
+          "pre": "Completado",
+          "pos": "Completado"
+        },
+        {
+          "codigo": "PL-GH-006",
+          "politica": "Política de seguridad y salud en el trabajo",
+          "pre": "Completado",
+          "pos": "Completado"
+        },
+        {
+          "codigo": "R-SST-01",
+          "politica": "Política de seguridad y salud en el trabajo",
+          "pre": "Completado",
+          "pos": "Completado"
+        }
+      ],
+      "constanciaEvaluaciones": {
+        "firmada": true,
+        "cedula": "1124042872",
+        "cargo": "Auxiliar de Enfermería",
+        "fecha": "2026-10-06T18:49:22.084Z"
+      },
+      "procesoCompleto": false,
+      "pasos": {
+        "hv": true,
+        "soportes": true,
+        "induccion": true,
+        "evaluaciones": true
+      },
+      "actualizadoEn": "2026-10-06T18:49:48.932Z",
+      "completadoEn": null,
+      "pdfUrl": "/api/people/8813fe88-d25d-4907-9d08-acc83835243c/pdf"
+    },
+    {
+      "_id": "05",
+      "resultadoId": "5c5c128f-a5d0-4e1b-90e9-78349acef288",
+      "nombre": "SANDRA PATRICIA",
+      "apellido": "ECHEVERRIA GOMEZ",
+      "telefono": "3007298474",
+      "correo": "secheverria9730@gmail.com",
+      "empresa": "",
+      "evaluaciones": [
+        {
+          "codigo": "PL-GH-001",
+          "politica": "Política de desconexión laboral",
+          "pre": "Completado",
+          "pos": "Completado"
+        },
+        {
+          "codigo": "PL-GH-002",
+          "politica": "Política de alcohol y no drogas",
+          "pre": "Completado",
+          "pos": "Completado"
+        },
+        {
+          "codigo": "PL-GH-003",
+          "politica": "Política de orden y aseo",
+          "pre": "Completado",
+          "pos": "Completado"
+        },
+        {
+          "codigo": "PL-GH-005",
+          "politica": "Política de acoso laboral",
+          "pre": "Completado",
+          "pos": "Completado"
+        },
+        {
+          "codigo": "PL-GH-006",
+          "politica": "Política de seguridad y salud en el trabajo",
+          "pre": "Completado",
+          "pos": "Completado"
+        },
+        {
+          "codigo": "R-SST-01",
+          "politica": "Política de seguridad y salud en el trabajo",
+          "pre": "Completado",
+          "pos": "Completado"
+        }
+      ],
+      "constanciaEvaluaciones": {
+        "firmada": true,
+        "cedula": "1044801997",
+        "cargo": "AUXILIAR DE ENFERMERIA",
+        "fecha": "2026-10-06T20:22:53.195Z"
+      },
+      "procesoCompleto": false,
+      "pasos": {
+        "hv": true,
+        "soportes": false,
+        "induccion": true,
+        "evaluaciones": true
+      },
+      "actualizadoEn": "2026-10-06T20:23:57.138Z",
+      "completadoEn": null,
+      "pdfUrl": "/api/people/5c5c128f-a5d0-4e1b-90e9-78349acef288/pdf"
+    }
+  ]
+}

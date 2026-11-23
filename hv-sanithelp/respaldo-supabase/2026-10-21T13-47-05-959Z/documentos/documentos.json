@@ -1,0 +1,368 @@
+[
+  {
+    "nombre": "migracion-blob.json",
+    "datos": {
+      "detalle": "Vercel Blob: Failed to fetch blob: 403 Forbidden",
+      "completada": false,
+      "ultimoIntento": "2026-10-21T11:21:44.142Z"
+    },
+    "version": 17,
+    "actualizado_en": "2026-10-21T11:21:44.233+00:00"
+  },
+  {
+    "nombre": "respuestas.json",
+    "datos": {
+      "ultimoId": 4,
+      "respuestas": [
+        {
+          "_id": "01",
+          "pasos": {
+            "hv": true,
+            "soportes": true,
+            "induccion": true,
+            "evaluaciones": true
+          },
+          "correo": "elin_licona@hotmail.com",
+          "nombre": "Eilin Loraine",
+          "pdfUrl": "/api/people/8813fe88-d25d-4907-9d08-acc83835243c/pdf",
+          "empresa": "",
+          "apellido": "Licona Camargo",
+          "telefono": "3022700107",
+          "resultadoId": "8813fe88-d25d-4907-9d08-acc83835243c",
+          "completadoEn": "2026-10-08T23:03:41.524Z",
+          "evaluaciones": [
+            {
+              "pos": "Completado",
+              "pre": "Completado",
+              "codigo": "PL-GH-001",
+              "politica": "Política de desconexión laboral"
+            },
+            {
+              "pos": "Completado",
+              "pre": "Completado",
+              "codigo": "PL-GH-002",
+              "politica": "Política de alcohol y no drogas"
+            },
+            {
+              "pos": "Completado",
+              "pre": "Completado",
+              "codigo": "PL-GH-003",
+              "politica": "Política de orden y aseo"
+            },
+            {
+              "pos": "Completado",
+              "pre": "Completado",
+              "codigo": "PL-GH-005",
+              "politica": "Política de acoso laboral"
+            },
+            {
+              "pos": "Completado",
+              "pre": "Completado",
+              "codigo": "PL-GH-006",
+              "politica": "Política de seguridad y salud en el trabajo"
+            },
+            {
+              "pos": "Completado",
+              "pre": "Completado",
+              "codigo": "R-SST-01",
+              "politica": "Política de seguridad y salud en el trabajo"
+            }
+          ],
+          "actualizadoEn": "2026-10-08T23:03:41.524Z",
+          "procesoCompleto": true,
+          "constanciaEvaluaciones": {
+            "cargo": "Auxiliar de Enfermería",
+            "fecha": "2026-10-06T18:49:22.084Z",
+            "cedula": "1124042872",
+            "firmada": true
+          }
+        },
+        {
+          "_id": "02",
+          "pasos": {
+            "hv": true,
+            "soportes": false,
+            "induccion": false,
+            "evaluaciones": false
+          },
+          "correo": "BELTRANISABELLA982@GMAIL.COM",
+          "nombre": "ISABELLA",
+          "pdfUrl": "/api/people/d42d64d9-156a-4b18-9368-83656f5f8b99/pdf",
+          "empresa": "",
+          "apellido": "BELTRAN CASARES",
+          "telefono": "3045848095",
+          "resultadoId": "d42d64d9-156a-4b18-9368-83656f5f8b99",
+          "completadoEn": null,
+          "evaluaciones": [
+            {
+              "pos": "Pendiente",
+              "pre": "Completado",
+              "codigo": "PL-GH-001",
+              "politica": "Política de desconexión laboral"
+            },
+            {
+              "pos": "Pendiente",
+              "pre": "Pendiente",
+              "codigo": "PL-GH-002",
+              "politica": "Política de alcohol y no drogas"
+            },
+            {
+              "pos": "Pendiente",
+              "pre": "Pendiente",
+              "codigo": "PL-GH-003",
+              "politica": "Política de orden y aseo"
+            },
+            {
+              "pos": "Pendiente",
+              "pre": "Pendiente",
+              "codigo": "PL-GH-005",
+              "politica": "Política de acoso laboral"
+            },
+            {
+              "pos": "Pendiente",
+              "pre": "Pendiente",
+              "codigo": "PL-GH-006",
+              "politica": "Política de seguridad y salud en el trabajo"
+            },
+            {
+              "pos": "Pendiente",
+              "pre": "Pendiente",
+              "codigo": "R-SST-01",
+              "politica": "Política de seguridad y salud en el trabajo"
+            }
+          ],
+          "actualizadoEn": "2026-10-09T19:42:26.641Z",
+          "procesoCompleto": false,
+          "constanciaEvaluaciones": {
+            "firmada": false
+          }
+        },
+        {
+          "_id": "04",
+          "pasos": {
+            "hv": true,
+            "soportes": true,
+            "induccion": true,
+            "evaluaciones": true
+          },
+          "correo": "natalydelahoznatera@gmail.com",
+          "nombre": "NATALI",
+          "pdfUrl": "/api/people/d454e1d8-3af1-4d97-88c8-8aa2866acd27/pdf",
+          "empresa": "",
+          "apellido": "DE LA HOZ NATERA",
+          "telefono": "3015211356",
+          "resultadoId": "d454e1d8-3af1-4d97-88c8-8aa2866acd27",
+          "completadoEn": "2026-10-15T21:53:42.195Z",
+          "evaluaciones": [
+            {
+              "pos": "Completado",
+              "pre": "Completado",
+              "codigo": "PL-GH-001",
+              "politica": "Política de desconexión laboral"
+            },
+            {
+              "pos": "Completado",
+              "pre": "Completado",
+              "codigo": "PL-GH-002",
+              "politica": "Política de alcohol y no drogas"
+            },
+            {
+              "pos": "Completado",
+              "pre": "Completado",
+              "codigo": "PL-GH-003",
+              "politica": "Política de orden y aseo"
+            },
+            {
+              "pos": "Completado",
+              "pre": "Completado",
+              "codigo": "PL-GH-005",
+              "politica": "Política de acoso laboral"
+            },
+            {
+              "pos": "Completado",
+              "pre": "Completado",
+              "codigo": "PL-GH-006",
+              "politica": "Política de seguridad y salud en el trabajo"
+            },
+            {
+              "pos": "Completado",
+              "pre": "Completado",
+              "codigo": "R-SST-01",
+              "politica": "Política de seguridad y salud en el trabajo"
+            }
+          ],
+          "actualizadoEn": "2026-10-15T21:53:42.195Z",
+          "procesoCompleto": true,
+          "constanciaEvaluaciones": {
+            "cargo": "ASISTENTE ADMINISTRATIVO",
+            "fecha": "2026-10-15T21:52:49.883Z",
+            "cedula": "1046874436",
+            "firmada": true
+          }
+        }
+      ]
+    },
+    "version": 154,
+    "actualizado_en": "2026-10-16T13:39:27.543+00:00"
+  },
+  {
+    "nombre": "personas.json",
+    "datos": [
+      {
+        "id": "d454e1d8-3af1-4d97-88c8-8aa2866acd27",
+        "name": "NATALI DE LA HOZ NATERA",
+        "email": "natalydelahoznatera@gmail.com",
+        "pasos": {
+          "hv": true,
+          "soportes": true,
+          "induccion": true,
+          "evaluaciones": true
+        },
+        "pdfUrl": "/api/people/d454e1d8-3af1-4d97-88c8-8aa2866acd27/pdf",
+        "completo": true,
+        "createdAt": "2026-10-14T21:38:57.124Z",
+        "updatedAt": "2026-10-15T21:53:42.195Z",
+        "documentos": [
+          {
+            "id": "induccion",
+            "desde": 1,
+            "hasta": 1,
+            "nombre": ""
+          },
+          {
+            "id": "evaluaciones",
+            "desde": 2,
+            "hasta": 2,
+            "nombre": ""
+          },
+          {
+            "id": "hv",
+            "desde": 3,
+            "hasta": 3,
+            "nombre": ""
+          },
+          {
+            "id": "completed-cv",
+            "desde": 4,
+            "hasta": 5,
+            "nombre": "NATALY DE LA HOZ_CV.pdf"
+          },
+          {
+            "id": "contract",
+            "desde": 6,
+            "hasta": 7,
+            "nombre": "OTRO SI - NATALY DE LA HOZ (1) (1).pdf"
+          },
+          {
+            "id": "studies",
+            "desde": 8,
+            "hasta": 12,
+            "nombre": "ilovepdf_merged (1) (2)-5-9.pdf"
+          },
+          {
+            "id": "identity",
+            "desde": 13,
+            "hasta": 13,
+            "nombre": "ilovepdf_merged (1) (2)-4.pdf"
+          },
+          {
+            "id": "background",
+            "desde": 14,
+            "hasta": 15,
+            "nombre": "Policía Nacional de Colombia.pdf"
+          }
+        ]
+      },
+      {
+        "id": "d42d64d9-156a-4b18-9368-83656f5f8b99",
+        "name": "ISABELLA BELTRAN CASARES",
+        "email": "BELTRANISABELLA982@GMAIL.COM",
+        "pasos": {
+          "hv": true,
+          "soportes": false,
+          "induccion": false,
+          "evaluaciones": false
+        },
+        "pdfUrl": "/api/people/d42d64d9-156a-4b18-9368-83656f5f8b99/pdf",
+        "completo": false,
+        "createdAt": "2026-10-09T19:42:25.947Z",
+        "updatedAt": "2026-10-09T19:42:26.641Z",
+        "documentos": [
+          {
+            "id": "hv",
+            "desde": 1,
+            "hasta": 1,
+            "nombre": ""
+          },
+          {
+            "id": "completed-cv",
+            "desde": 2,
+            "hasta": 2,
+            "nombre": ""
+          },
+          {
+            "id": "anteriores",
+            "desde": 3,
+            "hasta": 5,
+            "nombre": ""
+          }
+        ]
+      },
+      {
+        "id": "8813fe88-d25d-4907-9d08-acc83835243c",
+        "name": "Eilin Loraine Licona Camargo",
+        "email": "elin_licona@hotmail.com",
+        "pasos": {
+          "hv": true,
+          "soportes": true,
+          "induccion": true,
+          "evaluaciones": true
+        },
+        "pdfUrl": "/api/people/8813fe88-d25d-4907-9d08-acc83835243c/pdf",
+        "completo": true,
+        "createdAt": "2026-10-08T23:02:51.114Z",
+        "updatedAt": "2026-10-08T23:03:41.524Z",
+        "documentos": [
+          {
+            "id": "induccion",
+            "desde": 1,
+            "hasta": 1,
+            "nombre": ""
+          },
+          {
+            "id": "evaluaciones",
+            "desde": 2,
+            "hasta": 2,
+            "nombre": ""
+          },
+          {
+            "id": "hv",
+            "desde": 3,
+            "hasta": 3,
+            "nombre": ""
+          },
+          {
+            "id": "completed-cv",
+            "desde": 4,
+            "hasta": 4,
+            "nombre": ""
+          },
+          {
+            "id": "anteriores",
+            "desde": 5,
+            "hasta": 34,
+            "nombre": ""
+          },
+          {
+            "id": "background",
+            "desde": 35,
+            "hasta": 36,
+            "nombre": ""
+          }
+        ]
+      }
+    ],
+    "version": 116,
+    "actualizado_en": "2026-10-16T13:39:27.387+00:00"
+  }
+]

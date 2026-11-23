@@ -1,0 +1,20 @@
+node_modules
+dist
+.vite
+.vercel
+.env*
+!.env.example
+firebase-service-account*.json
+*-firebase-adminsdk-*.json
+
+# Resultados de pruebas locales (hojas de vida y datos personales): nunca al repositorio.
+data
+
+# Los genera la prueba e2e en cada ejecución.
+tests/fixtures
+
+.env*
+
+# Copia local de Vercel Blob (datos personales)
+respaldo-blob/
+respaldo-supabase/

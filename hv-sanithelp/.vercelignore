@@ -1,0 +1,15 @@
+# Datos y archivos locales que no deben subirse a Vercel.
+data
+tests
+PL
+presentaciones
+dist
+.vite
+.env*
+firebase-service-account*.json
+*-firebase-adminsdk-*.json
+scripts
+respaldo-blob
+/*.pdf
+*.traineddata
+respaldo-supabase

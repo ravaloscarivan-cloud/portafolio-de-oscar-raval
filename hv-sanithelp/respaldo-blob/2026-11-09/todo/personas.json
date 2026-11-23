@@ -1,0 +1,77 @@
+[
+  {
+    "id": "5c5c128f-a5d0-4e1b-90e9-78349acef288",
+    "name": "SANDRA PATRICIA ECHEVERRIA GOMEZ",
+    "email": "secheverria9730@gmail.com",
+    "createdAt": "2026-10-06T19:19:39.747Z",
+    "updatedAt": "2026-10-06T20:23:57.138Z",
+    "completo": false,
+    "pasos": {
+      "hv": true,
+      "soportes": false,
+      "induccion": true,
+      "evaluaciones": true
+    },
+    "pdfUrl": "/api/people/5c5c128f-a5d0-4e1b-90e9-78349acef288/pdf"
+  },
+  {
+    "id": "8813fe88-d25d-4907-9d08-acc83835243c",
+    "name": "Eilin Loraine Licona Camargo",
+    "email": "elin_licona@hotmail.com",
+    "createdAt": "2026-10-06T00:45:16.676Z",
+    "updatedAt": "2026-10-06T18:49:48.932Z",
+    "completo": false,
+    "pasos": {
+      "hv": true,
+      "soportes": true,
+      "induccion": true,
+      "evaluaciones": true
+    },
+    "pdfUrl": "/api/people/8813fe88-d25d-4907-9d08-acc83835243c/pdf"
+  },
+  {
+    "id": "d42d64d9-156a-4b18-9368-83656f5f8b99",
+    "name": "ISABELLA BELTRAN CASARES",
+    "email": "BELTRANISABELLA982@GMAIL.COM",
+    "createdAt": "2026-10-05T15:11:57.103Z",
+    "updatedAt": "2026-10-06T19:48:18.184Z",
+    "completo": false,
+    "pasos": {
+      "hv": true,
+      "soportes": false,
+      "induccion": false,
+      "evaluaciones": false
+    },
+    "pdfUrl": "/api/people/d42d64d9-156a-4b18-9368-83656f5f8b99/pdf"
+  },
+  {
+    "id": "5eee31dc-d491-4ee7-bc08-16cef94d627d",
+    "name": "ANDERSON DE JESUS CANTOR RAMBAO",
+    "email": "andercantor07@gmail.com",
+    "createdAt": "2026-10-05T15:07:26.201Z",
+    "updatedAt": "2026-10-07T13:03:54.264Z",
+    "completo": true,
+    "pasos": {
+      "hv": true,
+      "soportes": true,
+      "induccion": true,
+      "evaluaciones": true
+    },
+    "pdfUrl": "/api/people/5eee31dc-d491-4ee7-bc08-16cef94d627d/pdf"
+  },
+  {
+    "id": "616516c6-0ad2-44e4-a9de-475d583c9235",
+    "name": "katheryn pianeta de la hoz",
+    "email": "kate-delahoz-1911@hotmail.com",
+    "createdAt": "2026-10-02T19:46:35.483Z",
+    "updatedAt": "2026-10-02T19:50:07.596Z",
+    "completo": false,
+    "pasos": {
+      "hv": true,
+      "soportes": false,
+      "induccion": true,
+      "evaluaciones": false
+    },
+    "pdfUrl": "/api/people/616516c6-0ad2-44e4-a9de-475d583c9235/pdf"
+  }
+]

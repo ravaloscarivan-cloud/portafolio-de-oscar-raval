@@ -1,0 +1,549 @@
+[
+  {
+    "id": "21995a0b-0666-4261-902e-ad36227da73d",
+    "name": "katheryn pianeta de la hoz",
+    "email": "kate-delahoz-1911@hotmail.com",
+    "pasos": {
+      "hv": true,
+      "soportes": true,
+      "induccion": true,
+      "evaluaciones": true
+    },
+    "pdfUrl": "/api/people/21995a0b-0666-4261-902e-ad36227da73d/pdf",
+    "completo": true,
+    "createdAt": "2026-11-04T12:23:51.605Z",
+    "updatedAt": "2026-11-04T12:41:23.614Z",
+    "documentos": [
+      {
+        "id": "induccion",
+        "desde": 1,
+        "hasta": 1,
+        "nombre": ""
+      },
+      {
+        "id": "evaluaciones",
+        "desde": 2,
+        "hasta": 2,
+        "nombre": ""
+      },
+      {
+        "id": "hv",
+        "desde": 3,
+        "hasta": 4,
+        "nombre": ""
+      },
+      {
+        "id": "completed-cv",
+        "desde": 5,
+        "hasta": 6,
+        "nombre": "Hoja de vida actual.pdf"
+      },
+      {
+        "id": "profile",
+        "desde": 7,
+        "hasta": 7,
+        "nombre": "diploma.pdf"
+      },
+      {
+        "id": "studies",
+        "desde": 8,
+        "hasta": 9,
+        "nombre": "tarjeta profesional.pdf"
+      },
+      {
+        "id": "identity",
+        "desde": 10,
+        "hasta": 11,
+        "nombre": "BE REPUBLICA DE COLOMBIA.pdf"
+      },
+      {
+        "id": "professional-card",
+        "desde": 12,
+        "hasta": 13,
+        "nombre": "tarjeta profesional.pdf"
+      }
+    ]
+  },
+  {
+    "id": "ba06f10c-a901-45f5-b9b1-d93ca015265b",
+    "name": "HEISA MARIA BUELVAS LUNA",
+    "email": "heisabuelvas@gmail.com",
+    "pasos": {
+      "hv": true,
+      "soportes": true,
+      "induccion": true,
+      "evaluaciones": true
+    },
+    "pdfUrl": "/api/people/ba06f10c-a901-45f5-b9b1-d93ca015265b/pdf",
+    "completo": true,
+    "createdAt": "2026-10-30T19:15:02.890Z",
+    "updatedAt": "2026-10-30T19:26:16.350Z",
+    "documentos": [
+      {
+        "id": "induccion",
+        "desde": 1,
+        "hasta": 1,
+        "nombre": ""
+      },
+      {
+        "id": "evaluaciones",
+        "desde": 2,
+        "hasta": 2,
+        "nombre": ""
+      },
+      {
+        "id": "hv",
+        "desde": 3,
+        "hasta": 4,
+        "nombre": ""
+      },
+      {
+        "id": "completed-cv",
+        "desde": 5,
+        "hasta": 7,
+        "nombre": "CB- HEISA BUELVAS (2).pdf"
+      },
+      {
+        "id": "profile",
+        "desde": 8,
+        "hasta": 28,
+        "nombre": "SOPORTES HV HEISA BUELVAS.pdf"
+      },
+      {
+        "id": "contract",
+        "desde": 29,
+        "hasta": 32,
+        "nombre": "CONTRATO PRESTACION DE SERVICIO - HEISA BUELVAS.pdf"
+      },
+      {
+        "id": "studies",
+        "desde": 33,
+        "hasta": 53,
+        "nombre": "SOPORTES HV HEISA BUELVAS.pdf"
+      },
+      {
+        "id": "identity",
+        "desde": 54,
+        "hasta": 57,
+        "nombre": "cedula.pdf"
+      },
+      {
+        "id": "professional-card",
+        "desde": 58,
+        "hasta": 58,
+        "nombre": "tarjeta.pdf"
+      }
+    ]
+  },
+  {
+    "id": "79159eb6-7f50-4248-bb7a-e3c2f8b93edc",
+    "name": "ANDERSON DE JESUS CANTOR RAMBAO",
+    "email": "andercantor07@gmail.com",
+    "pasos": {
+      "hv": true,
+      "soportes": true,
+      "induccion": true,
+      "evaluaciones": true
+    },
+    "pdfUrl": "/api/people/79159eb6-7f50-4248-bb7a-e3c2f8b93edc/pdf",
+    "completo": true,
+    "createdAt": "2026-10-29T22:10:25.132Z",
+    "updatedAt": "2026-10-30T13:20:03.192Z",
+    "documentos": [
+      {
+        "id": "induccion",
+        "desde": 1,
+        "hasta": 1,
+        "nombre": ""
+      },
+      {
+        "id": "evaluaciones",
+        "desde": 2,
+        "hasta": 2,
+        "nombre": ""
+      },
+      {
+        "id": "hv",
+        "desde": 3,
+        "hasta": 4,
+        "nombre": ""
+      },
+      {
+        "id": "completed-cv",
+        "desde": 5,
+        "hasta": 5,
+        "nombre": "CV ANDERSON CANTOR.pdf"
+      },
+      {
+        "id": "studies",
+        "desde": 6,
+        "hasta": 7,
+        "nombre": "DIPLOMAS.pdf"
+      },
+      {
+        "id": "identity",
+        "desde": 8,
+        "hasta": 8,
+        "nombre": "CEDULA REPRESENTANTE LEGAL ANDERSON CANTOR - SANITHELP (4).pdf"
+      },
+      {
+        "id": "professional-card",
+        "desde": 9,
+        "hasta": 10,
+        "nombre": "LICENCIA.pdf"
+      }
+    ]
+  },
+  {
+    "id": "766ad128-9e7c-4c6a-aa1a-0a9dd24797c2",
+    "name": "Gina Yolanda Hernández Yabrudy",
+    "email": "giher30@hotmail.com",
+    "pasos": {
+      "hv": true,
+      "soportes": false,
+      "induccion": false,
+      "evaluaciones": false
+    },
+    "pdfUrl": "/api/people/766ad128-9e7c-4c6a-aa1a-0a9dd24797c2/pdf",
+    "completo": false,
+    "createdAt": "2026-10-28T14:39:55.982Z",
+    "updatedAt": "2026-10-28T14:41:58.695Z",
+    "documentos": [
+      {
+        "id": "hv",
+        "desde": 1,
+        "hasta": 2,
+        "nombre": ""
+      },
+      {
+        "id": "completed-cv",
+        "desde": 3,
+        "hasta": 8,
+        "nombre": "Gina Hernández Md SST octubre 2026 (1).pdf"
+      }
+    ]
+  },
+  {
+    "id": "be7d2f82-cae1-4ba6-99a0-3cfad4318396",
+    "name": "Sandra Patricia Echeverría Gómez",
+    "email": "secheverria9730@gmail.com",
+    "pasos": {
+      "hv": true,
+      "soportes": true,
+      "induccion": true,
+      "evaluaciones": true
+    },
+    "pdfUrl": "/api/people/be7d2f82-cae1-4ba6-99a0-3cfad4318396/pdf",
+    "completo": true,
+    "createdAt": "2026-10-25T16:22:35.081Z",
+    "updatedAt": "2026-10-25T16:53:25.431Z",
+    "documentos": [
+      {
+        "id": "induccion",
+        "desde": 1,
+        "hasta": 1,
+        "nombre": ""
+      },
+      {
+        "id": "evaluaciones",
+        "desde": 2,
+        "hasta": 2,
+        "nombre": ""
+      },
+      {
+        "id": "hv",
+        "desde": 3,
+        "hasta": 4,
+        "nombre": ""
+      },
+      {
+        "id": "completed-cv",
+        "desde": 5,
+        "hasta": 18,
+        "nombre": "SANDRAPATRICIA_ECHEVERRÍAGÓMEZ_CV.pdf"
+      },
+      {
+        "id": "profile",
+        "desde": 19,
+        "hasta": 27,
+        "nombre": "Diplomas y cursos.pdf"
+      },
+      {
+        "id": "contract",
+        "desde": 28,
+        "hasta": 33,
+        "nombre": "Contrato Sandra Echeverría.pdf"
+      },
+      {
+        "id": "studies",
+        "desde": 34,
+        "hasta": 42,
+        "nombre": "Diplomas y cursos.pdf"
+      },
+      {
+        "id": "identity",
+        "desde": 43,
+        "hasta": 44,
+        "nombre": "Cédula Sandra Echeverría.pdf"
+      },
+      {
+        "id": "professional-card",
+        "desde": 45,
+        "hasta": 45,
+        "nombre": "Resolución.pdf"
+      },
+      {
+        "id": "background",
+        "desde": 46,
+        "hasta": 46,
+        "nombre": "Antecedentes policia.pdf"
+      },
+      {
+        "id": "affiliations",
+        "desde": 47,
+        "hasta": 48,
+        "nombre": "Salud y pensión.pdf"
+      }
+    ]
+  },
+  {
+    "id": "d454e1d8-3af1-4d97-88c8-8aa2866acd27",
+    "name": "NATALI DE LA HOZ NATERA",
+    "email": "natalydelahoznatera@gmail.com",
+    "pasos": {
+      "hv": true,
+      "soportes": true,
+      "induccion": true,
+      "evaluaciones": true
+    },
+    "pdfUrl": "/api/people/d454e1d8-3af1-4d97-88c8-8aa2866acd27/pdf",
+    "completo": true,
+    "createdAt": "2026-10-14T21:38:57.124Z",
+    "updatedAt": "2026-10-15T21:53:42.195Z",
+    "documentos": [
+      {
+        "id": "induccion",
+        "desde": 1,
+        "hasta": 1,
+        "nombre": ""
+      },
+      {
+        "id": "evaluaciones",
+        "desde": 2,
+        "hasta": 2,
+        "nombre": ""
+      },
+      {
+        "id": "hv",
+        "desde": 3,
+        "hasta": 3,
+        "nombre": ""
+      },
+      {
+        "id": "completed-cv",
+        "desde": 4,
+        "hasta": 5,
+        "nombre": "NATALY DE LA HOZ_CV.pdf"
+      },
+      {
+        "id": "contract",
+        "desde": 6,
+        "hasta": 7,
+        "nombre": "OTRO SI - NATALY DE LA HOZ (1) (1).pdf"
+      },
+      {
+        "id": "studies",
+        "desde": 8,
+        "hasta": 12,
+        "nombre": "ilovepdf_merged (1) (2)-5-9.pdf"
+      },
+      {
+        "id": "identity",
+        "desde": 13,
+        "hasta": 13,
+        "nombre": "ilovepdf_merged (1) (2)-4.pdf"
+      },
+      {
+        "id": "background",
+        "desde": 14,
+        "hasta": 15,
+        "nombre": "Policía Nacional de Colombia.pdf"
+      }
+    ]
+  },
+  {
+    "id": "d42d64d9-156a-4b18-9368-83656f5f8b99",
+    "name": "ISABELLA BELTRAN CASARES",
+    "email": "BELTRANISABELLA982@GMAIL.COM",
+    "pasos": {
+      "hv": true,
+      "soportes": true,
+      "induccion": true,
+      "evaluaciones": true
+    },
+    "pdfUrl": "/api/people/d42d64d9-156a-4b18-9368-83656f5f8b99/pdf",
+    "completo": true,
+    "createdAt": "2026-10-09T19:42:25.947Z",
+    "updatedAt": "2026-10-29T21:23:31.371Z",
+    "documentos": [
+      {
+        "id": "induccion",
+        "desde": 1,
+        "hasta": 1,
+        "nombre": ""
+      },
+      {
+        "id": "evaluaciones",
+        "desde": 2,
+        "hasta": 2,
+        "nombre": ""
+      },
+      {
+        "id": "hv",
+        "desde": 3,
+        "hasta": 4,
+        "nombre": ""
+      },
+      {
+        "id": "completed-cv",
+        "desde": 5,
+        "hasta": 5,
+        "nombre": "Isabella_Beltrán_Auxiliar_de_Enfermería.pdf"
+      },
+      {
+        "id": "profile",
+        "desde": 6,
+        "hasta": 6,
+        "nombre": "DIPLOMA ISABELLA BELTRAN.pdf"
+      },
+      {
+        "id": "studies",
+        "desde": 7,
+        "hasta": 7,
+        "nombre": "DIPLOMA ISABELLA BELTRAN.pdf"
+      },
+      {
+        "id": "identity",
+        "desde": 8,
+        "hasta": 8,
+        "nombre": "CEDULA AMPLIADA.pdf"
+      },
+      {
+        "id": "professional-card",
+        "desde": 9,
+        "hasta": 9,
+        "nombre": "RESOLUCION.pdf"
+      },
+      {
+        "id": "background",
+        "desde": 10,
+        "hasta": 11,
+        "nombre": "ANTECEDESTES.pdf"
+      },
+      {
+        "id": "affiliations",
+        "desde": 12,
+        "hasta": 13,
+        "nombre": "afiliacion eps.pdf"
+      }
+    ]
+  },
+  {
+    "id": "8813fe88-d25d-4907-9d08-acc83835243c",
+    "name": "Eilin Loraine Licona Camargo",
+    "email": "elin_licona@hotmail.com",
+    "pasos": {
+      "hv": true,
+      "soportes": true,
+      "induccion": true,
+      "evaluaciones": true
+    },
+    "pdfUrl": "/api/people/8813fe88-d25d-4907-9d08-acc83835243c/pdf",
+    "completo": true,
+    "createdAt": "2026-10-08T23:02:51.114Z",
+    "updatedAt": "2026-10-08T23:03:41.524Z",
+    "documentos": [
+      {
+        "id": "induccion",
+        "desde": 1,
+        "hasta": 1,
+        "nombre": ""
+      },
+      {
+        "id": "evaluaciones",
+        "desde": 2,
+        "hasta": 2,
+        "nombre": ""
+      },
+      {
+        "id": "hv",
+        "desde": 3,
+        "hasta": 3,
+        "nombre": ""
+      },
+      {
+        "id": "completed-cv",
+        "desde": 4,
+        "hasta": 4,
+        "nombre": ""
+      },
+      {
+        "id": "anteriores",
+        "desde": 5,
+        "hasta": 34,
+        "nombre": ""
+      },
+      {
+        "id": "background",
+        "desde": 35,
+        "hasta": 36,
+        "nombre": ""
+      }
+    ]
+  },
+  {
+    "id": "5c5c128f-a5d0-4e1b-90e9-78349acef288",
+    "name": "SANDRA PATRICIA ECHEVERRIA GOMEZ",
+    "email": "secheverria9730@gmail.com",
+    "pasos": {
+      "hv": true,
+      "soportes": false,
+      "induccion": true,
+      "evaluaciones": true
+    },
+    "pdfUrl": "/api/people/5c5c128f-a5d0-4e1b-90e9-78349acef288/pdf",
+    "completo": false,
+    "createdAt": "2026-10-06T19:19:39.747Z",
+    "updatedAt": "2026-10-06T20:23:57.138Z"
+  },
+  {
+    "id": "5eee31dc-d491-4ee7-bc08-16cef94d627d",
+    "name": "ANDERSON DE JESUS CANTOR RAMBAO",
+    "email": "andercantor07@gmail.com",
+    "pasos": {
+      "hv": true,
+      "soportes": true,
+      "induccion": true,
+      "evaluaciones": true
+    },
+    "pdfUrl": "/api/people/5eee31dc-d491-4ee7-bc08-16cef94d627d/pdf",
+    "completo": true,
+    "createdAt": "2026-10-05T15:07:26.201Z",
+    "updatedAt": "2026-10-07T13:03:54.264Z"
+  },
+  {
+    "id": "616516c6-0ad2-44e4-a9de-475d583c9235",
+    "name": "katheryn pianeta de la hoz",
+    "email": "kate-delahoz-1911@hotmail.com",
+    "pasos": {
+      "hv": true,
+      "soportes": false,
+      "induccion": true,
+      "evaluaciones": false
+    },
+    "pdfUrl": "/api/people/616516c6-0ad2-44e4-a9de-475d583c9235/pdf",
+    "completo": false,
+    "createdAt": "2026-10-02T19:46:35.483Z",
+    "updatedAt": "2026-10-02T19:50:07.596Z"
+  }
+]
